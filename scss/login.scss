@@ -1,0 +1,159 @@
+/*login-style*/
+.login {
+    background-image: url('assets/images/cryptotradersBackground.jpg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    overflow: auto;
+    .container {
+        margin-top: 90px; 
+        width: 90%;
+        max-width: 500px;
+        padding: 40px 55px;
+        background: $blue;
+        border-radius: 4px;
+        .logo {
+            max-width: 100%; 
+            display: inline-block; 
+            .app-logo {
+                margin: 0px auto;
+                margin-bottom:10px;
+                width: 95%; 
+            }
+        }
+        .text, p, a {
+            color: $login-text-color; 
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 15px;
+            font-weight: $regular-font;
+            line-height: 22px;
+        } 
+        .input-layout{
+            padding: 0px 35px; 
+            .inut-form { 
+                background-color: $blue;
+                border: 2px solid $inut-form-color;
+                color: $white; 
+                outline: none;
+                border-radius: 4px;
+                padding: 1.1rem .9rem;
+                font-size: 1rem;
+                width: 100%;
+                &:hover {
+                    border: 2px solid $green-button-color;
+                }
+            }
+        }
+        .button {
+            background: $green-button-color;
+            padding: 1.1rem .9rem; 
+            font-size: 1rem; 
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            color: $white;
+            font-size: 16px;
+            font-weight: $regular-font;
+        } 
+        .account-text {
+            color: $green-button-color;
+
+        }
+        .blue-text {
+            color: $green-button-color ! important;
+        }       
+        .social-login-btns {
+            button {
+                border: none;
+                color: $white;
+                background: #5a53ac;
+                border: 2px solid transparent;
+                border-radius: 4px;
+                padding: .7rem 1rem;
+                min-width: 6rem;
+                font-size: .85rem;
+                font-weight: $semibold-font;
+                cursor: pointer;
+                outline: none;
+                align-items: center;
+                outline: none;
+                margin: 0px 5px 20px;
+            }
+            .google {
+                background: $white;
+            }
+            .fb {
+                background: $fb-bg;
+            }
+            .discord {
+                background-color: $discord-bg;
+            } 
+        }
+
+    }
+}
+/*login-social-style*/
+.login-social{
+    .login-social-div{ 
+        max-width: 320px;
+        margin: 0px auto;
+        .google-text {
+            color: #000;
+            font-size: $regular-font-size;   
+        }
+        .fb-text {
+            font-size: $regular-font-size;   
+        }
+        .discord-text {
+            font-size: $regular-font-size;   
+        }
+    }  
+}
+/*Responsive-style*/
+@media only screen and (max-width: 767px) {
+    .login {
+        .container {
+            margin-top: 50px;
+            padding: 40px;
+            .logo {
+                max-width: 320px; 
+            }
+            .input-layout {
+                padding: 0;
+                max-width: 320px;
+                margin: 0px auto;
+            }
+        }
+
+    }
+}
+@media only screen and (max-width: 580px) {
+    .login {
+        .container {
+            margin-top: 50px;
+            padding: 25px;
+            .input-layout {
+                padding: 0;
+            }
+        }
+
+    }
+}
+@media only screen and (max-width: 420px) {
+    .login{
+        .container{
+            padding: 20px;
+            .social-login-btns {
+                button {
+                    min-width: auto !important; 
+                } 
+            }
+        }
+    } 
+}  

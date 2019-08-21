@@ -1,0 +1,96 @@
+body {
+    font: 100% $font-stack;
+    color: $primary-color; 
+    background: $white;
+    font-weight: $regular-font;
+}
+.font-family{
+    font-family: 'DM Sans', sans-serif !important;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+.button:focus{ 
+    outline: none;
+}
+.container {
+    overflow: hidden;
+}
+li{
+    list-style: none;
+    color: #fff;
+}
+ul{
+    margin: 0;
+    padding: 0; 
+}
+a{outline: none;
+ color: $primary-color  !important; 
+}
+input[type="text"] 
+{
+    min-width: 200px;
+}
+.button:focus {
+    outline: none;
+}
+#wrapper.active {
+    padding-left: 150px;
+}
+#wrapper.active #sidebar-wrapper {
+    left: 150px;
+}
+
+.red-font{
+    color: #f23658 !important; 
+}
+.green-font{
+    color:#22c3aa !important;  
+}
+.white-font{
+    color:#fff !important;  
+}
+.edit-icon {
+    margin-left: 8px;
+    font-size: 13px;
+}
+.normal{
+    background: #77beff;
+}
+.above{
+    background: #a096ff;
+}
+.high{
+    background: #fee57d;
+}
+.very-high{
+    background: #f06170;
+}
+
+
+
+
+
+
+
+/*@media (max-width:767px) {
+
+    #wrapper {
+        padding-left: 70px;
+        transition: all .4s ease 0s;
+    }
+    #sidebar-wrapper {
+        left: 70px;
+    }
+    #wrapper.active {
+        padding-left: 150px;
+    }
+    #wrapper.active #sidebar-wrapper {
+        left: 150px;
+        width: 150px;
+        transition: all .4s ease 0s;
+    }
+
+}*/
