@@ -223,8 +223,8 @@
                                     </div>
                                 </div> 
                                 <!-- end-of-container-header --> 
-                                <!-- table -->
-                                <div class="table-box">  
+                                <!-- table --> 
+                                <div class="table-box table-responsive">  
                                     <table class="table">
                                         <thead>
                                             <tr>
@@ -314,10 +314,21 @@
                         </div> 
                         <!--End-of-col-md-6 col-sm-12-->
                     </div><!--End-of-Row-->
+                    
+                    
+                     <div class="try">
+            <ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+        </div>
                 </div><!-- end-of page-contents -->
             </div><!--End-of-#page-content-wrapper-->
         </div><!--End-of-#Wrapper-->
-
+       
 
         <!--js-files-->
         <script src="./bundle.js"></script> 
@@ -382,7 +393,10 @@
                     }
                 },
                 xAxis: {
-                    categories: ['Activity', 'Conversations', 'Invites', 'Alerts']
+                    categories: ['Activity', 'Conversations', 'Invites', 'Alerts', '', '', '', ''],  
+                    style: {
+                            color: '#fff'
+                        } 
                 },
                 yAxis: {
                     gridLineColor: '#11293d ',
@@ -654,69 +668,10 @@
 
 
         <!--container-line-chart-js -->
-        <script>
-            Highcharts.chart('container', {
+          <script>
+            Highcharts.chart('container', { 
                 chart: {
-                    type: 'line',
-                    backgroundColor: '#021c33',
-                    spacingBottom: 15,
-                    spacingTop: 10,
-                    spacingLeft: 10,
-                    spacingRight: 10,
-                    color: '#fff'
-
-                }, 
-                title: {
-                    text: '',
-                    style: {
-                        color: '#fff'
-                    }
-                },
-                subtitle: {
-                    text: '1d   3d   1w   1m',
-                    style: {
-                        color: '#fff' 
-                    }
-                },
-                xAxis: {
-                    categories: ['25.07', '26.07', '27.07', '28.07', '29.07', '30.07', '31.07']
-                },
-                yAxis: {
-                    gridLineColor: '#11293d ',
-                    title: {
-                        text: '',
-                        style: {
-                            color: '#fff'
-                        }
-                    }
-                },
-                plotOptions: {
-                    line: {
-                        dataLabels: {
-                            enabled: false
-                        },
-                        enableMouseTracking: true
-                    },
-                    series: {
-                        color: '#fff'
-                    }
-                },
-                series: [{
-                        name: '',
-                        data: [0, 5, 0.5, 20.5, 18.4, 10.5, 25.2],
-                        style: {
-                            color: '#fff'
-                        }
-                    }]
-            });
-        </script>
-
-
-        <!--Messages-line-chart-js -->
-        <script>
-            Highcharts.chart('messages', {
-                chart: {
-                    type: 'line',
+                     type: 'spline',
                     backgroundColor: '#021c33',
                     spacingBottom: 15,
                     spacingTop: 10,
@@ -734,7 +689,7 @@
                 subtitle: {
                     text: '1d   3d   1w   1m',
                     style: {
-                        color: '#fff'
+                        color: '#808d99'
                     }
                 },
                 xAxis: {
@@ -763,6 +718,65 @@
                 series: [{
                         name: '',
                         data: [0, 5, 0.5, 20.5, 18.4, 10.5, 25.2],
+                        style: {
+                            color: '#fff'
+                        }
+                    }]
+            });
+        </script>
+
+
+        <!--Messages-line-chart-js -->
+        <script>
+            Highcharts.chart('messages', {
+                chart: {
+                    type: 'spline',
+                    backgroundColor: '#021c33',
+                    spacingBottom: 15,
+                    spacingTop: 10,
+                    spacingLeft: 10,
+                    spacingRight: 10,
+                    color: '#fff'
+
+                },
+                title: {
+                    text: '',
+                    style: {
+                        color: '#fff'
+                    }
+                },
+                subtitle: {
+                    text: '1d   3d   1w   1m',
+                    style: {
+                        color: '#808d99'
+                    }
+                },
+                xAxis: {
+                    categories: ['25.07', '26.07', '27.07', '28.07', '29.07', '30.07', '31.07']
+                },
+                yAxis: {
+                    gridLineColor: '#11293d ',
+                    title: {
+                        text: '',
+                        style: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                plotOptions: {
+                    line: {
+                        dataLabels: {
+                            enabled: false
+                        },
+                        enableMouseTracking: true
+                    },
+                    series: {
+                        color: '#22c3aa'
+                    }
+                },
+                series: [{
+                        name: '',
+                        data: [0, 5, 0.5, 10.5, 8.4, 1.5, 5.2], 
                         style: {
                             color: '#fff'
                         }
