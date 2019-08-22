@@ -344,8 +344,6 @@
         </script>
 
         <!--bar-chart-js-->
-
-
         <script>
             $(function () {
                 var chart, merge = Highcharts.merge;
@@ -384,7 +382,7 @@
                     ]
                     chart = new Highcharts.Chart({
 
-                        chart: { 
+                        chart: {
                             renderTo: 'barcontainer',
                             type: 'column',
                             backgroundColor: '#021c33'
@@ -414,7 +412,6 @@
                                 borderWidth: '0',
                                 borderRadius: '4'
                             }
-
                         },
                         series: [{
                                 name: name,
@@ -444,47 +441,6 @@
 
             });
         </script> 
-
-
-
-        <script>
-            // Create the chart
-            Highcharts.chart('barcontainer', {
-                chart: {
-                    type: 'column',
-                    backgroundColor: '#021c33'
-                },
-                xAxis: {
-                    categories: ['Activity', 'Conversations', 'Invites', 'Alerts']
-                },
-
-                plotOptions: {
-                    series: {
-                        pointWidth: 16
-                    }
-                },
-                title: {
-                    text: '',
-                    style: {
-                        color: '#fff'
-                    }
-                },
-                yAxis: {
-                    gridLineColor: '#11293d ',
-                    title: {
-                        text: '',
-                        style: {
-                            color: '#fff'
-                        }
-                    }
-                },
-
-                series: [{
-                        data: [1300, 100, 200.4, 100]
-                    }]
-            });
-        </script>
-
 
         <!--container-line-chart-js -->
         <script>
@@ -591,6 +547,8 @@
             });
         </script>
 
+
+        <!--pie-chart-js -->
         <script>
             // Uncomment to style it like Apple Watch
 
