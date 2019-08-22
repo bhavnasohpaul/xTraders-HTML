@@ -62,7 +62,7 @@
                                         <h2>Member status</h2>
                                     </div>
 
-                                    <div class="nav-item dropdown">
+                                    <div class="nav-item dropdown header-right-items">
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
                                         </a>
@@ -74,7 +74,7 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                </div> 
                                 <div class="tabs">
                                     <ul class="nav nav-tabs">
                                         <li><a class="active" data-toggle="tab" href="#gold">ELITE GOLD MEMBER</a></li>
@@ -121,7 +121,7 @@
                                     <div class="header-div">
                                         <h2>New Users Joined</h2>
                                     </div>
-                                    <div class="nav-item dropdown">
+                                    <div class="nav-item dropdown header-right-items">
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
                                         </a>
@@ -148,7 +148,7 @@
                                     <div class="header-div">
                                         <h2>Number of Messages</h2>
                                     </div>
-                                    <div class="nav-item dropdown">
+                                    <div class="nav-item dropdown header-right-items">
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
                                         </a>
@@ -162,7 +162,7 @@
                                 </div> 
                                 <!-- end-of-container-header --> 
                                 <!-- New Users Joined-chart --> 
-                                <div id="messages" style=" margin: 20px auto;  margin-bottom: 10px;"></div>
+                                <div id="messages"></div>
                                 <!-- end-of-New Users Joined-chart --> 
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                                     <div class="header-div">
                                         <h2>My Achievements</h2>
                                     </div>
-                                    <div class="nav-item dropdown">
+                                    <div class="nav-item dropdown header-right-items">
                                         <span class="badge badge-secondary leaderboard">view leaderboard</span>
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
@@ -191,7 +191,7 @@
                                 <!-- end-of-container-header --> 
                                 <!-- Ranking-chart -->  
 
-                                <div id="barcontainer" style="margin: 80px auto;  margin-bottom: 20px;"></div>
+                                <div id="barcontainer"></div>
                                 <div class="barcontainer-ranking">
                                     <div class="white-font">Ranking %</div>
                                     <div class=""><span class="lowdiv"></span>1,5%</div>
@@ -209,7 +209,7 @@
                                     <div class="header-div">
                                         <h2>Watchlist</h2>
                                     </div>
-                                    <div class="nav-item dropdown">
+                                    <div class="nav-item dropdown header-right-items">
                                         <span class="badge badge-secondary leaderboard">Add To Watchlist</span>
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
@@ -276,7 +276,7 @@
                                     <div class="header-div">
                                         <h2>Market Volatility</h2>
                                     </div>
-                                    <div class="nav-item dropdown">
+                                    <div class="nav-item dropdown header-right-items">
                                         <span class="badge badge-secondary leaderboard">Add To Watchlist</span>
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
@@ -332,7 +332,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
         <script src="https://code.highcharts.com/highcharts-more.js"></script>
-        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
 
         <script>
             $(function () {
@@ -371,7 +371,7 @@
                             linearGradient: merge(perShapeGradient),
                             stops: [
                                 [0, 'rgb(160, 150, 255)'],
-                                [1, 'rgb(165, 140, 265)']
+                                [1, 'rgb(165, 150, 255)']
                             ]},
                         {
                             linearGradient: merge(perShapeGradient),
@@ -393,16 +393,12 @@
                         title: {
                             text: '',
                             style: {
-                                color: '#fff'
                             }
                         },
                         yAxis: {
                             gridLineColor: '#11293d ',
                             title: {
                                 text: '',
-                                style: {
-                                    color: '#fff'
-                                }
                             }
                         },
 
@@ -428,14 +424,13 @@
                                         y: 181.94,
                                         color: colors[3]
                                     }],
-                                color: '#021c33'
                             }],
 
                         exporting: {
-                            enabled: false
+                            enabled: true
                         },
-                        credits: {enabled: false},
-                        legend: {enabled: false},
+                        credits: {enabled: true},
+                        legend: {enabled: true},
                     });
                 });
 
@@ -579,12 +574,12 @@
 
                 // Move icon
                 if (!this.series[0].icon) {
-                    this.series[0].icon = this.renderer.path(['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8])
+                    this.series[0].icon = this.renderer.path([])
                             .attr({
-                                stroke: '#303030',
+                                stroke: '#021c33',
                                 'stroke-linecap': 'round',
                                 'stroke-linejoin': 'round',
-                                'stroke-width': 2,
+                                'stroke-width': 10,
                                 zIndex: 10
                             })
                             .add(this.series[2].group);
@@ -594,18 +589,55 @@
                         this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
                         (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
                         );
+                
+                 // Move icon
+                if (!this.series[0].icon) {
+                    this.series[0].icon = this.renderer.path([])
+                            .attr({
+                                stroke: '#021c33',
+                                'stroke-linecap': 'round',
+                                'stroke-linejoin': 'round',
+                                'stroke-width': 10,
+                                zIndex: 10
+                            })
+                            .add(this.series[2].group);
+                }
+                this.series[0].icon.translate(
+                        this.chartWidth / 2 - 10,
+                        this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
+                        (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
+                        );
+                
+                
+                 // Move icon
+                if (!this.series[0].icon) {
+                    this.series[0].icon = this.renderer.path([])
+                            .attr({
+                                stroke: '#021c33',
+                                'stroke-linecap': 'round',
+                                'stroke-linejoin': 'round',
+                                'stroke-width': 10,
+                                zIndex: 10
+                            })
+                            .add(this.series[2].group);
+                }
+                this.series[0].icon.translate(
+                        this.chartWidth / 2 - 10,
+                        this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
+                        (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
+                        );
+                
 
                 // Exercise icon
                 if (!this.series[1].icon) {
                     this.series[1].icon = this.renderer.path(
-                            ['M', -8, 0, 'L', 8, 0, 'M', 0, -8, 'L', 8, 0, 0, 8,
-                                'M', 8, -8, 'L', 16, 0, 8, 8]
+                            [] 
                             )
                             .attr({
-                                stroke: '#ffffff',
+                                stroke: '#021c33',
                                 'stroke-linecap': 'round',
                                 'stroke-linejoin': 'round',
-                                'stroke-width': 2,
+                                'stroke-width': 10,
                                 zIndex: 10
                             })
                             .add(this.series[2].group);
@@ -618,12 +650,12 @@
 
                 // Stand icon
                 if (!this.series[2].icon) {
-                    this.series[2].icon = this.renderer.path(['M', 0, 8, 'L', 0, -8, 'M', -8, 0, 'L', 0, -8, 8, 0])
+                    this.series[2].icon = this.renderer.path([])
                             .attr({
-                                stroke: '#303030',
+                                stroke: '#021c33',
                                 'stroke-linecap': 'round',
                                 'stroke-linejoin': 'round',
-                                'stroke-width': 2,
+                                'stroke-width': 10, 
                                 zIndex: 10
                             })
                             .add(this.series[2].group);
@@ -642,11 +674,6 @@
                     type: 'solidgauge',
                     height: '110%',
                     backgroundColor: '#021c33',
-                    spacingBottom: 15,
-                    spacingTop: 10,
-                    spacingLeft: 10,
-                    spacingRight: 10,
-                    color: '#fff',
                     events: {
                         render: renderIcons
                     }
@@ -655,7 +682,7 @@
                 title: {
                     text: '',
                     style: {
-                        fontSize: '24px'
+                        fontSize: '12px'
                     }
                 },
 
@@ -664,7 +691,7 @@
                     backgroundColor: 'none',
                     shadow: false,
                     style: {
-                        fontSize: '16px'
+                        fontSize: '12px'
                     },
                     pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}%</span>',
                     positioner: function (labelWidth) {
@@ -676,8 +703,8 @@
                 },
 
                 pane: {
-                    startAngle: 0,
-                    endAngle: 360,
+                    startAngle: 360,
+                    endAngle: 0,
                     background: [{// Track for Move
                             outerRadius: '100%',
                             innerRadius: '90%',
@@ -740,44 +767,44 @@
                     }
                 },
                 series: [{
-                        name: 'Move',
+                        name: 'Low',
                         data: [{
                                 color: Highcharts.getOptions().colors[0],
                                 radius: '100%',
                                 innerRadius: '90%',
-                                y: 80
+                                y: 65
                             }]
                     }, {
-                        name: 'Exercise',
+                        name: 'Normal',
                         data: [{
                                 color: Highcharts.getOptions().colors[1],
                                 radius: '90%',
                                 innerRadius: '80%',
-                                y: 65
+                                y: 80
                             }]
                     }, {
-                        name: 'Stand',
+                        name: 'Above Average',
                         data: [{
                                 color: Highcharts.getOptions().colors[2],
                                 radius: '80%',
                                 innerRadius: '70%',
-                                y: 50
+                                y: 85
                             }]
                     }, {
-                        name: 'Pool',
+                        name: 'High',
                         data: [{
                                 color: Highcharts.getOptions().colors[3],
                                 radius: '70%',
                                 innerRadius: '60%',
-                                y: 35
+                                y: 75
                             }]
                     }, {
-                        name: 'Game',
+                        name: 'Very High',
                         data: [{
                                 color: Highcharts.getOptions().colors[4],
                                 radius: '60%',
                                 innerRadius: '50%',
-                                y: 20
+                                y: 73
                             }]
                     }]
             });
