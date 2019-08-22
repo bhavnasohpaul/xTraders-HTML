@@ -75,6 +75,18 @@ input[type="text"]
     background: #f06170;
 }
 
+.dropdown-menu {
+    display: none !important;
+} 
+#container, #messages{ 
+    .highcharts-point {
+    display: none;
+}
+}
+
+.highcharts-point.highcharts-point-hover {
+    display: block !important;
+}
 
 
 

@@ -1,7 +1,4 @@
 /*wrapper-page-scss-*/
-.dropdown-menu {
-    display: none !important;
-} 
 #wrapper {
     padding-left: 70px;
     height: 100%;
@@ -219,18 +216,20 @@
                     .leaderboard {
                         background-color: $primary-bg-color;
                         margin-right: 10px;
-                        margin-top: 29px;
-                        padding: 4px 7px 6px;
+                        margin-top: 28px;
+                        padding: 6px 10px 6px;
+                        text-transform: uppercase;
                     }
                     .header-div{
-                        float: left;
+                        float: left; 
                     }
                     h2 {
                         color:$white;
-                        padding: 25px 0;
-                        float: left;
-                        font-weight: 400;
+                        font-weight: $regular-font;
                         font-size: 20px;
+                        margin: 0;
+                        line-height: 20px;
+                        padding: 29px 0px;
                     }
                     .header-right-items{  
                         float: right;
@@ -261,8 +260,9 @@
                         .text {
                             float: right;
                             font-size: 30px;
-                            font-weight: 700;
-                        }
+                            font-weight: $semibold-font;
+                            color: $primary-bg-color;
+                        } 
                     }
                     .content{
                         border-bottom:1px solid $content-border; 
@@ -270,19 +270,22 @@
                         li { 
                             font-size: 14px; 
                             margin: 10px 0px;
-                            font-weight: 500;
+                            font-weight: $regular-font;
                             color: $primary-color; 
                             .text-li {
-                                color:$white;
+                                color:$white; 
                                 float: right;
                                 font-size: 14px;
-                                font-weight: 600;
-                            }
+                                font-weight: $bold-font;
+                            } 
                         }
                     }
                     .badge-button {
                         background-color: $primary-bg-color;
                         margin-left: 10px;
+                        text-transform: uppercase;
+                        padding-top: 4px; 
+                        font-size: 12px;
                     }
                     .nav-tabs {
                         border-bottom: 1px solid $nav-border;
@@ -306,8 +309,8 @@
                                 text-decoration: none;
                                 border: none;
                                 font-size: 14px;
-                                font-weight: 700;
-                                color: $primary-color; 
+                                font-weight: $semibold-font;
+                                color: $primary-color;  
                             }
                         }
                     }
@@ -348,8 +351,8 @@
                 }
             }
             #piecontainer {
-                margin: 0px;
-                max-width: 300px;
+                margin: 12px auto;
+                max-width: 300px; 
                 min-width: 170px;
             }
             #barcontainer{ 
