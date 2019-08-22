@@ -344,6 +344,109 @@
         </script>
 
         <!--bar-chart-js-->
+
+
+        <script>
+            $(function () {
+                var chart, merge = Highcharts.merge;
+                $(document).ready(function () {
+                    var perShapeGradient = {
+                        x1: 0,
+                        y1: 0,
+                        x2: 1,
+                        y2: 0
+                    };
+                    var colors = Highcharts.getOptions().colors;
+                    colors = [{
+                            linearGradient: perShapeGradient,
+                            stops: [
+                                [0, 'rgb(34, 195, 170)'],
+                                [1, 'rgb(36, 199, 175)']
+                            ]
+                        }, {
+                            linearGradient: merge(perShapeGradient),
+                            stops: [
+                                [0, 'rgb(119, 190, 255)'],
+                                [1, 'rgb(109, 100, 245)']
+                            ]
+                        }, {
+                            linearGradient: merge(perShapeGradient),
+                            stops: [
+                                [0, 'rgb(160, 150, 255)'],
+                                [1, 'rgb(165, 140, 265)']
+                            ]},
+                        {
+                            linearGradient: merge(perShapeGradient),
+                            stops: [
+                                [0, 'rgb(254, 229, 125)'],
+                                [1, 'rgb(264, 249, 145)']
+                            ]},
+                    ]
+                    chart = new Highcharts.Chart({
+
+                        chart: { 
+                            renderTo: 'barcontainer',
+                            type: 'column',
+                            backgroundColor: '#021c33'
+                        },
+                        xAxis: {
+                            categories: ['Activity', 'Conversations', 'Invites', 'Alerts'],
+                        },
+                        title: {
+                            text: '',
+                            style: {
+                                color: '#fff'
+                            }
+                        },
+                        yAxis: {
+                            gridLineColor: '#11293d ',
+                            title: {
+                                text: '',
+                                style: {
+                                    color: '#fff'
+                                }
+                            }
+                        },
+
+                        plotOptions: {
+                            series: {
+                                pointWidth: '16',
+                                borderWidth: '0',
+                                borderRadius: '4'
+                            }
+
+                        },
+                        series: [{
+                                name: name,
+                                data: [{
+                                        y: 1355.11,
+                                        color: colors[0]
+                                    }, {
+                                        y: 181.63,
+                                        color: colors[1]
+                                    }, {
+                                        y: 450.63,
+                                        color: colors[2]
+                                    }, {
+                                        y: 181.94,
+                                        color: colors[3]
+                                    }],
+                                color: '#021c33'
+                            }],
+
+                        exporting: {
+                            enabled: false
+                        },
+                        credits: {enabled: false},
+                        legend: {enabled: false},
+                    });
+                });
+
+            });
+        </script> 
+
+
+
         <script>
             // Create the chart
             Highcharts.chart('barcontainer', {
@@ -356,17 +459,17 @@
                 },
 
                 plotOptions: {
-                    series: { 
-                        pointWidth: 20
+                    series: {
+                        pointWidth: 16
                     }
                 },
                 title: {
                     text: '',
                     style: {
-                        color: '#fff' 
+                        color: '#fff'
                     }
                 },
-                 yAxis: {
+                yAxis: {
                     gridLineColor: '#11293d ',
                     title: {
                         text: '',
@@ -377,7 +480,7 @@
                 },
 
                 series: [{
-                        data: [29.9, 71.5, 106.4, 129.2]
+                        data: [1300, 100, 200.4, 100]
                     }]
             });
         </script>
@@ -389,12 +492,6 @@
                 chart: {
                     type: 'spline',
                     backgroundColor: '#021c33',
-                    spacingBottom: 15,
-                    spacingTop: 10,
-                    spacingLeft: 10,
-                    spacingRight: 10,
-                    color: '#fff'
-
                 },
                 title: {
                     text: '',
@@ -447,13 +544,7 @@
             Highcharts.chart('messages', {
                 chart: {
                     type: 'spline',
-                    backgroundColor: '#021c33',
-                    spacingBottom: 15,
-                    spacingTop: 10,
-                    spacingLeft: 10,
-                    spacingRight: 10,
-                    color: '#fff'
-
+                    backgroundColor: '#021c33'
                 },
                 title: {
                     text: '',
@@ -508,7 +599,7 @@
                     chart: {
                         backgroundColor: '#021c33'
                     },
-                    colors: ['#22c3aa', '#77beff', '#a096ff', '#0e99ff', '#f06170'],  
+                    colors: ['#22c3aa', '#77beff', '#a096ff', '#0e99ff', '#f06170'],
                     title: {
                         style: {
                             color: 'silver'
@@ -678,18 +769,18 @@
                     solidgauge: {
                         dataLabels: {
                             enabled: false
-                        }, 
-                        line: {
-                        dataLabels: {
-                            enabled: false
                         },
-                        enableMouseTracking: false
-                    },
+                        line: {
+                            dataLabels: {
+                                enabled: false
+                            },
+                            enableMouseTracking: false
+                        },
                         linecap: 'round',
                         stickyTracking: false,
                         rounded: true
-                    } 
-                },           
+                    }
+                },
                 series: [{
                         name: 'Move',
                         data: [{
