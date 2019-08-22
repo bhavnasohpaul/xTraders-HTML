@@ -302,9 +302,6 @@
                             text-align: center; 
                             padding-bottom: 0px;
                             color: $primary-color; 
-                            .active {
-                                color: $white !important;
-                            } 
                             a {
                                 text-decoration: none;
                                 border: none;
@@ -352,9 +349,9 @@
                 }
             }
             #piecontainer {
-                margin: 20px;
+                margin: 0px;
                 max-width: 300px;
-                min-width: 200px;
+                min-width: 170px;
             }
             #barcontainer{ 
                 margin: 75px auto 0px;
@@ -372,6 +369,7 @@
                 margin-right: 50px;
                 padding: 15px 5px 20px 15px;
                 font-size: 14px;
+                margin-bottom: 30px; 
                 div {
                     display: inline-block;
                     width: 100%;
@@ -432,20 +430,20 @@
     #page-content-wrapper {
         .page-contents {
             .container {
+                p {
+                    width: 92%;
+                    float: left;
+
+                }
                 .tabs {
                     .nav {
                         li {
                             width: 33.3% !important;
-                        }
-                        p {
-                            width: 92%;
-                            float: left;
-
-                        }
+                        }                       
                     }
                 }
                 .swim-tab {
-                    .nav {
+                    .nav { 
                         li {
                             width: 20% !important;
                         }
@@ -455,18 +453,20 @@
         }
     }
 }
+
+/*Responsive-scss-*/
 @media screen and (max-width: 992px) { 
-#wrapper {
-	#page-content-wrapper {
-		.page-contents {
-			.barcontainer-ranking {
-				width: auto;
-				div { margin-bottom: 10px;
-			}
-		}
-	}
-}
-}
+    #wrapper {
+        #page-content-wrapper {
+            .page-contents {
+                .barcontainer-ranking {
+                    width: auto;
+                    div { margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
 }
 @media only screen and (max-width: 1100px) and (min-width: 767px) {
     #wrapper {
@@ -475,9 +475,9 @@
                 .piechart-color {
                     width: auto;
                     height: auto;
-                    float: right;
-                    padding: 10px;
-                    font-size: 14px;
+                    float: none;
+                    margin: 0px auto;
+                    margin: 10px;
                 }
                 .container {
                     .tabs {
@@ -551,6 +551,9 @@
             .page-contents {
                 .container {
                     max-width: 100% !important;
+                    .tabs {
+                        margin: 15px;
+                    }
                     .table-box {
                         margin: 15px;
                     }
@@ -562,9 +565,21 @@
             }
         }
     }
-
+    .product-page{
+        li {
+            list-style: none;
+            color: #fff;
+            margin-bottom: 15px;
+            width: 100%;
+            float: left;
+        }
+        p {
+            width: 100% !important;
+            float: left;
+            margin-bottom:5px; 
+        }
+    } 
 }
-
 @media screen and (max-width:580px) { 
     #wrapper #page-content-wrapper .page-contents .container .tabs h3 .text {
         font-size: 18px;
@@ -614,6 +629,13 @@
             .page-contents {
                 .container {
                     max-width: 100% !important;
+                    .piechart-color {
+                        width: auto;
+                        height: auto;
+                        float: none;
+                        margin: 0px auto;
+                        margin: 10px;
+                    }
                     .container-header {
                         padding: 3px 10px;
                     }
@@ -622,10 +644,17 @@
                     }
                     .tabs {
                         margin: 10px;
-                        .nav {
+                        .nav-tabs {
+                            border-bottom: 0px solid #979797;
+                            .active {
+                                padding: 20px;
+                                background: $container-border;
+                            }
+                        }
+                        .nav {                          
                             li {
                                 width: 100%;
-                                padding: 10px 0px 20px;
+                                padding: 10px 0px 10px;
                             }
                         }
                         margin: 15px;
@@ -641,28 +670,26 @@
         margin: 8px 0px 20px;
     }
 }
-
 @media screen and (max-width:550px) { 
- 
-#wrapper {
-	.header {
-		.header-inner {
-			.header-icons-group {
-				.search-form {
-					.form-group {
-						&:hover {
-							right: 0;
-						}
-					}
-				}
-			}
-		}
-	}
-}
-.search-form {
-	display: none;
-}
 
+    #wrapper {
+        .header {
+            .header-inner {
+                .header-icons-group {
+                    .search-form {
+                        .form-group {
+                            &:hover {
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .search-form {
+        display: none;
+    }
 }
 
 
