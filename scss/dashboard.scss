@@ -3,9 +3,9 @@
     padding-left: 70px;
     height: 100%;
     #sidebar-wrapper { 
-        margin-left: -150px;
+        margin-left: -180px;
         left: 70px;
-        width: 150px;
+        width: 180px;
         background: #112943;
         position: fixed;
         height: 100%;
@@ -15,7 +15,7 @@
     .sidebar-nav{
         display: block;
         float: left;
-        width: 150px;
+        width: 180px; 
         list-style: none;
         margin: 0;
         padding: 0;
@@ -28,7 +28,7 @@
                 display: block;
                 float: left;
                 text-decoration: none;
-                width: 150px;
+                width: 180px;
                 -webkit-transition: background .5s;
                 -moz-transition: background .5s;
                 -o-transition: background .5s;
@@ -44,7 +44,7 @@
         }
         .sub_icon{
             float:right;
-            padding-right: 26px;
+            padding-right: 21px;
         }
         .menu {
             float: right;
@@ -433,15 +433,24 @@
 /*product-page-scss-*/
 .product-page {
     #page-content-wrapper {
-        .page-contents {
+        .page-contents {            
+            .top-container{
+                .tabs{
+                    margin-bottom: 50px;
+                }
+            } 
             .container {
                 p {
                     width: 92%;
                     float: left;
-
+margin-bottom: 15px;
                 }
-                .tabs {
-                    .nav {
+                .product-tabs, .sec-tabs{
+                    display: inline-block;
+                    width: 100%;
+                }
+                .videos-tabs { 
+                    .nav { 
                         li {
                             width: 33.3% !important;
                         }                       
@@ -666,6 +675,7 @@
                         margin: 10px;
                         .nav-tabs {
                             border-bottom: 0px solid #979797;
+                            margin-bottom: 20px;
                             .active {
                                 padding: 20px;
                                 background: $container-border;
@@ -761,12 +771,12 @@
             }
         }
         #sidebar-wrapper {
-            margin-left: -150px;
+            margin-left: -180px;
             left: 40px;
         }
         .sidebar-nav {
             .sub_icon {
-                padding-right: 9px;
+                padding-right: 5px;
             }
             .menu {
                 margin-right: 10px;
@@ -775,5 +785,3 @@
     }
 
 }
-
-
