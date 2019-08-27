@@ -1,0 +1,92 @@
+/*chat-page-scss-*/ 
+.chat-page{
+    .center-div{ 
+        position: relative; 
+        margin: auto;
+        top: 100px;
+        right: 0;
+        bottom: 0;
+        left: 0px;
+        width: 520px;
+        height: 275px;
+        background-color: $container-border;
+        padding-bottom: 40px;
+        .content{
+            h2 {
+                margin: 40px 0px 30px;
+                display: inline-block;
+                color: $primary-bg-color;
+                font-size: 30px;
+                width: 100%;
+                font-weight: $extra-bold-font;
+            }
+            p {
+                margin: 0px 0px 10px;
+                display: inline-block;
+                color: #aaadb3;
+                font-size: 14px;
+                font-weight: $regular-font;
+            }
+            h4 {
+                margin: 0px 0px 10px;
+                display: inline-block;
+                color: $white;
+                font-size: 14px;
+                text-transform: uppercase;
+                width: 100%;
+            }
+            .chat-btn {
+                background: $primary-bg-color;
+                border: 1px solid $primary-bg-color;
+                color:$white;
+                padding: 7px 30px;
+                margin: 20px 0px 0px;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight:  $extra-bold-font;
+            }
+        }
+    } 
+    .ph-pic {
+        position: absolute;
+        top: 166px;
+        right: -256px;
+        width: 343px;
+        .ph-pic-img {
+            width: 100%;
+        }
+    }
+}
+/*Responsive-scss-*/
+@media screen and (max-width:1200px) {
+    .chat-page{
+        .center-div {
+            width: 300px;
+            height: auto;
+        } 
+        .ph-pic {
+            position: absolute;
+            top: 238px;
+            right: 0px;
+            width: 100%; 
+        }
+    }
+}
+@media screen and (max-width:767px) {
+.chat-page{
+    .center-div {
+    position: relative;
+    margin: auto;
+    top: 50px;
+}
+} 
+} 
+@media screen and (max-width:350px) {
+    .chat-page{
+        .center-div {
+            top: 50px;
+            right: -8px;
+            width: auto;
+        }
+    }
+} 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Mobile Specific Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">			
+        <!-- Site Title -->
+        <title> Crypto Traders </title>			
+        <!--  font-css  -->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- wrapper -->
+        <div id="wrapper" class="chat-page font-family"> 
+            <!-- sidebar-wrapper -->
+            <div id="sidebar-wrapper">
+                <!-- sidebar_menu -->
+                <div id="sidebar_menu" class="sidebar-nav">
+                    <div class="sidebar-brand"><a id="menu-toggle" href="#"><img src="assets/images/dashboard-icon/menu.png" alt="icon" class="menu"/></a></div>  
+                </div>
+                <!-- sidebar-nav -->
+                <ul class="sidebar-nav" id="sidebar">     
+                    <li><a href="home-page.html">Dashboard<span class="sub_icon"><img src="assets/images/dashboard-icon/grid.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
+                    <li><a href="product-page.html">link2<span class="sub_icon"><img src="assets/images/dashboard-icon/award.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
+                    <li><a href="chat.html">Join Chat<span class="sub_icon"><img src="assets/images/dashboard-icon/film_hover.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
+                    <li><a href="login.html">link4<span class="sub_icon"><img src="assets/images/dashboard-icon/user.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
+                </ul> 
+            </div>  
+            <!-- end-of-sidebar-wrapper -->
+
+            <!-- page-content-wrapper -->
+            <div id="page-content-wrapper">
+                <!-- header -->
+                <header class="header">
+                    <div class="header-inner clearfix">
+                        <h1 class="heading">Join Chat</h1>
+                        <div class="header-icons-group">
+                            <form action="" class="search-form desktop"> 
+                                <div class="form-group has-feedback">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                                    <span class="form-control-feedback"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                </div>
+                            </form>
+                            <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/></div>
+                        </div>
+                    </div>
+                    <div class="mobile-small-size">  
+                        <form class="search-container">
+                            <input type="text" id="search-bar" placeholder="Search"> 
+                            <a href="#"><span class="form-control-search search-icon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+                        </form>
+                    </div>
+                </header>
+                <!-- end-of-header --> 
+
+                <!-- page-contents -->
+                <div class="page-contents">  
+
+                    <div class="center-div text-center">  
+
+                        <div class="content">
+                            <h2>LOGO</h2>
+                            <p>Lorem ipsum invites you to join the chat</p>
+                            <h4>www.Lorem ipsum.com</h4>
+                            <button type="button" class="btn chat-btn">JOIN THE CHAT</button>
+                            <!-- End-of-center-div -->
+
+                        </div><!-- End-of-center-div -->
+
+                        <div class="ph-pic">
+                            <img src="assets/images/ph-pic.png" alt="icon" class="ph-pic-img"/>
+                        </div>
+
+                        <!-- End-of-center-div -->
+
+                    </div><!-- end-of page-contents -->
+                </div><!--End-of-#page-content-wrapper-->
+            </div><!--End-of-#Wrapper-->
+
+
+            <script src="./bundle.js"></script> 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+            <script>
+                $(function () {
+                    $("#menu-toggle").click(function (e) {
+                        e.preventDefault();
+                        $("#wrapper").toggleClass("active");
+                    });
+                });
+            </script>
+    </body>
+</html>

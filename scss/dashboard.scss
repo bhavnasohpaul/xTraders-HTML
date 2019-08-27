@@ -3,9 +3,9 @@
     padding-left: 70px;
     height: 100%;
     #sidebar-wrapper { 
-        margin-left: -150px;
+        margin-left: -180px;
         left: 70px;
-        width: 150px;
+        width: 180px;
         background: #112943;
         position: fixed;
         height: 100%;
@@ -15,7 +15,7 @@
     .sidebar-nav{
         display: block;
         float: left;
-        width: 150px;
+        width: 180px; 
         list-style: none;
         margin: 0;
         padding: 0;
@@ -28,7 +28,7 @@
                 display: block;
                 float: left;
                 text-decoration: none;
-                width: 150px;
+                width: 180px;
                 -webkit-transition: background .5s;
                 -moz-transition: background .5s;
                 -o-transition: background .5s;
@@ -44,7 +44,7 @@
         }
         .sub_icon{
             float:right;
-            padding-right: 26px;
+            padding-right: 21px;
         }
         .menu {
             float: right;
@@ -176,7 +176,7 @@
         .page-contents {
             display: inline-block;
             width: 100%;
-            padding: 40px;
+            padding: 50px;
             .container {
                 width: 100%;
                 border: 1.5px solid $container-border;  
@@ -184,25 +184,30 @@
                 min-height: 100px;
                 border-radius: 5px;
                 margin-bottom: 50px;
+                .outer-padding-div{
+                    padding: 29px;
+                    width: 100%;
+                    display: inline-block;
+                }
                 .table-responsive {
                     width: auto;
-
                 }
                 .table-box{
-                    margin:40px;
+                    margin:50px;
                     .table {
                         margin-bottom: 30px;
                         min-width: 450px;
                         th{
                             border: none !important;
-                            padding: 15px .75rem;
+                            padding: 15px 0px;
                             color: $primary-color; 
                             font-size: 14px;
                         }
                         td{
                             border: none;
                             border-bottom: 1.5px solid $border-color  !important;
-                            color: $primary-color; 
+                            color: $primary-color;
+                            padding: 15px 0px;
                             font-size: 14px;
                         }
                     }
@@ -215,9 +220,8 @@
                     padding:3px 40px;
                     .leaderboard {
                         background-color: $primary-bg-color;
-                        margin-right: 10px;
-                        margin-top: 29px; 
-                        padding: 7px 14px;
+                        margin: 27px 13px;
+                        padding: 7px 14px; 
                         text-transform: uppercase;
                     }
                     .header-div{
@@ -368,7 +372,7 @@
                 border-radius: 5px;
                 float: right;
                 margin-top: 50px;
-                margin-right: 50px;
+                margin-right: 11px;
                 padding: 15px 5px 20px 15px;
                 font-size: 14px;
                 margin-bottom: 30px; 
@@ -425,37 +429,6 @@
         #wrapper.active #sidebar-wrapper {
             left: 150px;
         }
-
-
-    }
-}
-
-/*product-page-scss-*/
-.product-page {
-    #page-content-wrapper {
-        .page-contents {
-            .container {
-                p {
-                    width: 92%;
-                    float: left;
-
-                }
-                .tabs {
-                    .nav {
-                        li {
-                            width: 33.3% !important;
-                        }                       
-                    }
-                }
-                .swim-tab {
-                    .nav { 
-                        li {
-                            width: 20% !important;
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -466,7 +439,8 @@
             .page-contents {
                 .barcontainer-ranking {
                     width: auto;
-                    div { margin-bottom: 10px;
+                    div {
+                        margin-bottom: 10px;
                     }
                 }
             }
@@ -474,9 +448,7 @@
     }
 }
 @media only screen and (max-width: 1100px) and (min-width: 767px) {
-    #wrapper .header .header-inner .header-icons-group .search-form .form-group span.form-control-feedback {
-        margin-right: 0;
-    }
+
     #wrapper {
         #page-content-wrapper {
             .page-contents {
@@ -527,7 +499,7 @@
                         margin-right: 15px;
                     }
                     .search-form{
-                        .form-control-feedback {
+                        .form-group span.form-control-feedback  {
                             margin-right: 0px;
                         }
                     }
@@ -540,17 +512,13 @@
     }
 }
 @media screen and (max-width:767px) { 
-    #wrapper .header .header-inner .header-icons-group .search-form .form-group span.form-control-feedback { 
-        margin-right: 0;
-    }
     #wrapper {
         .header {
             .header-inner {
                 .header-icons-group {
                     .search-form{
-                        .form-control-feedback {
+                        .form-group span.form-control-feedback {
                             margin-right: 0px;
-                            right: 56px;
                         }
                     }
                     .user {
@@ -559,6 +527,7 @@
                 }
                 .heading {
                     margin-left: 15px;
+                    font-size: 20px;
                 }
             }
         }
@@ -568,6 +537,9 @@
                 margin-top: 15px;
                 .container {
                     max-width: 100% !important;
+                    .outer-padding-div {
+                        padding: 4px;
+                    }
                     .tabs {
                         margin: 15px;
                     }
@@ -584,46 +556,8 @@
             }
         }
     }
-    .product-page{
-        li {
-            list-style: none;
-            color: #fff;
-            margin-bottom: 15px;
-            width: 100%;
-            float: left;
-        }
-        p {
-            width: 100% !important;
-            float: left;
-            margin-bottom:5px; 
-        }
-    } 
 }
 @media screen and (max-width:580px) { 
-    #wrapper #page-content-wrapper .page-contents .container .tabs h3 .text {
-        font-size: 18px;
-    }
-    #wrapper #page-content-wrapper .page-contents .container .tabs h3 {
-        font-size: 16px;
-    } 
-
-    #wrapper #page-content-wrapper .page-contents .container .container-header h2 {
-        padding: 10px 0;
-        font-size: 16px;
-    }
-    #barcontainer {
-        margin: 50px 20px auto;
-    }
-    #wrapper #page-content-wrapper .page-contents .container .container-header .leaderboard {
-        margin-top: 10px;
-        padding: 3px 2px;
-    }
-    #wrapper #page-content-wrapper .page-contents .container .container-header .fa.fa-ellipsis-v {
-        color: #fff;
-        font-size: 22px;
-        padding: 10px 0px;
-        float: right;
-    }
     #wrapper {
         .header {
             .header-inner {
@@ -648,6 +582,15 @@
             .page-contents {
                 .container {
                     max-width: 100% !important;
+                    .tabs{
+                        h3 {
+                            font-size: 16px;
+                        } 
+                        .text {
+                            font-size: 18px;
+                        }
+                    } 
+
                     .piechart-color {
                         width: auto;
                         height: auto;
@@ -658,6 +601,20 @@
                     }
                     .container-header {
                         padding: 3px 10px;
+                        .fa.fa-ellipsis-v {
+                            color: #fff;
+                            font-size: 22px;
+                            padding: 10px 0px;
+                            float: right;
+                        }
+                        h2 {
+                            padding: 10px 0;
+                            font-size: 16px;
+                        }
+                        .leaderboard {
+                            margin-top: 10px;
+                            padding: 3px 2px;
+                        }
                     }
                     .table-box { 
                         margin: 0px;
@@ -666,6 +623,7 @@
                         margin: 10px;
                         .nav-tabs {
                             border-bottom: 0px solid #979797;
+                            margin-bottom: 20px;
                             .active {
                                 padding: 20px;
                                 background: $container-border;
@@ -684,10 +642,8 @@
             }
         }
     }
-    .product-page p {
-        width: 100%;
-        float: left;
-        margin: 8px 0px 20px;
+    #barcontainer {
+        margin: 50px 20px auto;
     }
 }
 @media screen and (max-width:520px) {
@@ -761,19 +717,16 @@
             }
         }
         #sidebar-wrapper {
-            margin-left: -150px;
+            margin-left: -180px;
             left: 40px;
         }
         .sidebar-nav {
             .sub_icon {
-                padding-right: 9px;
+                padding-right: 5px;
             }
             .menu {
                 margin-right: 10px;
             }
         }
     }
-
 }
-
-
