@@ -23,9 +23,9 @@
                 <ul class="sidebar-nav" id="sidebar">     
                     <li><a href="home-page.html">Dashboard<span class="sub_icon"><img src="assets/images/dashboard-icon/grid_hover.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
                     <li><a href="product-page.html">Product<span class="sub_icon"><img src="assets/images/dashboard-icon/award.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
-                    <li><a href="chat-page.html">Join Chat<span class="sub_icon"><img src="assets/images/dashboard-icon/film.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
+                    <li><a href="#">Join Chat<span class="sub_icon"><img src="assets/images/dashboard-icon/film.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
                     <li><a href="login.html">link4<span class="sub_icon"><img src="assets/images/dashboard-icon/user.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
-                </ul> 
+                </ul>  
             </div> 
             <!-- end-of-sidebar-wrapper --> 
 
@@ -255,7 +255,7 @@
                                                 <td class="white-font">OSRK</td>
                                                 <td>Mon, Jul 29</td>
                                                 <td class="green-font">$216.20</td>
-                                                <td>Good Offer. Watch <span class="edit-icon"><i class="fa fa-pencil" aria-hidden="true"></i></span></td>
+                                                <td>Good Offer. Watch <span class="edit-icon"><img src="assets/images/pen.png" alt="icon" class="pen"/></span></td>
                                             </tr>
                                             <tr>
                                                 <td class="white-font">FEYE</td>
@@ -301,13 +301,12 @@
                                 <!-- end-of-container-header --> 
                                 <!-- pie-chart -->
                                 <div class="row">
-                                    <div class="outer-padding-div">
-                                        <div class="col-md-6 col-sm-6 col-xs-12 text-center pull-left">   
+                                    <div class="outer-padding-div-pie-chart"> 
+                                        <div class="col-md-6 col-sm-6 col-xs-12 text-center pull-left no-padding">   
                                             <div id="piecontainer"></div>   
                                         </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12  pull-right">  
+                                        <div class="col-md-6 col-sm-6 col-xs-12  pull-right no-padding">  
                                             <div class="piechart-color">
-
                                                 <div class=""><span class="lowdiv"></span>Low</div>
                                                 <div class=""><span class="normal"></span>Normal</div>
                                                 <div class=""><span class="above"></span>Above Average</div> 
@@ -317,7 +316,6 @@
                                         </div>
                                     </div>
                                 </div> 
-
                                 <!-- end-of-pie-chart --> 
 
                             </div>
@@ -400,6 +398,7 @@
                         },
                         xAxis: {
                             categories: ['Activity', 'Conversations', 'Invites', 'Alerts'],
+                            lineColor: '#203547' ,
                             labels: {
                                 style: {
                                     color: '#fff'
@@ -408,11 +407,11 @@
                         },
                         title: {
                             text: '',
-                            style: {
+                            style: { 
                             }
                         },
                         yAxis: {
-                            gridLineColor: '#11293d ',
+                            gridLineColor: '#203547 ',
                             title: {
                                 text: '',
                             }
@@ -422,7 +421,8 @@
                             series: {
                                 pointWidth: '16',
                                 borderWidth: '0',
-                                borderRadius: '4'
+                                borderRadius: '4',
+            shadow: true
                             }
                         },
                         series: [{
@@ -515,10 +515,11 @@
                 },
 
                 xAxis: {
-                    categories: ['25.07', '26.07', '27.07', '28.07', '29.07', '30.07', '31.07']
+                    categories: ['25.07', '26.07', '27.07', '28.07', '29.07', '30.07', '31.07'],
+                    lineColor: '#33393f' 
                 },
                 yAxis: {
-                    gridLineColor: '#11293d ',
+                    gridLineColor: '#33393f ',
                     title: {
                         text: '',
                         style: {
@@ -562,6 +563,7 @@
                 chart: {
                     type: 'spline',
                     backgroundColor: '#021c33',
+                     color: '#fff'
                 },
                 title: {
                     text: '',
@@ -572,7 +574,7 @@
                 subtitle: {
                     text: '',
                     style: {
-                        color: '#808d99'
+                        color: '#fff'
                     }
                 },
                 rangeSelector: {
@@ -608,10 +610,11 @@
                 },
 
                 xAxis: {
-                    categories: ['25.07', '26.07', '27.07', '28.07', '29.07', '30.07', '31.07']
+                    categories: ['25.07', '26.07', '27.07', '28.07', '29.07', '30.07', '31.07'],
+                    lineColor: '#33393f' 
                 },
                 yAxis: {
-                    gridLineColor: '#11293d ',
+                    gridLineColor: '#33393f ',
                     title: {
                         text: '',
                         style: {
