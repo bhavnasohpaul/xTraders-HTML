@@ -78,44 +78,44 @@
                                     </div>
 
                                 </div> 
-                                <div class="tabs">
-                                    <ul class="nav nav-tabs">
-                                        <li><a class="active" data-toggle="tab" href="#gold">ELITE GOLD MEMBER</a></li>
-                                        <li><a data-toggle="tab" href="#diamond">DIAMEND STATUS</a></li>
-                                    </ul> 
+                                    <div class="tabs">
+                                        <ul class="nav nav-tabs">
+                                            <li><a class="active" data-toggle="tab" href="#gold">ELITE GOLD MEMBER</a></li>
+                                            <li><a data-toggle="tab" href="#diamond">DIAMEND STATUS</a></li>
+                                        </ul> 
 
-                                    <div class="tab-content">
-                                        <div id="gold" class="tab-pane  in active">
-                                            <h3>Commission Rate<span class="text">30%</span></h3>
+                                        <div class="tab-content">
+                                            <div id="gold" class="tab-pane  in active">
+                                                <h3>Commission Rate<span class="text">30%</span></h3>
 
-                                            <div class="progress">
-                                                <div class="progress-bar bg-blue" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-blue" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+
+                                                <ul class="content">
+                                                    <li>Bonuses<span class="text-li">$1,330</span></li>
+                                                    <li>Recurring Income<span class="text-li">$3,686</span></li>
+                                                    <li>Recurring Income<span class="text-li">$40,555</span></li>
+                                                </ul>
+
+                                                <ul class="content">
+                                                    <li>Commissions Rate<span class="text-li">30%</span></li>
+                                                    <li>Commissions Level<span class="text-li">4/5</span></li>
+                                                    <li>Next Rate<span class="text-li">40%</span></li>
+                                                </ul>
+
+
+                                                <ul class="content border-0">
+                                                    <li>Current Referrals<span class="text-li">35<span class="badge badge-secondary badge-button">Button</span></span></li>
+                                                    <li>Active Referrals<span class="text-li">27</span></li>
+                                                    <li>New Leads<span class="text-li">13<span class="badge badge-secondary badge-button">Button</span></span></li>
+                                                </ul>
                                             </div>
-
-                                            <ul class="content">
-                                                <li>Bonuses<span class="text-li">$1,330</span></li>
-                                                <li>Recurring Income<span class="text-li">$3,686</span></li>
-                                                <li>Recurring Income<span class="text-li">$40,555</span></li>
-                                            </ul>
-
-                                            <ul class="content">
-                                                <li>Commissions Rate<span class="text-li">30%</span></li>
-                                                <li>Commissions Level<span class="text-li">4/5</span></li>
-                                                <li>Next Rate<span class="text-li">40%</span></li>
-                                            </ul>
-
-
-                                            <ul class="content border-0">
-                                                <li>Current Referrals<span class="text-li">35<span class="badge badge-secondary badge-button">Button</span></span></li>
-                                                <li>Active Referrals<span class="text-li">27</span></li>
-                                                <li>New Leads<span class="text-li">13<span class="badge badge-secondary badge-button">Button</span></span></li>
-                                            </ul>
-                                        </div>
-                                        <div id="diamond" class="tab-pane fade">
-                                            <h3>Menu</h3>
+                                            <div id="diamond" class="tab-pane fade">
+                                                <h3>Menu</h3>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                             </div>
 
                             <div class="container">
@@ -138,8 +138,10 @@
                                 </div> 
                                 <!-- end-of-container-header --> 
                                 <!-- New Users Joined-chart --> 
-                                <div id="container" style=" margin: 20px auto;  margin-bottom: 10px;"></div>
+                                <div class="outer-padding-div">
+                                <div id="container"></div> 
                                 <!-- end-of-New Users Joined-chart --> 
+                                </div>
 
                             </div>
 
@@ -165,7 +167,10 @@
                                 </div> 
                                 <!-- end-of-container-header --> 
                                 <!-- New Users Joined-chart --> 
-                                <div id="messages"></div>
+                                <div class="outer-padding-div">
+                                    <div id="messages"></div>
+                                </div> 
+
                                 <!-- end-of-New Users Joined-chart --> 
                             </div>
                         </div>
@@ -193,16 +198,18 @@
                                 </div> 
                                 <!-- end-of-container-header --> 
                                 <!-- Ranking-chart -->  
-
-                                <div id="barcontainer"></div>
-                                <div class="barcontainer-ranking">
-                                    <div class="white-font">Ranking %</div>
-                                    <div class=""><span class="lowdiv"></span>1,5%</div>
-                                    <div class=""><span class="normal"></span>10,8%</div>
-                                    <div class=""><span class="above"></span> 5,8%</div> 
-                                    <div class=""><span class="high"></span> 11%</div> 
+                                <div class="outer-padding-div">
+                                    <div id="barcontainer"></div>
+                                    <div class="barcontainer-ranking">
+                                        <div class="white-font">Ranking %</div>
+                                        <div class=""><span class="lowdiv"></span>1,5%</div>
+                                        <div class=""><span class="normal"></span>10,8%</div>
+                                        <div class=""><span class="above"></span> 5,8%</div> 
+                                        <div class=""><span class="high"></span> 11%</div> 
+                                    </div>
+                                    <!-- end-of-Ranking-chart --> 
                                 </div>
-                                <!-- end-of-Ranking-chart --> 
+
                             </div>
 
                             <!--Watchlist-->
@@ -294,21 +301,22 @@
                                 <!-- end-of-container-header --> 
                                 <!-- pie-chart -->
                                 <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-center">   
-                                        <div id="piecontainer"></div>  
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12"> 
-                                        <div class="piechart-color pull-right">
+                                    <div class="outer-padding-div">
+                                        <div class="col-md-6 col-sm-6 col-xs-12 text-center pull-left">   
+                                            <div id="piecontainer"></div>   
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12  pull-right">  
+                                            <div class="piechart-color">
 
-                                            <div class=""><span class="lowdiv"></span>Low</div>
-                                            <div class=""><span class="normal"></span>Normal</div>
-                                            <div class=""><span class="above"></span>Above Average</div> 
-                                            <div class=""><span class="high"></span>High</div>
-                                            <div class=""><span class="very-high"></span>Very High</div>
-
+                                                <div class=""><span class="lowdiv"></span>Low</div>
+                                                <div class=""><span class="normal"></span>Normal</div>
+                                                <div class=""><span class="above"></span>Above Average</div> 
+                                                <div class=""><span class="high"></span>High</div>
+                                                <div class=""><span class="very-high"></span>Very High</div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> 
 
                                 <!-- end-of-pie-chart --> 
 
@@ -368,7 +376,7 @@
                             linearGradient: merge(perShapeGradient),
                             stops: [
                                 [0, 'rgb(119, 190, 255)'],
-                                [1, 'rgb(119, 180, 245)'] 
+                                [1, 'rgb(119, 180, 245)']
                             ]
                         }, {
                             linearGradient: merge(perShapeGradient),
