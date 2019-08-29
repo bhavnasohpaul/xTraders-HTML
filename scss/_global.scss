@@ -128,24 +128,28 @@ input[type="text"]
     color:#22c3aa !important;  
 }
 .white-font{
-    color:#fff !important;  
+    color:$white !important;   
 }
 .edit-icon {
     margin-left: 8px;
     font-size: 13px;
 }
+
+
+//chart-legand-color
 .normal{
-    background: #77beff;
+    background: $normal-bg-color;
 }
 .above{
-    background: #a096ff;
+    background: $above-bg-color;
 }
 .high{
-    background: #fee57d;
+    background: $high-bg-color;
 }
 .very-high{
-    background: #f06170;
+    background: $very-high-bg-color;
 }
+
 .search-container {
     display: none;
 }
