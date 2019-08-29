@@ -1,35 +1,75 @@
 // Variables
-$font-stack:'Nunito Sans', sans-serif;;
-$primary-color: #818e99;  
-$blue-background: #021c33; 
-$primary-bg-color: #22c3aa; 
-$border-color: #2c3a5f; 
-$content-border: #11293d;
-$container-border: #233249; 
-$nav-border: #979797; 
-$darkblue-bg-color: #182f44;   
-$lightblue-bg-color: #2d4254;  
-//font-weight-Variables 300,400,600,700,800
-$light-font:300;
-$regular-font:400;
-$bold-font:600; 
-$semibold-font:700;
-$extra-bold-font:800;
-$regular-font-size:14px;
+$font-stack:'Nunito Sans', sans-serif;
+
+
+
+@mixin text-color($color: primary) {
+  @if ($color == primary) {
+    color: red;
+  }
+
+  @if ($color == secondary) {
+    color: blue;
+  }
+}
+
+
+
 //common-color
 $white:    #fff;
 $black:    #000;
 $blue:    #031926;
+$red:    #f23658;
+$green:    #22c3aa;
+
+//Dark-version
+$primary-color: #818e99;  
+$blue-background: #021c33; 
+$primary-bg-color: #22c3aa; 
+$border-color: #2c3a5f; 
+$content-border: #11293d; 
+$navyblue: #233249; 
+$nav-border: #979797; 
+$darkblue-bg-color: #182f44;   
+$lightblue-bg-color: #2d4254;  
+
+
+.light-version{ 
+    $primary-color: #000;  
+$blue-background: #000; 
+$primary-bg-color: #000; 
+$border-color: #000; 
+$content-border: #fff; 
+$navyblue: #000; 
+$nav-border: #000; 
+$darkblue-bg-color: #000;   
+$lightblue-bg-color: #000;   
+}
+//chart-legand-color
+$normal-bg-color: #77beff; 
+$above-bg-color: #a096ff;
+$high-bg-color: #fee57d;
+$very-high-bg-color: #f06170;
+
+
+//font-weight-Variables 300,400,600,700,800
+$light-font:300;
+$regular-font:400; 
+$bold-font:600; 
+$semibold-font:700;
+$extra-bold-font:800;
+$regular-font-size:14px;
+
+
 // login-color
 $green-button-color:  #01dba2;
 $inut-form-color:#818c93;
 $fb-bg:#4267b2;
 $discord-bg:#7289da;
 $login-text-color: rgba(255, 255, 255, 0.5);
-$normal-bg-color: #77beff;
-$above-bg-color: #a096ff;
-$high-bg-color: #fee57d;
-$very-high-bg-color: #f06170;
+
+
+
 
 
 

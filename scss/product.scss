@@ -40,22 +40,24 @@
 @media screen and (max-width:1200px) { 
     .product-page{
         li {
-            list-style: none; 
-            color: #fff;
-            margin-bottom: 15px;
-            width: 100%;
-            float: left; 
+            margin-bottom: 0;
         }
         p {
             width: 100% !important;
-            float: left;
+            float: left; 
             margin-bottom:5px; 
         }
     } 
 }
 @media screen and (max-width:650px) {
     .product-page { 
+        .sidebar-nav{
+            .menu {
+                margin: 22px 24px;
+            }
+        }
         .header {
+            height: 110px;          
             .mobile-small-size{
                 display: block !important;  
                 .search-container{
@@ -70,9 +72,9 @@
                     height: 45px;
                     padding: 0 20px;
                     font-size: 1rem;
-                    border: 1px solid $container-border;
+                    border: 1px solid $navyblue; 
                     outline: none;
-                    background: $container-border; 
+                    background: $navyblue; 
                     color: $white;  
                     &:focus{
                         border: 1px solid $primary-bg-color;
@@ -103,7 +105,6 @@
             } 
         }
     }
-
 }
 @media screen and (max-width:580px) { 
     .product-page{
@@ -111,4 +112,4 @@
             margin: 8px 0px 20px;
         }
     } 
-}
+} 
