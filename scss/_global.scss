@@ -2,10 +2,14 @@ html {
     height: 100%;
 } 
 body {
-    font: 100% $font-stack;
-    color: $primary-color;  
-    background: $blue-background !important;
-    font-weight: $regular-font;  
+  background-color: var(--body-background) !important; 
+  color: var(--font-color);
+  font: 100% var(--font-stack);
+    color: var(--primary-color);  
+    font-weight: var(--regular-font);  
+}
+  #checkbox {
+    margin: 30px;
 }
 .font-family{
     font-family: 'DM Sans', sans-serif !important;
@@ -105,7 +109,7 @@ ul{
     padding: 0; 
 }
 a{outline: none;
- color: $primary-color  !important; 
+ color: var(--primary-color  !important); 
 }
 input[type="text"] 
 {
@@ -125,29 +129,29 @@ input[type="text"]
     color: #f23658 !important; 
 }
 .green-font{
-    color:#22c3aa !important;  
+    color:#22c3aa;  
 }
 .white-font{
-    color:$white !important;   
+    color:var(--white)!important;   
 }
 .edit-icon {
     margin-left: 8px;
-    font-size: 13px;
+    font-size: 13px; 
 }
 
 
 //chart-legand-color
 .normal{
-    background: $normal-bg-color;
+    background: var(--normal-bg-color);
 }
 .above{
-    background: $above-bg-color;
+    background: var(--above-bg-color);
 }
 .high{
-    background: $high-bg-color;
+    background: var(--high-bg-color);
 }
-.very-high{
-    background: $very-high-bg-color;
+.very-high{ 
+    background: var(--very-high-bg-color);
 }
 
 .search-container {
@@ -169,8 +173,6 @@ input[type="text"]
 .dropdown-menu.show {
     display: none;
 }
-
-
 
 
 /*@media (max-width:767px) {

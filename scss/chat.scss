@@ -9,41 +9,41 @@
         left: 0px;
         width: 520px;
         height: 275px;
-        background-color: $navyblue; 
+        background-color: var(--navyblue); 
         padding-bottom: 40px;
         .content{
             h2 {
                 margin: 40px 0px 30px;
                 display: inline-block;
-                color: $primary-bg-color;
+                color: var(--primary-bg-color);
                 font-size: 30px;
                 width: 100%;
-                font-weight: $extra-bold-font;
+                font-weight: var(--extra-bold-font);
             }
             p {
                 margin: 0px 0px 10px;
                 display: inline-block;
                 color: #aaadb3;
                 font-size: 14px;
-                font-weight: $regular-font;
+                font-weight: var(--regular-font);
             }
             h4 {
-                margin: 0px 0px 10px;
+                margin: 0px 0px 10px; 
                 display: inline-block;
-                color: $white;
+                color: var(--white);
                 font-size: 14px;
-                text-transform: uppercase;
+                text-transform: uppercase; 
                 width: 100%;
             }
             .chat-btn {
-                background: $primary-bg-color;
-                border: 1px solid $primary-bg-color;
-                color:$white;
+                background: var(--primary-bg-color);
+                border: 1px solid var(--primary-bg-color);
+                color:var(--white);
                 padding: 7px 30px;
                 margin: 20px 0px 0px;
                 text-transform: uppercase;
                 font-size: 14px;
-                font-weight:  $extra-bold-font;
+                font-weight:  var(--extra-bold-font);
             }
         }
     } 
@@ -84,7 +84,7 @@
 @media screen and (max-width:350px) {
     .chat-page{
         .center-div {
-            top: 50px;
+            top: 50px; 
             right: -8px;
             width: auto;
         }

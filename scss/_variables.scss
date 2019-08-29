@@ -1,76 +1,86 @@
 // Variables
-$font-stack:'Nunito Sans', sans-serif;
-
-
-
-@mixin text-color($color: primary) {
-  @if ($color == primary) {
-    color: red;
-  }
-
-  @if ($color == secondary) {
-    color: blue;
-  }
-}
-
-
-
-//common-color
-$white:    #fff;
-$black:    #000;
-$blue:    #031926;
-$red:    #f23658;
-$green:    #22c3aa;
-
-//Dark-version
-$primary-color: #818e99;  
-$blue-background: #021c33; 
-$primary-bg-color: #22c3aa; 
-$border-color: #2c3a5f; 
-$content-border: #11293d; 
-$navyblue: #233249; 
-$nav-border: #979797; 
-$darkblue-bg-color: #182f44;   
-$lightblue-bg-color: #2d4254;  
-
-
-.light-version{ 
-    $primary-color: #000;  
-$blue-background: #000; 
-$primary-bg-color: #000; 
-$border-color: #000; 
-$content-border: #fff; 
-$navyblue: #000; 
-$nav-border: #000; 
-$darkblue-bg-color: #000;   
-$lightblue-bg-color: #000;   
-}
-//chart-legand-color
-$normal-bg-color: #77beff; 
-$above-bg-color: #a096ff;
-$high-bg-color: #fee57d;
-$very-high-bg-color: #f06170;
-
-
-//font-weight-Variables 300,400,600,700,800
-$light-font:300;
-$regular-font:400; 
-$bold-font:600; 
-$semibold-font:700;
-$extra-bold-font:800;
-$regular-font-size:14px;
-
-
-// login-color
-$green-button-color:  #01dba2;
-$inut-form-color:#818c93;
-$fb-bg:#4267b2;
-$discord-bg:#7289da;
-$login-text-color: rgba(255, 255, 255, 0.5);
-
-
-
-
-
-
+:root {
+    --primary-color: #818e99;  
+    --body-background: #021c33; 
+    --sidebar-wrapper-bg:#112943;
+    --primary-bg-color: #22c3aa; 
+    --border-color: #2c3a5f; 
+    --content-border: #11293d; 
+    --con-header: #233249; 
+    --container-subheading:#fff;
+    --navyblue: #233249; 
+    --nav-border: #979797; 
+    --darkblue-bg-color: #182f44;   
+    --lightblue-bg-color: #2d4254; 
+    --font-color: #2d4254;
+    --lightgreen:#22c3aa;
+    --ellipsis-color:#fff;
+    --heading-color:#fff;
+    --tab-active-color:#fff;
+    //chart-js-color
+    --chart-bg-color:#021c33; 
+    --chartgridLineColor:#33393f;
+    --bar-chartgridLineColor:#203547;
+    --bar-label-Color:#fff;
+    --chart-series-Color:#22c3aa;
+    --bar-strip-label-Color:rgb(36, 199, 175);
+    --chart-tooltip-background-Color:rgba(35, 50, 73, 1);
+    --chart-tooltip-border-Color:rgba(35, 50, 73, 1);
+    --chart-tooltip-text-Color:#fff;
+    //common-color
+    --white:    #fff;
+    --black:    #000;
+    --dark-blue:    #031926; 
+    --red:    #f23658;
+    --green:    #22c3aa; 
+    //font-weight-Variables 300,400,600,700,800
+    --light-font:300;
+    --regular-font:400; 
+    --bold-font:600; 
+    --semibold-font:700;
+    --extra-bold-font:800;
+    --regular-font-size:14px;
+    //chart-legand-color
+    --normal-bg-color: #77beff; 
+    --above-bg-color: #a096ff;
+    --high-bg-color: #fee57d;
+    --very-high-bg-color: #f06170;
+    // login-color
+    --green-button-color:  #01dba2;
+    --inut-form-color:#818c93;
+    --fb-bg:#4267b2;
+    --discord-bg:#7289da;
+    --login-text-color: rgba(255, 255, 255, 0.5);
+} 
+// Variables
+:root[data-theme="dark"] {
+    --primary-color: #808d99;   
+    --body-background: #efefef; 
+    --sidebar-wrapper-bg:#fff;
+    --primary-bg-color: #22c3aa;
+    --container-subheading:#acb4bb;
+    --border-color: #d6d6d6;  
+    --content-border: #f4f4f4; 
+    --con-header: #fff; 
+    --navyblue: #d6d6d6; 
+    --nav-border: #d6d6d6; 
+    --darkblue-bg-color: #fff;   
+    --lightblue-bg-color: #dddddd; 
+    --font-color: #2d4254;
+    --lightgreen:#358bdc;
+    --ellipsis-color:#bfc6cc;
+    --heading-color:#a6aeb5;
+    --tab-active-color:#a6aeb5;
+    --chart-bg-color:#efefef !important; 
+    --white:    #a6aeb5;
+    //chart-js-color
+    --chartgridLineColor:#dddddd;
+    --chart-series-Color:#358bdc;
+    --bar-chartgridLineColor:#dddddd;
+    --bar-label-Color:#808d99;
+    --bar-strip-label-Color:rgb(73, 141, 206);
+    --chart-tooltip-background-Color:#fff; 
+    --chart-tooltip-border-Color:#fff;
+    --chart-tooltip-text-Color:#808d99;
+} 
 
