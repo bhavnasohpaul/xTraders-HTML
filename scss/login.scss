@@ -8,14 +8,14 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    display: inline-block;
+    display: inline-block; 
     overflow: auto;
     .container {
         margin-top: 90px; 
         width: 90%;
         max-width: 500px;
-        padding: 40px 55px;
-        background: $blue;
+        padding: 40px 55px;  
+        background: var(--dark-blue);
         border-radius: 4px;
         .logo {
             max-width: 100%; 
@@ -27,58 +27,58 @@
             }
         }
         .text, p, a {
-            color: $login-text-color; 
+            color: var(--login-text-color); 
             text-align: center;
             margin-bottom: 15px;
             font-size: 15px;
-            font-weight: $regular-font;
+            font-weight: var(--regular-font);
             line-height: 22px;
         } 
         .input-layout{
             padding: 0px 35px; 
             .inut-form { 
-                background-color: $blue;
-                border: 2px solid $inut-form-color;
-                color: $white; 
+                background-color: var(--dark-blue); 
+                border: 2px solid var(--inut-form-color);
+                color: var(--white); 
                 outline: none;
                 border-radius: 4px;
                 padding: 1.1rem .9rem;
                 font-size: 1rem;
                 width: 100%;
                 &:hover {
-                    border: 2px solid $green-button-color;
+                    border: 2px solid var(--green-button-color);
                 }
             }
         }
         .button {
-            background: $green-button-color;
+            background: var(--green-button-color);
             padding: 1.1rem .9rem; 
             font-size: 1rem; 
             width: 100%;
             border: none;
             border-radius: 4px;
-            color: $white;
+            color: var(--white);
             font-size: 16px;
-            font-weight: $regular-font;
+            font-weight: var(--regular-font);
         } 
         .account-text {
-            color: $green-button-color;
+            color: var(--green-button-color);
 
         }
         .blue-text {
-            color: $green-button-color ! important;
+            color: var(--green-button-color ! important);
         }       
         .social-login-btns {
             button {
                 border: none;
-                color: $white;
+                color: var(--white);
                 background: #5a53ac;
                 border: 2px solid transparent;
                 border-radius: 4px;
                 padding: .7rem 1rem;
                 min-width: 6rem;
                 font-size: .85rem;
-                font-weight: $semibold-font;
+                font-weight: var(--semibold-font);
                 cursor: pointer;
                 outline: none;
                 align-items: center;
@@ -86,13 +86,13 @@
                 margin: 0px 5px 20px;
             }
             .google {
-                background: $white;
+                background: var(--white);
             }
             .fb {
-                background: $fb-bg;
+                background: var(--fb-bg);
             }
             .discord {
-                background-color: $discord-bg;
+                background-color: var(--discord-bg);
             } 
         }
 
@@ -105,13 +105,13 @@
         margin: 0px auto;
         .google-text {
             color: #000;
-            font-size: $regular-font-size;   
+            font-size: var(--regular-font-size);   
         }
         .fb-text {
-            font-size: $regular-font-size;   
+            font-size: var(--regular-font-size);   
         }
         .discord-text {
-            font-size: $regular-font-size;   
+            font-size: var(--regular-font-size);   
         }
     }  
 }
