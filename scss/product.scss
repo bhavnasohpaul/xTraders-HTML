@@ -8,10 +8,33 @@
                 }
             } 
             .container {
+                .elite-bg {
+                    background:var(--elite-bg) !important; 
+                } 
+                .gold-bg {
+                    background:var(--gold-bg) !important; 
+                }
+                .platinum-bg {
+                    background:var(--platinium-bg) !important; 
+                }
                 p {
-                    width: 92%;
                     float: left;
-                    margin-bottom: 15px;
+                    width: calc(100% - 160px); 
+                }
+                .right-div{ 
+                    width: 160px;
+                    float: right;
+                    text-align: right;
+                    .size {
+                        text-align: left;
+                        font-size: 15px;
+                        color: var(--primary-color); 
+                    }
+                    .badge-button {
+                        margin-left: 10px !important;
+                        margin-bottom: 10px;
+                        border: none;
+                    } 
                 }
                 .product-tabs, .sec-tabs{
                     display: inline-block;
@@ -36,20 +59,8 @@
     }
 }
 
-
-@media screen and (max-width:1200px) { 
-    .product-page{
-        li {
-            margin-bottom: 0;
-        }
-        p {
-            width: 100% !important;
-            float: left; 
-            margin-bottom:5px; 
-        }
-    } 
-}
-@media screen and (max-width:650px) {
+/*Responsive-scss-*/
+@media screen and (max-width:650px) { 
     .product-page { 
         .sidebar-nav{
             .menu {
@@ -106,10 +117,16 @@
         }
     }
 }
-@media screen and (max-width:580px) { 
-    .product-page{
-        p {
-            margin: 8px 0px 20px;
+@media screen and (max-width:520px) { 
+    .product-page #page-content-wrapper .page-contents .container{
+        .right-div {
+            width: 100%; 
+            margin-bottom: 15px;
         }
-    } 
-} 
+        p {
+            width: 100%;
+            margin-bottom: 4px;
+            text-align: justify
+        }
+    }
+}

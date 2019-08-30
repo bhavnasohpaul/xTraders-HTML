@@ -2,15 +2,13 @@ html {
     height: 100%;
 } 
 body {
-  background-color: var(--body-background) !important; 
-  color: var(--font-color);
-  font: 100% var(--font-stack);
+    background-color: var(--body-background) !important; 
+    color: var(--font-color);
+    font: 100% var(--font-stack);
     color: var(--primary-color);  
     font-weight: var(--regular-font);  
 }
-  #checkbox {
-    margin: 30px;
-}
+//General-scss 
 .font-family{
     font-family: 'DM Sans', sans-serif !important;
 }
@@ -19,78 +17,80 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box; 
 } 
+//font-scss
 @font-face {
     font-family: 'DMSansRegular';
     src: url('../fonts/DMSansRegular.eot');
     src: url('../fonts/DMSansRegular.eot') format('embedded-opentype'),
-         url('../fonts/DMSansRegular.woff2') format('woff2'),
-         url('../fonts/DMSansRegular.woff') format('woff'),
-         url('../fonts/DMSansRegular.ttf') format('truetype'),
-         url('../fonts/DMSansRegular.svg#DMSansRegular') format('svg');
+        url('../fonts/DMSansRegular.woff2') format('woff2'),
+        url('../fonts/DMSansRegular.woff') format('woff'),
+        url('../fonts/DMSansRegular.ttf') format('truetype'),
+        url('../fonts/DMSansRegular.svg#DMSansRegular') format('svg');
 }
 @font-face {
     font-family: 'NunitoSansBold';
     src: url('../fonts/NunitoSansBold.eot');
     src: url('../fonts/NunitoSansBold.eot') format('embedded-opentype'),
-         url('../fonts/NunitoSansBold.woff2') format('woff2'),
-         url('../fonts/NunitoSansBold.woff') format('woff'),
-         url('../fonts/NunitoSansBold.ttf') format('truetype'),
-         url('../fonts/NunitoSansBold.svg#NunitoSansBold') format('svg');
+        url('../fonts/NunitoSansBold.woff2') format('woff2'),
+        url('../fonts/NunitoSansBold.woff') format('woff'),
+        url('../fonts/NunitoSansBold.ttf') format('truetype'),
+        url('../fonts/NunitoSansBold.svg#NunitoSansBold') format('svg');
 }
 @font-face {
     font-family: 'NunitoSansLight';
     src: url('../fonts/NunitoSansLight.eot');
     src: url('../fonts/NunitoSansLight.eot') format('embedded-opentype'),
-         url('../fonts/NunitoSansLight.woff2') format('woff2'),
-         url('../fonts/NunitoSansLight.woff') format('woff'),
-         url('../fonts/NunitoSansLight.ttf') format('truetype'),
-         url('../fonts/NunitoSansLight.svg#NunitoSansLight') format('svg');
+        url('../fonts/NunitoSansLight.woff2') format('woff2'),
+        url('../fonts/NunitoSansLight.woff') format('woff'),
+        url('../fonts/NunitoSansLight.ttf') format('truetype'),
+        url('../fonts/NunitoSansLight.svg#NunitoSansLight') format('svg');
 }
 @font-face {
     font-family: 'NunitoSansRegular';
     src: url('../fonts/NunitoSansRegular.eot');
     src: url('../fonts/NunitoSansRegular.eot') format('embedded-opentype'),
-         url('../fonts/NunitoSansRegular.woff2') format('woff2'),
-         url('../fonts/NunitoSansRegular.woff') format('woff'),
-         url('../fonts/NunitoSansRegular.ttf') format('truetype'),
-         url('../fonts/NunitoSansRegular.svg#NunitoSansRegular') format('svg');
+        url('../fonts/NunitoSansRegular.woff2') format('woff2'),
+        url('../fonts/NunitoSansRegular.woff') format('woff'),
+        url('../fonts/NunitoSansRegular.ttf') format('truetype'),
+        url('../fonts/NunitoSansRegular.svg#NunitoSansRegular') format('svg');
 }
 @font-face {
     font-family: 'NunitoSansSemiBold';
     src: url('../fonts/NunitoSansSemiBold.eot');
     src: url('../fonts/NunitoSansSemiBold.eot') format('embedded-opentype'),
-         url('../fonts/NunitoSansSemiBold.woff2') format('woff2'),
-         url('../fonts/NunitoSansSemiBold.woff') format('woff'),
-         url('../fonts/NunitoSansSemiBold.ttf') format('truetype'),
-         url('../fonts/NunitoSansSemiBold.svg#NunitoSansSemiBold') format('svg');
+        url('../fonts/NunitoSansSemiBold.woff2') format('woff2'),
+        url('../fonts/NunitoSansSemiBold.woff') format('woff'),
+        url('../fonts/NunitoSansSemiBold.ttf') format('truetype'),
+        url('../fonts/NunitoSansSemiBold.svg#NunitoSansSemiBold') format('svg');
 }
 @font-face {
     font-family: 'NunitoSansSemiBoldItalic';
     src: url('../fonts/NunitoSansSemiBoldItalic.eot');
     src: url('../fonts/NunitoSansSemiBoldItalic.eot') format('embedded-opentype'),
-         url('../fonts/NunitoSansSemiBoldItalic.woff2') format('woff2'),
-         url('../fonts/NunitoSansSemiBoldItalic.woff') format('woff'),
-         url('../fonts/NunitoSansSemiBoldItalic.ttf') format('truetype'),
-         url('../fonts/NunitoSansSemiBoldItalic.svg#NunitoSansSemiBoldItalic') format('svg');
+        url('../fonts/NunitoSansSemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/NunitoSansSemiBoldItalic.woff') format('woff'),
+        url('../fonts/NunitoSansSemiBoldItalic.ttf') format('truetype'),
+        url('../fonts/NunitoSansSemiBoldItalic.svg#NunitoSansSemiBoldItalic') format('svg');
 }
 @font-face {
     font-family: 'DMSansBold';
     src: url('../fonts/DMSansBold.eot');
     src: url('../fonts/DMSansBold.eot') format('embedded-opentype'),
-         url('../fonts/DMSansBold.woff2') format('woff2'),
-         url('../fonts/DMSansBold.woff') format('woff'),
-         url('../fonts/DMSansBold.ttf') format('truetype'),
-         url('../fonts/DMSansBold.svg#DMSansBold') format('svg');
+        url('../fonts/DMSansBold.woff2') format('woff2'),
+        url('../fonts/DMSansBold.woff') format('woff'),
+        url('../fonts/DMSansBold.ttf') format('truetype'),
+        url('../fonts/DMSansBold.svg#DMSansBold') format('svg');
 }
 @font-face {
     font-family: 'DMSansMedium';
     src: url('../fonts/DMSansMedium.eot');
     src: url('../fonts/DMSansMedium.eot') format('embedded-opentype'),
-         url('../fonts/DMSansMedium.woff2') format('woff2'),
-         url('../fonts/DMSansMedium.woff') format('woff'),
-         url('../fonts/DMSansMedium.ttf') format('truetype'),
-         url('../fonts/DMSansMedium.svg#DMSansMedium') format('svg');
+        url('../fonts/DMSansMedium.woff2') format('woff2'),
+        url('../fonts/DMSansMedium.woff') format('woff'),
+        url('../fonts/DMSansMedium.ttf') format('truetype'),
+        url('../fonts/DMSansMedium.svg#DMSansMedium') format('svg');
 }
+//common-scss
 .no-padding{
     padding: 0px;
 }
@@ -102,14 +102,13 @@ body {
 }
 li{
     list-style: none;
-    color: #fff;
 }
 ul{
     margin: 0;
     padding: 0; 
 }
 a{outline: none;
- color: var(--primary-color  !important); 
+  color: var(--primary-color  !important); 
 }
 input[type="text"] 
 {
@@ -118,18 +117,20 @@ input[type="text"]
 .button:focus {
     outline: none;
 }
+#checkbox {
+    margin: 30px;
+}
 #wrapper.active {
     padding-left: 180px;
 }
 #wrapper.active #sidebar-wrapper {
     left: 180px;
 }
-
+button:focus {
+    outline: none !important; 
+}
 .red-font{
     color: #f23658 !important; 
-}
-.green-font{
-    color:#22c3aa;  
 }
 .white-font{
     color:var(--white)!important;   
@@ -138,9 +139,24 @@ input[type="text"]
     margin-left: 8px;
     font-size: 13px; 
 }
-
-
-//chart-legand-color
+.yellowish{
+    color:var(--yellowish-color)!important;
+}
+.green-font{
+    color:var(--green-color)!important;
+}
+//chart-scss
+#container, #messages{ 
+    .highcharts-point {
+        display: none;
+    }
+}
+.highcharts-point.highcharts-point-hover {
+    display: block !important;
+}
+.dropdown-menu.show {
+    display: none;
+}
 .normal{
     background: var(--normal-bg-color);
 }
@@ -153,26 +169,69 @@ input[type="text"]
 .very-high{ 
     background: var(--very-high-bg-color);
 }
-
+//search-styles
+.fa.fa-search {
+    color: var(--primary-color);
+}
 .search-container {
     display: none;
 }
 .dropdown-menu {
     display: none !important;
 } 
-#container, #messages{ 
-    .highcharts-point {
+//chart-legand-color
+html.dark span.sub_icon.light-icon {
     display: none;
-}
+} 
+html.light span.sub_icon.dark-icon { 
+    display: none;
+}  
+
+html.dark span.sub_icon.light-icon{
+
 }
 
-.highcharts-point.highcharts-point-hover {
-    display: block !important;
+
+html.dark {
+    .light-icon{
+        display: block;
+    } 
+    .dark-icon {
+        display: none;
+    } 
 }
 
-.dropdown-menu.show {
-    display: none;
+html.light {
+     
+    .dark-icon {
+        display: none;
+    } 
+    .light-icon{
+        display: block;
+    } 
 }
+
+html.dark {
+    span.sub_icon.light-icon{
+        display: block;
+    } 
+    span.sub_icon.dark-icon {
+        display: none;
+    } 
+}
+
+html.light {
+    span.sub_icon.light-icon{
+        display: block;
+    } 
+    span.sub_icon.dark-icon {
+        display: none;
+    } 
+}
+
+
+
+
 
 
 /*@media (max-width:767px) {
