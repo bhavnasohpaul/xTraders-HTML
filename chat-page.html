@@ -17,14 +17,28 @@
             <div id="sidebar-wrapper">
                 <!-- sidebar_menu -->
                 <div id="sidebar_menu" class="sidebar-nav">
-                    <div class="sidebar-brand"><a id="menu-toggle" href="#"><img src="assets/images/dashboard-icon/menu.png" alt="icon" class="menu"/></a></div>  
+                    <div class="sidebar-brand"><a id="menu-toggle" href="#">
+                            <img src="assets/images/dashboard-icon/menu.png" alt="icon" class="menu dark-icon"/>
+                            <img src="assets/images/dashboard-icon/menu-light.png" alt="icon" class="menu light-icon"/></a></div> 
                 </div>
-                <!-- sidebar-nav -->
+                <!-- sidebar-nav --> 
                 <ul class="sidebar-nav" id="sidebar">     
-                    <li><a href="home-page.html">Dashboard<span class="sub_icon"><img src="assets/images/dashboard-icon/grid.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
-                    <li><a href="product-page.html">link2<span class="sub_icon"><img src="assets/images/dashboard-icon/award.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
-                    <li><a href="chat.html">Join Chat<span class="sub_icon"><img src="assets/images/dashboard-icon/film_hover.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
-                    <li><a href="login.html">link4<span class="sub_icon"><img src="assets/images/dashboard-icon/user.png" alt="icon" class="l-sidebar-icon"/></span></a></li>
+                    <li><a href="home-page.html">Dashboard
+                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/grid_hover.png" alt="icon" class="l-sidebar-icon"/></span>
+                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/grid-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                        </a></li>
+                    <li><a href="product-page.html">Product
+                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/award.png" alt="icon" class="l-sidebar-icon"/></span>
+                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/award-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                        </a></li>
+                    <li><a href="chat-page.html">Join Chat 
+                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/film.png" alt="icon" class="l-sidebar-icon"/></span>
+                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/film-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                        </a></li>
+                    <li><a href="login.html">link4
+                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/user.png" alt="icon" class="l-sidebar-icon"/></span>
+                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/user-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                        </a></li>
                 </ul> 
             </div>  
             <!-- end-of-sidebar-wrapper -->
@@ -35,6 +49,12 @@
                 <header class="header">
                     <div class="header-inner clearfix">
                         <h1 class="heading">Join Chat</h1>
+                        <div class="theme-switch-wrapper mt-3">
+                            <label class="theme-switch" for="checkbox"> 
+                                <input type="checkbox" id="checkbox" />
+                                <div class="slider round"></div>
+                            </label>
+                        </div> 
                         <div class="header-icons-group">
                             <form action="" class="search-form desktop"> 
                                 <div class="form-group has-feedback">
@@ -92,6 +112,41 @@
                         $("#wrapper").toggleClass("active");
                     });
                 });
+            </script>
+            <script>
+                const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+                const currentTheme = localStorage.getItem('theme');
+
+                if (currentTheme) {
+                    document.documentElement.setAttribute('data-theme', currentTheme);
+
+                    if (currentTheme === 'dark') {
+                        toggleSwitch.checked = true;
+                    }
+                }
+
+                //add class to html tag
+                $('html').addClass('dark');
+                $("#checkbox").prop("checked", false);
+                function switchTheme(e) {
+                    if ($('html').hasClass('dark')) {
+                        $('html').addClass('light');
+                        $('html').removeClass('dark');
+                    } else {
+                        $('html').addClass('dark');
+                        $('html').removeClass('light');
+                    }
+
+                    if (e.target.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        document.documentElement.addClass('data-theme');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.setAttribute('data-theme', 'light');
+                        localStorage.setItem('theme', 'light');
+                    }
+                }
+                toggleSwitch.addEventListener('change', switchTheme, false);
             </script>
     </body>
 </html>

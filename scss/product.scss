@@ -19,10 +19,11 @@
                 }
                 p {
                     float: left;
-                    width: calc(100% - 160px); 
-                }
+                    width: calc(100% - 190px);
+                    color: var(--heading-color);              
+                } 
                 .right-div{ 
-                    width: 160px;
+                    width: 190px;
                     float: right;
                     text-align: right;
                     .size {
