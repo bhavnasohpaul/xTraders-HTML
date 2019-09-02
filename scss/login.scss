@@ -116,28 +116,28 @@
     }  
 }
 /*Responsive-style*/
-@media only screen and (max-width: 767px) {
-    .login {
+@media only screen and (max-width: 1200px) {
+    .login { 
         .container {
             margin-top: 50px;
-            padding: 40px;
+            padding: 30px 20px;
+            max-width: 400px;  
             .logo {
                 max-width: 320px; 
             }
             .input-layout {
                 padding: 0;
-                max-width: 320px;
                 margin: 0px auto;
             }
         }
 
     }
 }
-@media only screen and (max-width: 580px) {
+/*@media only screen and (max-width: 580px) {
     .login {
         .container {
             margin-top: 50px;
-            padding: 25px;
+            padding: 20px;
             .input-layout {
                 padding: 0;
             }
@@ -156,4 +156,4 @@
             }
         }
     } 
-}  
+}  */

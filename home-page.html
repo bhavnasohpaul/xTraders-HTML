@@ -3,7 +3,7 @@
     <head>
         <!-- Mobile Specific Meta -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">			
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Site Title -->
         <title> Crypto Traders </title>			
         <!--  font-css  -->
@@ -81,11 +81,11 @@
                         <div class="col-md-6 col-sm-12">                            
                             <div class="container">
                                 <div class="container-header">
-                                    <div class="header-div">
+                                    <div class="header-div"> 
                                         <h2>Member status</h2>
                                     </div>
 
-                                    <div class="nav-item dropdown header-right-items">
+                                    <div class="nav-item dropdow1  header-right-items">
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
                                         </a>
@@ -119,7 +119,7 @@
                                             </ul>
 
                                             <ul class="content"> 
-                                                <li>Commissions Rate<span class="text-li">30%</span></li>
+                                                <li>Commissions Rate<span class="text-li">30%</span></li> 
                                                 <li>Commissions Level<span class="text-li">4/5</span></li>
                                                 <li>Next Rate<span class="text-li">40%</span></li>
                                             </ul>
@@ -144,7 +144,7 @@
                                         <h2>Charts</h2>
                                     </div>
 
-                                    <div class="nav-item dropdown header-right-items">
+                                    <div class="nav-item dropdow1  header-right-items">
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
                                         </a>
@@ -187,7 +187,7 @@
                                     <div class="header-div">
                                         <h2>My Achievements</h2>
                                     </div>
-                                    <div class="nav-item dropdown header-right-items">
+                                    <div class="nav-item dropdow1  header-right-items">
                                         <span class="badge badge-secondary leaderboard">view leaderboard</span>
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
@@ -223,7 +223,7 @@
                                     <div class="header-div">
                                         <h2>Watchlist</h2>
                                     </div>
-                                    <div class="nav-item dropdown header-right-items">
+                                    <div class="nav-item dropdow1  header-right-items">
                                         <span class="badge badge-secondary leaderboard">Add To Watchlist</span>
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
@@ -290,7 +290,7 @@
                                     <div class="header-div">
                                         <h2>Market Volatility</h2>
                                     </div>
-                                    <div class="nav-item dropdown header-right-items">
+                                    <div class="nav-item dropdow1  header-right-items">
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
                                         </a>
@@ -343,6 +343,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
         <!--solid-gaugejs-->
         <script src="https://code.highcharts.com/highcharts-more.js"></script>
         <script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
@@ -358,7 +359,14 @@
                     e.preventDefault();
                     $("#wrapper").toggleClass("active");
                 });
-            });
+           
+            
+            jQuery(document).ready(function($) {
+    $('.dropdown-menu a').click(function(){ 
+        $(this).find('.dropdown-menu').toggle(); 
+    });
+});
+ });
         </script>
 
         <!--bar-chart-js--> 
@@ -423,7 +431,16 @@
                             gridLineColor: 'var(--bar-chartgridLineColor) ',
                             title: {
                                 text: '',
+                            },
+                            labels: {
+                                style: {
+                                    color: 'var(--bar-label-Color-y-axis)'
+                                }
                             }
+                        },
+
+                        legend: {
+                            shadow: true
                         },
 
                         plotOptions: {
@@ -449,7 +466,13 @@
                                         y: 181.94,
                                         color: colors[3]
                                     }],
-                            }],
+                                shadow: {
+                                    color: new Highcharts.Color('#eef1f3').setOpacity('0.4').get(),
+                                    width: 10,
+                                    offsetX: 0, 
+                                    offsetY: 0
+                                },
+                            }], 
 
                         tooltip: {
                             outside: true,
@@ -473,7 +496,8 @@
         </script> 
 
         <!--users-line-chart-js -->
-        <script>
+    
+               <script>
             Highcharts.chart('users', {
                 chart: {
                     type: 'spline',
@@ -525,7 +549,12 @@
                     gridLineColor: 'var(--chartgridLineColor)',
                     title: {
                         text: '',
-                    }
+                    },
+                    labels: {
+                                style: {
+                                    color: 'var(--bar-label-Color-y-axis)'
+                                }
+                            }
                 },
                 plotOptions: {
                     line: {
@@ -553,8 +582,9 @@
                         data: [0, 5, 0.5, 20.5, 18.4, 10.5, 25.2],
                     }]
             });
+            
         </script>
-
+ 
         <!--Messages-line-chart-js -->
         <script>
             Highcharts.chart('messages', {
@@ -608,7 +638,11 @@
                     gridLineColor: 'var(--chartgridLineColor)',
                     title: {
                         text: '',
-                    }
+                    },labels: {
+                                style: {
+                                    color: 'var(--bar-label-Color-y-axis)'
+                                }
+                            }
                 },
                 plotOptions: {
                     line: {
