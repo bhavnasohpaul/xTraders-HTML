@@ -24,7 +24,7 @@
     --elite-bg:#1a3349; 
     --gold-bg:#5c4c0b; 
     --platinium-bg:#414d5a;
-    --progress-box-shadow: #C80000; 
+    --progress-box-shadow: #C80000;  
 
     //chart-js-color 
     --chart-bg-color:#021c33; 
@@ -63,9 +63,14 @@
     --discord-bg:#7289da;
     --login-text-color: rgba(255, 255, 255, 0.5);
     --chat-btn:#fff; 
+    // leaderboard page-color
+    --table-green-bg:  #22c3aa;
+    --table-red-bg:#f06170;
+    --table-bottom-border-color:#203547;
+    --select-border:#fff;
 } 
 // Variables
-:root[data-theme="dark"] {
+:root[data-theme="dark"] { 
     --primary-color: #808d99;   
     --body-background: #efefef; 
     --sidebar-wrapper-bg:#fff;
@@ -97,4 +102,6 @@
     --bar-label-Color-y-axis:#b7bec4;
     --chart-tooltip-text-Color:#808d99;
     --barchart-shadow-color:#eef1f3; 
-}
+    --table-bottom-border-color:#dddddd;
+    --select-border:#dddddd;
+} 
