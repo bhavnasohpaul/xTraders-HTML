@@ -1,6 +1,6 @@
 /*wrapper-page-scss-*/
 body{
-     background-color: var(--body-background); 
+    background-color: var(--body-background); 
 }
 #wrapper {
     padding-left: 70px;
@@ -69,8 +69,9 @@ body{
             .heading { 
                 font-size: 22px;
                 color: var(--heading-color);
-                margin-left: 30px;
+                margin-left: 45px;
                 margin-top: 10px;
+                font-weight: var(--bold-font);
             }
             .header-icons-group {
                 display: flex;
@@ -249,15 +250,14 @@ body{
                     margin: 40px;
                     .progress { 
                         background-color: var(--lightblue-bg-color); 
-                        border-radius: 50px;
-                        margin-bottom: 40px;                       
-                        .progress-bar{
-                            box-shadow: 5px 1px 11px rgba(34,195,170,.2); 
-                            -webkit-box-shadow: 5px 1px 11px rgba(34,195,170,.2);
-                            -moz-box-shadow: 5px 1px 11px rgba(34,195,170,.2);
-                        }
+                        border-radius: 50px; 
+                        margin-bottom: 40px;  
                         .bg-blue{ 
                             background: var(--lightgreen); 
+                            box-shadow: 5px 1px 11px rgba(34,195,170,.5); 
+                            -webkit-box-shadow: 5px 1px 11px rgba(34,195,170,.5);
+                            -moz-box-shadow: 5px 1px 11px rgba(34,195,170,.5);
+                            border-radius: 90px;
                         }
                     }
 
@@ -265,6 +265,9 @@ body{
                         color:var(--white);
                         font-size: 20px;
                         margin: 20px 0px; 
+                        .heading-text {
+                            margin-top: 4px;
+                        }
                         .text {
                             float: right;
                             font-size: 30px;
@@ -279,7 +282,9 @@ body{
                             font-size: 14px; 
                             margin: 10px 0px;
                             font-weight: var(--regular-font);
-                            color: var(--primary-color); 
+                            color:  var(--navli-font-color);
+                            width: 100%;
+                            display: inline-block;
                             .text-li {
                                 color:var(--white); 
                                 float: right;
@@ -292,7 +297,8 @@ body{
                         background-color: var(--lightgreen);
                         margin-left: 20px;
                         text-transform: uppercase;
-                        padding-top: 4px;  
+                        border: none;
+                        padding: 7px 9px 6px;   
                         font-size: 12px;
                     }
                     .nav-tabs {
@@ -310,15 +316,16 @@ body{
                         li{
                             text-decoration: none;
                             width: 50%;
-                            text-align: center; 
+                            text-align: center;  
                             padding-bottom: 0px;
-                            color: var(--primary-color); 
+                            color:  var(--navli-font-color); 
                             a {
                                 text-decoration: none;
                                 border: none;
                                 font-size: 14px;
                                 font-weight: var(--semibold-font);
-                                color: var(--primary-color);  
+                                color:  var(--navli-font-color); 
+                                text-transform: uppercase;
                             }
                         }
                     }
@@ -445,6 +452,16 @@ body{
         }
     }
 }
+@media screen and (max-width:1200px) { 
+    #wrapper #page-content-wrapper .page-contents .barcontainer-ranking {
+        width: auto;
+        height: auto;
+        margin: 10px;
+        ranking div {
+            margin-bottom: 10px;
+        }
+    }
+}
 @media only screen and (max-width: 1100px) and (min-width: 767px) {
     #wrapper { 
         #page-content-wrapper {
@@ -460,7 +477,7 @@ body{
                     .tabs {
                         h3 {
                             .text {
-                                font-size: 18px;
+                                font-size: 25px;
                             }
                             font-size: 16px;
                         }
@@ -503,6 +520,7 @@ body{
         }
     }
 }
+
 @media only screen and (max-width: 880px) and (min-width: 767px){
     #wrapper {
         #page-content-wrapper {
@@ -545,7 +563,7 @@ body{
                     }
                 }
                 .heading {
-                    margin-left: 10px;
+                    margin-left: 15px;
                     font-size: 20px;
                 }
             }
@@ -553,7 +571,7 @@ body{
         #page-content-wrapper {
             .page-contents {
                 padding: 15px !important;
-                margin-top: 15px;
+                margin-top: 0px;
                 .container {
                     max-width: 100% !important;
                     .outer-padding-div, .outer-padding-div-pie-chart {
@@ -582,7 +600,7 @@ body{
         height: 100%;
         .sidebar-nav{
             .menu { 
-                margin: 30px 10px;
+                margin: 30px 12px !important;
                 width: 16px;
             } 
         }  
@@ -593,7 +611,7 @@ body{
         }
         .sidebar-nav {
             .sub_icon {
-                padding-right: 8px;
+                padding-right:9px !important;
                 .l-sidebar-icon {
                     width: 23px;
                 }
@@ -604,6 +622,7 @@ body{
 @media screen and (max-width:580px) { 
     #wrapper {
         .header {
+            height: 110px; 
             .header-inner {
                 .header-icons-group {
                     .user {
@@ -617,7 +636,7 @@ body{
                     }
                 }
                 .heading {
-                    margin-left: 10px;
+                    margin-left: 15px;
                 }
             }
         }
@@ -627,12 +646,16 @@ body{
                 .container {
                     max-width: 100% !important;
                     .tabs{
-                        h3 {
-                            font-size: 16px;
-                        } 
-                        .text {
-                            font-size: 18px;
+                        .badge-button {
+                            margin-left: 5px;
                         }
+                        h3 {
+                            font-size: 18px;
+                            .text {
+                                font-size: 22px;
+                            }
+                        } 
+
                     } 
 
                     .piechart-color {
@@ -707,7 +730,7 @@ body{
                     }
                 }
                 .heading {
-                    font-size: 20px;
+                    font-size: 17px;
                 }
                 .search-form.desktop {
                     display: none;
@@ -715,49 +738,8 @@ body{
 
             }
             .mobile-small-size{
-                display: block !important;  
-                .search-container{
-                    display: block !important; 
-                    width: 90%; 
-                    display: block; 
-                    margin: 0 auto;
-                }
-                input#search-bar{
-                    margin: 15px auto;
-                    width: 100%; 
-                    height: 45px;
-                    padding: 0 20px;
-                    font-size: 1rem;
-                    border: 1px solid var(--navyblue);
-                    outline: none;
-                    background: var(--navyblue); 
-                    color: var(--white);    
-                    &:focus{
-                        border: 1px solid var(--lightgreen); 
-                        transition: 0.35s ease;
-                        color: #008ABF;
-                        &::-webkit-input-placeholder{
-                            transition: opacity 0.45s ease; 
-                            opacity: 0;
-                        }
-                        &::-moz-placeholder {
-                            transition: opacity 0.45s ease; 
-                            opacity: 0;
-                        }
-                        &:-ms-placeholder {
-                            transition: opacity 0.45s ease; 
-                            opacity: 0;
-                        }    
-                    }
-                }
-                .search-icon{
-                    position: relative;
-                    float: right;
-                    width: 75px;
-                    height: 75px;
-                    top: -50px;
-                    right: -45px;
-                }
+                display: block !important;
+                height: 63px;           
             }
         }
         #sidebar-wrapper {
@@ -805,6 +787,9 @@ body{
             .page-contents {
                 .container {
                     max-width: 100% !important;
+                    p {
+                        text-align: justify;
+                    }
                     .container-header {
                         padding: 15px 5px;
                         .fa.fa-ellipsis-v {
@@ -818,7 +803,6 @@ body{
                             padding: 8px 4px 7px;
                         }
                     }
-
                 }
                 padding: 10px;
             }
@@ -827,47 +811,20 @@ body{
 }
 
 
-
-
-.light-version{
-    background: #efefef;
-    #sidebar-wrapper {
-        background:  !important;
-    }
-    .header .header-inner .heading {
-        color: #a6aeb5 !important;
-    }
-    #page-content-wrapper{
-        .page-contents{
-            .piechart-color {
-                background: #fff  !important;
-            }
-            .barcontainer-ranking {
-                background: #fff !important;
-                div {
-                    color: #808d99 !important;
-                }
-            }
-            .container{
+@media screen and (max-width:350px) { 
+    #page-content-wrapper {
+        .page-contents {
+            .container {
                 .tabs{
-                    .nav-tabs{
-                        .active {
-                    color: #b7bec4 !important;
-                    border-bottom: 4px solid #b7bec4 !important;
-                }
-                    } 
-                    .progress {
-    background-color: #dddddd; 
-                    }
-                } 
-                .container-header{
-                    background: #fff !important;
-                    h2 {
-                        color: #a6aeb5 !important;
-                    }
-                }
-            } 
-        } 
+                    h3 {
+                        font-size: 16px;
+                        .text {
+                            font-size: 20px;
+                        } 
 
+                    } 
+                }
+            }
+        }
     }
 }
