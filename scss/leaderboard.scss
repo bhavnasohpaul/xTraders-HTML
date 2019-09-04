@@ -1,0 +1,188 @@
+.leaderboard-page{
+    #page-content-wrapper {
+        .page-contents {
+            .mobile {
+                display: none;
+            }
+            .container {
+                .container-header {
+                    padding: 20px 40px ! important;
+                    h2 {
+                        margin-top: 2px !important;
+                    }
+                    .fa.fa-ellipsis-v {
+                        margin-top: 6px;
+                    }
+                    .table-filter {
+                        float: left;
+                        margin-right: 50px;
+                        height: 34px; 
+                    }
+                    .table-filter.mobile {
+                        display: none ! important; 
+                    }
+                    select {
+                        width: 140px;
+                        padding: 5px 35px 5px 5px;
+                        border: 1px solid var(--select-border);  
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        background: url(assets/images/dropdown.png) 90%/10% no-repeat transparent;   
+                        color:var(--white); 
+                        font-size: 13px;
+                    }
+                    select > option
+                    {
+                        background-color: #fff !important;
+                        color: var(--primary-color);
+                        margin: 5px 2px;
+                        font-size: 13px;
+                    }
+                    /*                    select:before {
+                                            position: absolute;
+                                            top: 10px;
+                                            left: 0;
+                                            content: "\f000";
+                                        }*/
+                    select.form-control:not([size]):not([multiple]) {
+                        height: auto;
+                    }
+                    select::-ms-expand { 
+                        display: none; /* remove default arrow on ie10 and ie11 */
+                    }
+                    .form-control:focus {
+                        box-shadow: none;
+                    }
+
+
+                }               
+                .leaderboard-table{
+                    .mobile{ 
+                        display: none;
+                    }
+                    .table {
+                        padding: 25px 40px; 
+                        th{
+                            color:var(--white); 
+                            vertical-align: middle !important;
+                            text-align: center;
+                            font-size: 13px;
+                            border: none; 
+                            font-weight:var(--bold-font); 
+                            .th-min {
+                                display: block;
+                                text-align: center;
+                            }
+                        }
+                        td{
+                            color:var(--white); 
+                            vertical-align: middle !important;
+                            text-align: center;
+                            font-size: 14px;
+                            font-weight:var(--regular-font); 
+                            border-top: 1px solid var(--table-bottom-border-color);
+                            .tr-count { 
+                                display: block;
+                                text-align: center;
+                            }
+                            %div-color{
+                                width: 5px;
+                                height: 16px;
+                                margin-left: -52px; 
+                                text-align: center;
+                                border-bottom-right-radius: 12px;
+                                border-top-right-radius: 12px;
+                                vertical-align: middle !important;
+                                box-shadow: 1px 1px 9px rgba(34,195,170,.7); 
+                                -webkit-box-shadow: 1px 1px 9px rgba(34,195,170,.7);
+                                -moz-box-shadow: 1px 1px 9px rgba(34,195,170,.7);
+                                margin-top: 4px;
+                            }
+                            .green-div {
+                                @extend %div-color; 
+                                background: var(--table-green-bg); 
+                            }
+                            .red-div {
+                                @extend %div-color;
+                                background: var(--table-red-bg); 
+                            } 
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.dataTables_filter {
+    display: none;
+}
+#leaderboard-table_length {
+    display: none;
+}
+#leaderboard-table_info {
+    display: none;
+}
+#leaderboard-table {
+    padding: 25px 40px;
+}
+#leaderboard-table_paginate {
+    display: none;
+}
+
+@media screen and (max-width:900px) { 
+    .leaderboard-page #page-content-wrapper .page-contents .container .container-header {
+        padding: 15px 10px ! important;
+        .table-filter {
+            margin-right: 10px;
+        }
+    }
+}
+
+
+
+/*Responsive-scss-*/
+@media screen and (max-width:767px) { 
+    #leaderboard-table_wrapper { 
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+@media screen and (max-width:420px) {  
+    .leaderboard-page #page-content-wrapper .page-contents .container{
+        .mobile {
+            display: block;
+        }
+        select { 
+            width: 90%;
+            padding: 5px 35px 5px 5px;
+            border: 1px solid var(--select-border); 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: url(assets/images/dropdown.png) 95%/5% no-repeat transparent;
+            color: var(--white);
+            font-size: 13px;
+            margin: 20px auto;
+            height: 34px;
+        } 
+        select.form-control:not([size]):not([multiple]) {
+            height: auto;
+        }
+        select::-ms-expand { 
+            display: none; /* remove default arrow on ie10 and ie11 */
+        }
+        .form-control:focus {
+            box-shadow: none;
+        }
+        .container-header {
+            padding: 15px 10px ! important;
+            .desktop {
+                display: none;
+            } 
+        }
+    } 
+}  
