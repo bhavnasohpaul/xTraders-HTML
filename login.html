@@ -9,55 +9,103 @@
     </head>
     <body>   	 
         <div class="container-fluid">
+
+            <!-- theme-switch-wrapper -->
+            <div class="theme-switch-wrapper mt-3 login-switch-wrapper">
+                <label class="theme-switch" for="checkbox"> 
+                    <input type="checkbox" id="checkbox" /> 
+                    <div class="slider round"></div>
+                </label>
+            </div>
+
             <div class="login">
                 <div class="container text-center"> 
                     <!-- Start-of-logo-div -->
                     <div class="logo"> 
-                        <img src="assets/images/ct-logo.png" class="app-logo text-center">
                     </div>
-                    <!-- End-of-logo-div -->
-                    <!-- Start-of-input-layout-div -->
-                    <div class="input-layout"> 
-                        <form>
-                            <div class="mt-4">
-                                <input class="inut-form"  type="email" name="email" placeholder="Email Address">
-                            </div> 
-                            <div class="mt-4">
-                                <input class="inut-form" type="password" name="password"  placeholder="Password">
-                            </div>
-                            <button class="button mt-4 mb-4 full login-button">Login</button>
-                            <p class="mt-1 text">
-                                Don't have an account yet?
-                                <a href="#" class="blue-text account-text underline-text"><u>Create an account</u></a> 
-                            </p>
-                        </form>
-                    </div>
-                    <!-- End-of-input-layout-div -->
+                     <h1 class="trade-heading">Xtrades</h1>  
+ 
+                <!-- End-of-logo-div -->
+                <!-- Start-of-input-layout-div -->
+                <div class="input-layout"> 
+                    <form>
+                        <div class="mt-4">
+                            <input class="inut-form"  type="email" name="email" placeholder="Email Address">
+                        </div> 
+                        <div class="mt-4">
+                            <input class="inut-form" type="password" name="password"  placeholder="Password">
+                        </div>
+                        <button class="button mt-4 mb-4 full login-button">Login</button>
+                        <p class="mt-1 text">
+                            Don't have an account yet?
+                            <a href="#" class="blue-text account-text underline-text"><u>Create an account</u></a> 
+                        </p>
+                    </form>
+                </div>
+                <!-- End-of-input-layout-div -->
 
-                    <!-- Start-of-social-login-btns -->
-                    <div class="flex social-login-btns">
-                        <button class="google"><img height="24" src="assets/images/download.svg"></button>
-                        <button class="fb"><img height="24" src="assets/images/index.svg"></button>
-                        <button class="discord"><img height="24" src="assets/images/index2.svg"></button>
-                    </div>
-                    <!-- End-of-input-layout-div --> 
+                <!-- Start-of-social-login-btns -->
+                <div class="flex social-login-btns">
+                    <button class="google"><img height="24" src="assets/images/download.svg"></button>
+                    <button class="fb"><img height="24" src="assets/images/index.svg"></button>
+                    <button class="discord"><img height="24" src="assets/images/index2.svg"></button>
+                </div>
+                <!-- End-of-input-layout-div --> 
 
-                    <!-- Start-of-term privacy-text-div -->
-                    <p class="mt-2 termprivacy-text">
-                        By continuing you indicate that you have read and agree to our
-                        <a  href="#" class="terms-text underline-text"><u>Terms of Service</u></a>
-                        &nbsp;and&nbsp;
-                        <a  href="#" class="privacy-text underline-text"><u>Privacy Policy</u></a>. 
-                    </p>
-                    <!-- End-of-term privacy-text-div -->                    
-                </div> <!-- End-of-container-div -->   			
-            </div><!-- End-of-login-div -->
-        </div> <!-- End-of-container-fluid-div --> 
-        <!-- Js-files -->
-        <script src="./bundle.js"></script>
-        <script>
+                <!-- Start-of-term privacy-text-div --> 
+                <p class="mt-2 termprivacy-text">
+                    By continuing you indicate that you have read and agree to our
+                    <a  href="#" class="terms-text underline-text"><u>Terms of Service</u></a>
+                    &nbsp;and&nbsp;
+                    <a  href="#" class="privacy-text underline-text"><u>Privacy Policy</u></a>. 
+                </p>
+                <!-- End-of-term privacy-text-div -->                    
+            </div> <!-- End-of-container-div -->   			
+        </div><!-- End-of-login-div -->
+    </div> <!-- End-of-container-fluid-div --> 
+    <!-- Js-files -->
+    <script src="./bundle.js"></script>
+    <!--theme-switch-wrapper-js -->
 
-        </script>
-    </body>
-</html>
+    <!--bootstrap-js-files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        //add class to html tag
+        $('html').addClass('dark');
+        $("#checkbox").prop("checked", false);
+        function switchTheme(e) {
+            if ($('html').hasClass('dark')) {
+                $('html').addClass('light');
+                $('html').removeClass('dark');
+            } else {
+                $('html').addClass('dark');
+                $('html').removeClass('light');
+            }
+
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.documentElement.addClass('data-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
+</body>
+</html> 
 

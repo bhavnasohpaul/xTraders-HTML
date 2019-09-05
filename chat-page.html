@@ -13,35 +13,41 @@
     <body class="dark-bg-color">
         <!-- wrapper -->
         <div id="wrapper" class="chat-page font-family">  
-            <!-- sidebar-wrapper -->
-            <div id="sidebar-wrapper">
-                <!-- sidebar_menu -->
-                <div id="sidebar_menu" class="sidebar-nav">
-                    <div class="sidebar-brand"><a id="menu-toggle" href="#">
-                            <img src="assets/images/dashboard-icon/menu.png" alt="icon" class="menu dark-icon"/>
-                            <img src="assets/images/dashboard-icon/menu-light.png" alt="icon" class="menu light-icon"/></a></div> 
+      <!-- sidebar --> 
+            <div id="sidebar">      
+                <div id="sidebar-btn">
+                    <!-- sidebar-wrapper -->            
+                    <div id="sidebar-wrapper">
+                        <!-- sidebar_menu --> 
+                        <div id="sidebar_menu">
+                            <div class="sidebar-brand"><a href="#">
+                                    <img src="assets/images/dashboard-icon/menu.png" alt="icon" class="dark-icon"/>
+                                    <img src="assets/images/dashboard-icon/menu-light.png" alt="icon" class="light-icon"/></a></div> 
+                        </div>
+                        <!-- sidebar-nav --> 
+                        <ul class="sidebar-nav">      
+                            <li><a href="home-page.html">Home
+                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/grid.png" alt="icon" class="l-sidebar-icon"/></span>
+                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/grid-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                                </a></li>
+                            <li><a href="chat-page.html">Chat
+                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/award_hover.png" alt="icon" class="l-sidebar-icon"/></span>
+                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/award-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                                </a></li>
+                            <li><a href="product-page.html">Affiliates 
+                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/film.png" alt="icon" class="l-sidebar-icon"/></span>
+                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/film-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                                </a></li>
+                            <li><a href="leaderboard-page.html">Leaderboard 
+                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/user.png" alt="icon" class="l-sidebar-icon"/></span>
+                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/user-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                                </a></li>
+                        </ul> 
+                    </div>  
+                    <!-- end-of-sidebar-wrapper -->
                 </div>
-                <!-- sidebar-nav --> 
-                <ul class="sidebar-nav" id="sidebar">     
-                    <li><a href="home-page.html">Dashboard
-                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/grid_hover.png" alt="icon" class="l-sidebar-icon"/></span>
-                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/grid-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                        </a></li>
-                    <li><a href="product-page.html">Product
-                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/award.png" alt="icon" class="l-sidebar-icon"/></span>
-                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/award-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                        </a></li>
-                    <li><a href="chat-page.html">Join Chat 
-                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/film.png" alt="icon" class="l-sidebar-icon"/></span>
-                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/film-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                        </a></li>
-                    <li><a href="login.html">link4
-                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/user.png" alt="icon" class="l-sidebar-icon"/></span>
-                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/user-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                        </a></li>
-                </ul> 
-            </div>  
-            <!-- end-of-sidebar-wrapper -->
+            </div>   
+
 
             <!-- page-content-wrapper -->
             <div id="page-content-wrapper">
@@ -63,7 +69,18 @@
                                     <span class="form-control-feedback"><i class="fa fa-search" aria-hidden="true"></i></span>
                                 </div>
                             </form>
-                            <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/></div>
+                            <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/> </div>
+                            </a>
+                            <div class="dropdown-menu user-dropdown" aria-labelledby="navbarDropdown">                        
+                                    <div class="widget-pic">
+                                        <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/>Robert</div> 
+                                    </div>
+                                    <div class="widget-logout"> 
+                                        <button class="btn user-button">Logout</button>
+                                    </div>
+                           
+                            </div> 
                         </div>
                     </div>
                     <div class="mobile-small-size">  
@@ -97,14 +114,22 @@
 
                     </div><!-- end-of page-contents -->
                 </div><!--End-of-#page-content-wrapper-->
-            </div><!--End-of-#Wrapper-->
+            </div>
 
-
+        </div><!--End-of-#Wrapper--> 
             <script src="./bundle.js"></script> 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+                    <script>
+            $(document).ready(function () {
+                $('#sidebar-btn').click(function () {
+                    $('#sidebar').toggleClass('visible');
+                    $('.body-menu').toggleClass('.body-menu-left');
+                });
+            })
+        </script>
             <script>
                 $(function () {
                     $("#menu-toggle").click(function (e) {

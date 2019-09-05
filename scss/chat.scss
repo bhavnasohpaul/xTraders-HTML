@@ -8,9 +8,8 @@
         bottom: 0;
         left: 0px;
         width: 520px;
-        height: 275px;
         background-color: var(--navyblue); 
-        padding-bottom: 40px;
+        padding: 15px;
         .content{
             h2 {
                 margin: 40px 0px 30px;
@@ -40,7 +39,7 @@
                 border: 1px solid var(--primary-bg-color);
                 color:var(--chat-btn); 
                 padding: 7px 30px; 
-                margin: 20px 0px 0px;
+                margin: 20px 0px 30px;
                 text-transform: uppercase;
                 font-size: 14px;
                 font-weight:  var(--extra-bold-font);
@@ -72,21 +71,46 @@
         }
     }
 }
+
+/*Responsive-scss-*/
 @media screen and (max-width:767px) {
-.chat-page{
-    .center-div {
-    position: relative;
-    margin: auto;
-    top: 50px;
-}
-} 
-} 
-@media screen and (max-width:350px) {
     .chat-page{
         .center-div {
-            top: 50px; 
-            right: -8px;
-            width: auto;
+            position: relative;
+            margin: auto; 
+        }
+    } 
+} 
+
+@media screen and (max-width:400px) { 
+    .chat-page{
+        .center-div {  
+            width: 100% ! important; 
         }
     }
 } 
+
+
+@media screen and (max-width:370px) { 
+    .chat-page{
+        .ph-pic{
+            top: 250px;
+            .ph-pic-img {
+                width: 88%;
+            }
+        }
+        .center-div { 
+            right: -8px;
+            width: auto;
+            top: 30px;
+        }
+    }
+}  
+
+@media screen and (max-width:340px) { 
+    .chat-page{
+        .center-div { 
+            top: 0px;
+        }
+    }
+}  
