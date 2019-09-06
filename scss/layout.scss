@@ -1,10 +1,10 @@
 #sidebar{
     background:  var(--sidebar-wrapper-bg); 
-    width: 130px;
+    width: 190px;
     height:100%;
     display: block;
     position: fixed;
-    left:-130px;
+    left:-190px;
     top:0px;
     transition: left 0.3s linear;
     z-index: 99;
@@ -23,7 +23,7 @@
     vertical-align: middle;
     width: 60px;
     height: 100%;
-    cursor: pointer;  
+    cursor: pointer;   
     margin: 0; 
     position: absolute;
     right: -60px;
@@ -35,7 +35,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-    
+
     #page-content-wrapper {
         left: 40px;
         width: calc(100% - 40px);
@@ -43,12 +43,40 @@
     #sidebar-btn {
         width: 40px;
         right: -40px;
-    }
+    } 
     #sidebar_menu {
         width: 40px;
-        padding: 30px 10px 0;
+            padding: 23px 10px 0;
     }
-    .sidebar-nav {
-        width: 170px;
+    .sidebar-nav li .l-sidebar-icon-grid { 
+        width: 20px;
+        margin-left: 10px;
+        margin-top: 14px;
+        margin-right: 9px;
     }
+}   
+.l-sidebar-icon:focus-within, .l-sidebar-icon:hover, .l-sidebar-icon:active, .l-sidebar-icon:focus{
+    background: var(--icon-hover-bg); 
+    color: var(--icon-hover-text);
+}
+ 
+ 
+.chat-btn:hover, .login .container .button:hover { 
+    background: var(--icon-hover-button) !important; 
+}
+ 
+@media screen and (max-width: 900px){
+
+#product-page #page-content-wrapper .page-contents {
+    padding: 15px!important;
+    margin-top: 0;
 } 
+}
+@media only screen and (max-width: 580px) {
+
+    #sidebar_menu {
+        height: 60px;
+        width: 40px;
+            padding: 18px 10px 0;
+    }
+}

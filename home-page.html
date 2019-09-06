@@ -21,29 +21,28 @@
                         <!-- sidebar_menu --> 
                         <div id="sidebar_menu">
                             <div class="sidebar-brand"><a href="#">
-                                    <img src="assets/images/dashboard-icon/menu.png" alt="icon" class="dark-icon"/>
-                                    <img src="assets/images/dashboard-icon/menu-light.png" alt="icon" class="light-icon"/></a></div> 
+                                    <img src="assets/images/dashboard-icon/menu-light.png" alt="icon"/></a></div>  
                         </div>
                         <!-- sidebar-nav --> 
-                        <ul class="sidebar-nav">      
-                            <li><a href="home-page.html">Home
-                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/grid.png" alt="icon" class="l-sidebar-icon"/></span>
-                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/grid-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                                </a></li>
-                            <li><a href="chat-page.html">Chat
-                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/award_hover.png" alt="icon" class="l-sidebar-icon"/></span>
-                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/award-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                                </a></li>
-                            <li><a href="product-page.html">Affiliates 
-                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/film.png" alt="icon" class="l-sidebar-icon"/></span>
-                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/film-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                                </a></li>
-                            <li><a href="leaderboard-page.html">Leaderboard 
-                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/user.png" alt="icon" class="l-sidebar-icon"/></span>
-                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/user-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                                </a></li>
+                        <ul class="sidebar-nav">       
+                            <li><a href="home-page.html" class="l-sidebar-icon">Dashboard
+                                    <span class="sub_icon l-sidebar-icon-grid"></span>
+                                </a>
+                            </li>  
+                            <li><a href="leaderboard-page.html" class="l-sidebar-icon">Leaderboard
+                                    <span class="sub_icon l-sidebar-icon-award"></span>
+                                </a>
+                            </li>
+                            <li><a href="product-page.html" class="l-sidebar-icon">Members Product Page 
+                                    <span class="sub_icon l-sidebar-icon-film"></span>    
+                                </a>
+                            </li>
+                            <li><a href="chat-page.html" class="l-sidebar-icon">Chat Page  
+                                    <span class="sub_icon l-sidebar-icon-user"></span>
+                                </a>
+                            </li>
                         </ul>  
-                    </div>  
+                    </div>   
                     <!-- end-of-sidebar-wrapper -->
                 </div>
             </div>  
@@ -64,23 +63,27 @@
                             <form action="" class="search-form desktop"> 
                                 <div class="form-group has-feedback">
                                     <label for="search" class="sr-only">Search</label>
-                                    <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                                    <input type="text" class="form-control" name="search" id="search" placeholder="Search">
                                     <span class="form-control-feedback"><i class="fa fa-search" aria-hidden="true"></i></span>
                                 </div>
-                            </form>
+                            </form> 
+                            
+                           <div class="nav-item dropdown  header-right-items">  
                             <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/> </div>
                             </a>
                             <div class="dropdown-menu user-dropdown" aria-labelledby="navbarDropdown">                        
-                                    <div class="widget-pic">
-                                        <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/>Robert</div> 
-                                    </div>
-                                    <div class="widget-logout"> 
-                                        <button class="btn user-button">Logout</button>
-                                    </div>
-                           
-                            </div> 
-                        </div>
+                                <div class="widget-pic">
+                                    <div class="user-text">Robert Millan</div> 
+                                </div> 
+                                <div class="widget-logout"> 
+                                    <button class="btn user-button">Logout</button>
+                                </div>
+
+                            </div>                            
+                           </div>
+                             
+                        </div> 
                     </div>
                     <div class="mobile-small-size">  
                         <form class="search-container">
@@ -101,7 +104,7 @@
                                         <h2>Member status</h2>
                                     </div>
 
-                                    <div class="nav-item dropdow1  header-right-items">
+                                    <div class="nav-item dropdown  header-right-items">
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
                                         </a>
@@ -160,7 +163,7 @@
                                         <h2>Charts</h2>
                                     </div>
 
-                                    <div class="nav-item dropdow1  header-right-items">
+                                    <div class="nav-item dropdown  header-right-items">
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
                                         </a>
@@ -203,7 +206,7 @@
                                     <div class="header-div">
                                         <h2>My Achievements</h2>
                                     </div>
-                                    <div class="nav-item dropdow1  header-right-items">
+                                    <div class="nav-item dropdown  header-right-items">
                                         <span class="badge badge-secondary leaderboard">view leaderboard</span>
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
@@ -239,7 +242,7 @@
                                     <div class="header-div">
                                         <h2>Watchlist</h2>
                                     </div>
-                                    <div class="nav-item dropdow1  header-right-items">
+                                    <div class="nav-item dropdown  header-right-items">
                                         <span class="badge badge-secondary leaderboard">Add To Watchlist</span>
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
@@ -306,7 +309,7 @@
                                     <div class="header-div">
                                         <h2>Market Volatility</h2>
                                     </div>
-                                    <div class="nav-item dropdow1  header-right-items">
+                                    <div class="nav-item dropdown  header-right-items">
                                         <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
                                         </a>
@@ -350,44 +353,49 @@
 
         <!--js-files-->
         <script src="./bundle.js"></script> 
+           <!--bootstrap-js-files-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
         <!--highcharts-js-files-->
         <script src="https://code.highcharts.com/stock/highstock.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
         <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
-        <!--bootstrap-js-files-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
         <!--solid-gaugejs-->
         <script src="https://code.highcharts.com/highcharts-more.js"></script>
         <script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
 
-
-
         <script src="https://code.highcharts.com/stock/highstock.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    
+        
+        <script>
+        $(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        } 
+    );
+});
+</script>
 
         <script>
-            $(function () {
-                jQuery(document).ready(function ($) {
-                    $('.dropdown-menu a').click(function () {
-                        $(this).find('.dropdown-menu').toggle();
-                    });
-                });
-            });
-        </script>
-        
-                <script>
             $(document).ready(function () {
                 $('#sidebar-btn').click(function () {
                     $('#sidebar').toggleClass('visible');
                     $('.body-menu').toggleClass('.body-menu-left');
                 });
+
             })
-        </script>
-        
+        </script> 
+
 
         <!--bar-chart-js--> 
         <script>
@@ -487,7 +495,7 @@
                                         color: colors[3]
                                     }],
                                 shadow: {
-                                    color: new Highcharts.Color('#eef1f3').setOpacity('0.4').get(),
+                                    color: new Highcharts.Color('var(--barchart-shadow-color)').setOpacity('0.4').get(),
                                     width: 10,
                                     offsetX: 0,
                                     offsetY: 0
@@ -532,6 +540,8 @@
                 rangeSelector: {
                     enabled: true,
                     inputEnabled: false,
+                    Color: 'var(--chartgridLineColor)',
+                    fill: '#000', 
                     buttonPosition: {
                         align: 'right',
                     },
@@ -555,6 +565,7 @@
                         display: 'none'
                     },
                     buttons: [{
+                            
                             type: 'month',
                             count: 1,
                             text: '1d'
@@ -992,8 +1003,8 @@
             });
 
         </script>
-        
- <!--theme-switch-wrapper-js -->
+
+        <!--theme-switch-wrapper-js -->
         <script>
             const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
             const currentTheme = localStorage.getItem('theme');
@@ -1029,6 +1040,11 @@
             }
             toggleSwitch.addEventListener('change', switchTheme, false);
         </script>
+        
+
+        
+        
+        
     </body>
 </html>
 

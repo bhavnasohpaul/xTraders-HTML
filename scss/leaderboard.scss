@@ -7,8 +7,8 @@
             .container {
                 .container-header {
                     padding: 20px 40px ! important;
-                    h2 {
-                        margin-top: 2px !important;
+                    h2 { 
+                        margin-top: 3px !important;
                     }
                     .fa.fa-ellipsis-v {
                         margin-top: 6px;
@@ -65,10 +65,10 @@
                         padding: 25px 40px; 
                         th{
                             color:var(--white); 
-                            vertical-align: middle !important;
                             text-align: center;
                             font-size: 13px;
                             border: none; 
+                            vertical-align: top;
                             font-weight:var(--bold-font); 
                             .th-min {
                                 display: block;
@@ -78,7 +78,7 @@
                         td{
                             color:var(--white); 
                             vertical-align: middle !important;
-                            text-align: center;
+                            text-align: center; 
                             font-size: 14px;
                             font-weight:var(--regular-font); 
                             border-top: 1px solid var(--table-bottom-border-color);

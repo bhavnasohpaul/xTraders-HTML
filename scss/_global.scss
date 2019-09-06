@@ -134,6 +134,11 @@ button:focus {
     margin-left: 8px;
     font-size: 13px; 
 }
+.btn.focus, .btn:focus {
+    outline: 0px !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 .yellowish{
     color:var(--yellowish-color)!important;
 }
@@ -176,49 +181,6 @@ button:focus {
     display: none;
 }
 
-//chart-legand-color
-html.dark span.sub_icon.light-icon {
-    display: none;
-} 
-html.light span.sub_icon.dark-icon { 
-    display: none;
-}  
-
-html.dark {
-    .light-icon{
-        display: block;
-    } 
-    .dark-icon {
-        display: none;
-    } 
-}
-html.light {
-
-    .dark-icon {
-        display: none;
-    } 
-    .light-icon{
-        display: block;
-    } 
-}
-
-html.dark {
-    span.sub_icon.light-icon{
-        display: block;
-    } 
-    span.sub_icon.dark-icon {
-        display: none;
-    } 
-}
-
-html.light {
-    span.sub_icon.light-icon{
-        display: block;
-    } 
-    span.sub_icon.dark-icon {
-        display: none;
-    } 
-}
 
 .header {         
     .mobile-small-size{
@@ -227,7 +189,7 @@ html.light {
         overflow: hidden;
         border-radius:90px;
         .search-container{
-            width: 90%; 
+            width: 90%;  
             display: block;
             margin: 0 auto; 
         }
@@ -291,3 +253,8 @@ html.light {
     }
 
 } */
+
+ .btn:focus {
+    box-shadow: none;
+}
+ 

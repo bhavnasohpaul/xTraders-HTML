@@ -14,7 +14,7 @@
             h2 {
                 margin: 40px 0px 30px;
                 display: inline-block;
-                color: var(--primary-bg-color);
+                color:var(--lightgreen); 
                 font-size: 30px;
                 width: 100%;
                 font-weight: var(--extra-bold-font);
@@ -35,8 +35,8 @@
                 width: 100%;
             }
             .chat-btn {
-                background: var(--primary-bg-color);
-                border: 1px solid var(--primary-bg-color);
+                background: var(--lightgreen);  
+                border: none;
                 color:var(--chat-btn); 
                 padding: 7px 30px; 
                 margin: 20px 0px 30px;
@@ -77,8 +77,9 @@
     .chat-page{
         .center-div {
             position: relative;
-            margin: auto; 
-        }
+            margin: auto;
+             top: 10px;
+        } 
     } 
 } 
 
@@ -102,15 +103,7 @@
         .center-div { 
             right: -8px;
             width: auto;
-            top: 30px;
         }
     }
 }  
-
-@media screen and (max-width:767px) {  
-    .chat-page{
-        .center-div { 
-            top: 0px;
-        }
-    }
-}  
+ 

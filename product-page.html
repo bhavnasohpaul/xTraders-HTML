@@ -13,7 +13,7 @@
     <body class="dark-bg-color">  
         <!-- wrapper -->
         <div id="wrapper" class="product-page font-family"> 
-                <!-- sidebar --> 
+            <!-- sidebar --> 
             <div id="sidebar">      
                 <div id="sidebar-btn">
                     <!-- sidebar-wrapper -->            
@@ -21,39 +21,38 @@
                         <!-- sidebar_menu --> 
                         <div id="sidebar_menu">
                             <div class="sidebar-brand"><a href="#">
-                                    <img src="assets/images/dashboard-icon/menu.png" alt="icon" class="dark-icon"/>
-                                    <img src="assets/images/dashboard-icon/menu-light.png" alt="icon" class="light-icon"/></a></div> 
+                                    <img src="assets/images/dashboard-icon/menu-light.png" alt="icon"/></a></div>  
                         </div>
                         <!-- sidebar-nav --> 
-                        <ul class="sidebar-nav">      
-                            <li><a href="home-page.html">Home
-                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/grid.png" alt="icon" class="l-sidebar-icon"/></span>
-                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/grid-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                                </a></li>
-                            <li><a href="chat-page.html">Chat
-                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/award_hover.png" alt="icon" class="l-sidebar-icon"/></span>
-                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/award-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                                </a></li>
-                            <li><a href="product-page.html">Affiliates 
-                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/film.png" alt="icon" class="l-sidebar-icon"/></span>
-                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/film-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                                </a></li>
-                            <li><a href="leaderboard-page.html">Leaderboard 
-                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/user.png" alt="icon" class="l-sidebar-icon"/></span>
-                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/user-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                                </a></li>
+                        <ul class="sidebar-nav">       
+                            <li><a href="home-page.html" class="l-sidebar-icon">Dashboard
+                                    <span class="sub_icon l-sidebar-icon-grid"></span>
+                                </a>
+                            </li>  
+                            <li><a href="leaderboard-page.html" class="l-sidebar-icon">Leaderboard
+                                    <span class="sub_icon l-sidebar-icon-award"></span>
+                                </a>
+                            </li>
+                            <li><a href="product-page.html" class="l-sidebar-icon">Members Product Page 
+                                    <span class="sub_icon l-sidebar-icon-film"></span>    
+                                </a>
+                            </li>
+                            <li><a href="chat-page.html" class="l-sidebar-icon">Chat Page  
+                                    <span class="sub_icon l-sidebar-icon-user"></span>
+                                </a>
+                            </li>
                         </ul>  
-                    </div>  
+                    </div>   
                     <!-- end-of-sidebar-wrapper -->
                 </div>
-            </div>
+            </div>  
 
             <!-- page-content-wrapper -->
-            <div id="page-content-wrapper">
+            <div id="page-content-wrapper"> 
                 <!-- header -->
                 <header class="header">
                     <div class="header-inner clearfix">
-                        <h1 class="heading">Members Product Page</h1> 
+                        <h1 class="heading">Members Product Page</h1>
                         <div class="theme-switch-wrapper mt-3">
                             <label class="theme-switch" for="checkbox"> 
                                 <input type="checkbox" id="checkbox" />
@@ -64,32 +63,36 @@
                             <form action="" class="search-form desktop"> 
                                 <div class="form-group has-feedback">
                                     <label for="search" class="sr-only">Search</label>
-                                    <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                                    <input type="text" class="form-control" name="search" id="search" placeholder="Search">
                                     <span class="form-control-feedback"><i class="fa fa-search" aria-hidden="true"></i></span>
                                 </div>
-                            </form>
+                            </form> 
+                            
+                           <div class="nav-item dropdown  header-right-items">  
                             <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/> </div>
                             </a>
                             <div class="dropdown-menu user-dropdown" aria-labelledby="navbarDropdown">                        
-                                    <div class="widget-pic">
-                                        <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/>Robert</div> 
-                                    </div>
-                                    <div class="widget-logout"> 
-                                        <button class="btn user-button">Logout</button>
-                                    </div>
-                           
-                            </div> 
-                        </div>
+                                <div class="widget-pic">
+                                    <div class="user-text">Robert Millan</div> 
+                                </div> 
+                                <div class="widget-logout"> 
+                                    <button class="btn user-button">Logout</button>
+                                </div>
+
+                            </div>                            
+                           </div>
+                             
+                        </div> 
                     </div>
-                    <div class="mobile-small-size">   
+                    <div class="mobile-small-size">  
                         <form class="search-container">
                             <input type="text" id="search-bar" placeholder="Search"> 
                             <a href="#"><span class="form-control-search search-icon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
                         </form>
                     </div>
                 </header>
-                <!-- end-of-header --> 
+                <!-- end-of-header -->  
 
                 <!-- page-contents --> 
                 <div class="page-contents">   
