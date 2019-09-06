@@ -1,6 +1,16 @@
 /*login-style*/
+.dark{
+    .trade-heading {
+        display: none;
+    }
+}
+.light{
+    .trade-heading{
+        display :block;
+    }
+} 
 .login {
-    background-image: url('assets/images/cryptotradersBackground.jpg');
+    background-image:var(--bg-image);  
     position: fixed;
     top: 0;
     left: 0;
@@ -11,20 +21,32 @@
     display: inline-block; 
     overflow: auto;
     .container {
-        margin-top: 90px; 
+        margin-top: 90px;
         width: 90%;
-        max-width: 500px;
-        padding: 40px 55px;  
-        background: var(--dark-blue);
-        border-radius: 4px;
+        max-width: 449px;
+        padding: 30px;
+        background: var(--login-bg); 
+        border-radius: 8px;
+        margin-bottom: 90px;
         .logo {
-            max-width: 100%; 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 109px;
+            margin: 0px auto;
+            max-width: 100%;  
             display: inline-block; 
-            .app-logo {
-                margin: 0px auto;
-                margin-bottom:10px;
-                width: 95%; 
-            }
+            margin: 0px auto;
+            margin-bottom:10px;
+            width: 95%; 
+            background-image:var(--logo);            
+        }
+        h1{
+            font-family: "PT Sans", sans-serif;
+            font-size: 2.8rem;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
         }
         .text, p, a {
             color: var(--login-text-color); 
@@ -37,7 +59,7 @@
         .input-layout{
             padding: 0px 35px; 
             .inut-form { 
-                background-color: var(--dark-blue); 
+                background-color: transparent; 
                 border: 2px solid var(--inut-form-color);
                 color: var(--white); 
                 outline: none;
@@ -57,9 +79,9 @@
             width: 100%;
             border: none;
             border-radius: 4px;
-            color: var(--white);
+            color: var(--login-text-white);
             font-size: 16px;
-            font-weight: var(--regular-font);
+            font-weight: var(--bold-font);
         } 
         .account-text {
             color: var(--green-button-color);
@@ -86,7 +108,7 @@
                 margin: 0px 5px 20px;
             }
             .google {
-                background: var(--white);
+                background: var(--login-text-white);
             }
             .fb {
                 background: var(--fb-bg);
@@ -95,10 +117,15 @@
                 background-color: var(--discord-bg);
             } 
         }
-
     }
 }
 /*login-social-style*/
+.login-switch-wrapper {
+    position: absolute;
+    z-index: 9;
+    top: 30px;
+    left: 30px;
+}
 .login-social{
     .login-social-div{ 
         max-width: 320px;
@@ -116,14 +143,26 @@
     }  
 }
 /*Responsive-style*/
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 767px) { 
+    .login-switch-wrapper {
+        top: 0px;
+        left: 0px;
+        #checkbox {
+            margin: 0px 20px ! important; 
+        }
+    }
+
+
     .login { 
         .container {
-            margin-top: 50px;
+            margin-top: 40px; 
             padding: 30px 20px;
-            max-width: 400px;  
+            max-width: 400px; 
+            margin-bottom: 40px;
             .logo {
-                max-width: 320px; 
+                img{
+                    max-width: 320px; 
+                }                 
             }
             .input-layout {
                 padding: 0;
@@ -133,27 +172,30 @@
 
     }
 }
-/*@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 580px) {
     .login {
         .container {
-            margin-top: 50px;
-            padding: 20px;
-            .input-layout {
-                padding: 0;
-            }
+            padding: 15px;
         }
 
     }
 }
+@media only screen and (max-width: 480px) {
+    .logo {
+        background-image:var(--logo-responsive) !important             
+    }
+}
+
+
 @media only screen and (max-width: 420px) {
     .login{
         .container{
-            padding: 20px;
             .social-login-btns {
-                button {
-                    min-width: auto !important; 
+                button { 
+                    padding: 7px 20px;
+                    min-width: 50px;
                 } 
             }
         }
     } 
-}  */
+}   

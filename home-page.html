@@ -13,35 +13,40 @@
     <body>
         <!-- wrapper -->
         <div id="wrapper" class="home-page font-family">  
-            <!-- sidebar-wrapper -->
-            <div id="sidebar-wrapper">
-                <!-- sidebar_menu -->
-                <div id="sidebar_menu" class="sidebar-nav">
-                    <div class="sidebar-brand"><a id="menu-toggle" href="#">
-                            <img src="assets/images/dashboard-icon/menu.png" alt="icon" class="menu dark-icon"/>
-                            <img src="assets/images/dashboard-icon/menu-light.png" alt="icon" class="menu light-icon"/></a></div> 
+            <!-- sidebar --> 
+            <div id="sidebar">      
+                <div id="sidebar-btn">
+                    <!-- sidebar-wrapper -->            
+                    <div id="sidebar-wrapper">
+                        <!-- sidebar_menu --> 
+                        <div id="sidebar_menu">
+                            <div class="sidebar-brand"><a href="#">
+                                    <img src="assets/images/dashboard-icon/menu.png" alt="icon" class="dark-icon"/>
+                                    <img src="assets/images/dashboard-icon/menu-light.png" alt="icon" class="light-icon"/></a></div> 
+                        </div>
+                        <!-- sidebar-nav --> 
+                        <ul class="sidebar-nav">      
+                            <li><a href="home-page.html">Home
+                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/grid.png" alt="icon" class="l-sidebar-icon"/></span>
+                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/grid-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                                </a></li>
+                            <li><a href="chat-page.html">Chat
+                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/award_hover.png" alt="icon" class="l-sidebar-icon"/></span>
+                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/award-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                                </a></li>
+                            <li><a href="product-page.html">Affiliates 
+                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/film.png" alt="icon" class="l-sidebar-icon"/></span>
+                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/film-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                                </a></li>
+                            <li><a href="leaderboard-page.html">Leaderboard 
+                                    <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/user.png" alt="icon" class="l-sidebar-icon"/></span>
+                                    <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/user-light.png" alt="icon" class="l-sidebar-icon"/></span>
+                                </a></li>
+                        </ul>  
+                    </div>  
+                    <!-- end-of-sidebar-wrapper -->
                 </div>
-                <!-- sidebar-nav --> 
-                <ul class="sidebar-nav" id="sidebar">     
-                    <li><a href="home-page.html">Dashboard
-                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/grid_hover.png" alt="icon" class="l-sidebar-icon"/></span>
-                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/grid-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                        </a></li>
-                    <li><a href="product-page.html">Product
-                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/award.png" alt="icon" class="l-sidebar-icon"/></span>
-                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/award-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                        </a></li>
-                    <li><a href="#">Join Chat
-                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/film.png" alt="icon" class="l-sidebar-icon"/></span>
-                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/film-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                        </a></li>
-                    <li><a href="login.html">link4
-                            <span class="sub_icon dark-icon"><img src="assets/images/dashboard-icon/user.png" alt="icon" class="l-sidebar-icon"/></span>
-                            <span class="sub_icon light-icon"><img src="assets/images/dashboard-icon/user-light.png" alt="icon" class="l-sidebar-icon"/></span>
-                        </a></li>
-                </ul> 
-            </div> 
-            <!-- end-of-sidebar-wrapper --> 
+            </div>  
 
             <!-- page-content-wrapper -->
             <div id="page-content-wrapper"> 
@@ -63,7 +68,18 @@
                                     <span class="form-control-feedback"><i class="fa fa-search" aria-hidden="true"></i></span>
                                 </div>
                             </form>
-                            <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/></div>
+                            <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/> </div>
+                            </a>
+                            <div class="dropdown-menu user-dropdown" aria-labelledby="navbarDropdown">                        
+                                    <div class="widget-pic">
+                                        <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/>Robert</div> 
+                                    </div>
+                                    <div class="widget-logout"> 
+                                        <button class="btn user-button">Logout</button>
+                                    </div>
+                           
+                            </div> 
                         </div>
                     </div>
                     <div class="mobile-small-size">  
@@ -343,7 +359,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        
+
         <!--solid-gaugejs-->
         <script src="https://code.highcharts.com/highcharts-more.js"></script>
         <script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
@@ -355,19 +371,23 @@
 
         <script>
             $(function () {
-                $("#menu-toggle").click(function (e) {
-                    e.preventDefault();
-                    $("#wrapper").toggleClass("active");
+                jQuery(document).ready(function ($) {
+                    $('.dropdown-menu a').click(function () {
+                        $(this).find('.dropdown-menu').toggle();
+                    });
                 });
-           
-            
-            jQuery(document).ready(function($) {
-    $('.dropdown-menu a').click(function(){ 
-        $(this).find('.dropdown-menu').toggle(); 
-    });
-});
- });
+            });
         </script>
+        
+                <script>
+            $(document).ready(function () {
+                $('#sidebar-btn').click(function () {
+                    $('#sidebar').toggleClass('visible');
+                    $('.body-menu').toggleClass('.body-menu-left');
+                });
+            })
+        </script>
+        
 
         <!--bar-chart-js--> 
         <script>
@@ -469,10 +489,10 @@
                                 shadow: {
                                     color: new Highcharts.Color('#eef1f3').setOpacity('0.4').get(),
                                     width: 10,
-                                    offsetX: 0, 
+                                    offsetX: 0,
                                     offsetY: 0
                                 },
-                            }], 
+                            }],
 
                         tooltip: {
                             outside: true,
@@ -496,8 +516,8 @@
         </script> 
 
         <!--users-line-chart-js -->
-    
-               <script>
+
+        <script>
             Highcharts.chart('users', {
                 chart: {
                     type: 'spline',
@@ -515,13 +535,29 @@
                     buttonPosition: {
                         align: 'right',
                     },
+                    buttonTheme: {// styles for the buttons
+                        style: {
+                            fontWeight: 'regular'
+                        },
+                        states: {
+                            hover: {
+                            },
+                            select: {
+                                style: {
+                                    color: '#22c3aa'
+                                }
+                            }
+                            // disabled: { ... }
+                        }
+                    },
+
                     labelStyle: {
                         display: 'none'
                     },
                     buttons: [{
                             type: 'month',
                             count: 1,
-                            text: '1m'
+                            text: '1d'
                         },
                         {
                             type: 'month',
@@ -551,10 +587,10 @@
                         text: '',
                     },
                     labels: {
-                                style: {
-                                    color: 'var(--bar-label-Color-y-axis)'
-                                }
-                            }
+                        style: {
+                            color: 'var(--bar-label-Color-y-axis)'
+                        }
+                    }
                 },
                 plotOptions: {
                     line: {
@@ -582,9 +618,9 @@
                         data: [0, 5, 0.5, 20.5, 18.4, 10.5, 25.2],
                     }]
             });
-            
+
         </script>
- 
+
         <!--Messages-line-chart-js -->
         <script>
             Highcharts.chart('messages', {
@@ -604,13 +640,28 @@
                     buttonPosition: {
                         align: 'right',
                     },
+                    buttonTheme: {// styles for the buttons
+                        style: {
+                            fontWeight: 'regular'
+                        },
+                        states: {
+                            hover: {
+                            },
+                            select: {
+                                style: {
+                                    color: '#22c3aa'
+                                }
+                            }
+                            // disabled: { ... }
+                        }
+                    },
                     labelStyle: {
                         display: 'none'
                     },
                     buttons: [{
                             type: 'month',
                             count: 1,
-                            text: '1m'
+                            text: '1d'
                         },
                         {
                             type: 'month',
@@ -620,7 +671,11 @@
                         {
                             type: 'month',
                             count: 1,
-                            text: '1w'
+                            text: '1w',
+                            color: '#000',
+                            style: {
+                                color: '#000'
+                            }
                         },
                         {
                             type: 'year',
@@ -638,11 +693,11 @@
                     gridLineColor: 'var(--chartgridLineColor)',
                     title: {
                         text: '',
-                    },labels: {
-                                style: {
-                                    color: 'var(--bar-label-Color-y-axis)'
-                                }
-                            }
+                    }, labels: {
+                        style: {
+                            color: 'var(--bar-label-Color-y-axis)'
+                        }
+                    }
                 },
                 plotOptions: {
                     line: {
@@ -681,7 +736,7 @@
                     chart: {
                         backgroundColor: 'var(--chart-bg-color)'
                     },
-                    colors: ['#22c3aa', '#77beff', '#a096ff', '#0e99ff', '#f06170'],
+                    colors: ['var(--lightgreen)', '#77beff', '#a096ff', '#fee57d', '#f06170'],
                     title: {
                         style: {
                             color: 'silver'
@@ -807,7 +862,6 @@
                 chart: {
                     type: 'solidgauge',
                     height: '110%',
-                    backgroundColor: 'var(--chart-bg-color)',
                     events: {
                         render: renderIcons
                     }
@@ -833,42 +887,42 @@
                 pane: {
                     startAngle: 360,
                     endAngle: 0,
-                    background: [{// Track for Move
-                            outerRadius: '100%',
-                            innerRadius: '90%',
-                            backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[0])
-                                    .setOpacity(0)
-                                    .get(),
-                            borderWidth: 0
-                        }, {// Track for Exercise
-                            outerRadius: '90%',
-                            innerRadius: '80%',
-                            backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[1])
-                                    .setOpacity(0)
-                                    .get(),
-                            borderWidth: 0
-                        }, {// Track for Stand
-                            outerRadius: '80%',
-                            innerRadius: '70%',
-                            backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[2])
-                                    .setOpacity(0)
-                                    .get(),
-                            borderWidth: 0
-                        }, {// Track for Stand
-                            outerRadius: '70%',
-                            innerRadius: '60%',
-                            backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[3])
-                                    .setOpacity(0)
-                                    .get(),
-                            borderWidth: 0
-                        }, {// Track for Stand
-                            outerRadius: '60%',
-                            innerRadius: '50%',
-                            backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[4])
-                                    .setOpacity(0)
-                                    .get(),
-                            borderWidth: 0
-                        }]
+                    background: 'transparent' [{// Track for Move
+                        outerRadius: '100%',
+                        innerRadius: '90%',
+                        backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[0])
+                                .setOpacity(0)
+                                .get(),
+                        borderWidth: 0
+                    }, {// Track for Exercise
+                        outerRadius: '90%',
+                        innerRadius: '80%',
+                        backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[1])
+                                .setOpacity(0)
+                                .get(),
+                        borderWidth: 0
+                    }, {// Track for Stand
+                        outerRadius: '80%',
+                        innerRadius: '70%',
+                        backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[2])
+                                .setOpacity(0)
+                                .get(),
+                        borderWidth: 0
+                    }, {// Track for Stand
+                        outerRadius: '70%',
+                        innerRadius: '60%',
+                        backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[3])
+                                .setOpacity(0)
+                                .get(),
+                        borderWidth: 0
+                    }, {// Track for Stand
+                        outerRadius: '60%',
+                        innerRadius: '50%',
+                        backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[4])
+                                .setOpacity(0)
+                                .get(),
+                        borderWidth: 0
+                    }]
                 },
 
                 yAxis: {
@@ -938,7 +992,8 @@
             });
 
         </script>
-
+        
+ <!--theme-switch-wrapper-js -->
         <script>
             const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
             const currentTheme = localStorage.getItem('theme');
