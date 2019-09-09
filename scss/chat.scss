@@ -6,7 +6,7 @@
         top: 100px;
         right: 0;
         bottom: 0;
-        left: 0px;
+        left: 0px; 
         width: 520px;
         background-color: var(--navyblue); 
         padding: 15px;
@@ -78,11 +78,17 @@
         .center-div {
             position: relative;
             margin: auto;
-             top: 10px;
+            top: 10px;
         } 
     } 
 } 
-
+@media screen and (max-width:580px) { 
+    .chat-page {
+        .center-div {
+            top: 0;
+        }
+    }
+}
 @media screen and (max-width:400px) { 
     .chat-page{
         .center-div {  
@@ -90,7 +96,6 @@
         }
     }
 } 
-
 
 @media screen and (max-width:370px) { 
     .chat-page{
@@ -106,4 +111,3 @@
         }
     }
 }  
- 

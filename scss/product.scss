@@ -55,12 +55,27 @@
                         }
                     }
                 }
-            }
+            } 
         }
     }
 }
 
 /*Responsive-scss-*/
+@media screen and (max-width: 900px){
+    .product-page {
+        #page-content-wrapper {
+            .page-contents { 
+                padding: 15px!important;
+                .container{
+                    .tabs {
+                        margin-top: 0 !important
+
+                    }
+                }
+            } 
+        }
+    } 
+}
 @media screen and (max-width:650px) { 
     .product-page { 
         .sidebar-nav{
@@ -69,26 +84,47 @@
             }
         }
         .header { 
-            height: 110px; 
+            height: 120px; 
             .desktop {
                 display: none;
             }
             .mobile-small-size{
                 display: block !important; 
-                height: 63px;
             } 
         }
     }
 }
-@media screen and (max-width:520px) { 
-    .product-page #page-content-wrapper .page-contents .container{
-        .right-div {
-            width: 100%; 
-            margin-bottom: 15px;
+@media screen and (max-width:580px) { 
+    .product-page {
+        #page-content-wrapper {
+            .page-contents {
+                .container {
+                    .tabs{
+                        .nav{
+                            li:first-child {
+                                padding-top: 0 !important; 
+                            }
+                        } 
+                    }  
+                }
+            }
         }
-        p {
-            width: 100%;
-            margin-bottom: 4px;
+    }
+}
+@media screen and (max-width:520px) { 
+    .product-page {
+        #page-content-wrapper {
+            .page-contents {
+                .container {
+                    .right-div { width: 100%;
+                                 margin-bottom: 15px;
+                    }
+                    p {
+                        width: 100%;
+                        margin-bottom: 4px;
+                    }
+                }
+            }
         }
     }
 }
