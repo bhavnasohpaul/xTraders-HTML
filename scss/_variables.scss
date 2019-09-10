@@ -39,14 +39,32 @@
     --chart-tooltip-background-Color:rgba(35, 50, 73, 1);
     --chart-tooltip-border-Color:rgba(35, 50, 73, 1);
     --chart-tooltip-text-Color:#fff;
-    --barchart-shadow-color:#eef1f3;
+    --barchart-shadow-color:rgba(238,241,243,0.2);  
+     --icon-hover-button:#0e99ff;
+
+    //sidebar-images-path
+    --icon-grid: url('assets/images/dashboard-icon/grid.png');
+    --icon-award: url('assets/images/dashboard-icon/award.png');
+    --icon-film: url('assets/images/dashboard-icon/film.png');
+    --icon-user: url('assets/images/dashboard-icon/user.png');
+    //sidebar-images-hover
+    --icon-grid_hover: url('assets/images/dashboard-icon/grid_hover.png');
+    --icon-award_hover: url('assets/images/dashboard-icon/award_hover.png');
+    --icon-film_hover: url('assets/images/dashboard-icon/film_hover.png');
+    --icon-user_hover: url('assets/images/dashboard-icon/user_hover.png');
+
+    --icon-hover-bg:#233249;
+    --icon-hover-text:#22c3aa;
+
+
+
     //common-color
-    --white:    #fff;
-    --black:    #000;
-    --dark-blue:    #031926;
-    --login-bg :    #031926;
-    --red:    #f23658;
-    --green:    #22c3aa; 
+    --white:#fff;
+    --black:#000;
+    --dark-blue:#031926; 
+    --login-bg :#031926;
+    --red:#f23658;
+    --green:#22c3aa; 
     --table-grey-color: #6c747d;   
     //font-weight-Variables 300,400,600,700,800
     --light-font:300;
@@ -61,9 +79,9 @@
     --high-bg-color: #fee57d; 
     --very-high-bg-color: #f06170;
     // login-color 
-     --bg-image: url('assets/images/cryptotradersBackground.jpg');
-     --logo: url('assets/images/ct-logo.png');
-     --logo-responsive: url('assets/images/ct-logo-responsive.png'); 
+    --bg-image: url('assets/images/cryptotradersBackground.jpg');
+    --logo: url('assets/images/ct-logo.png');
+    --logo-responsive: url('assets/images/ct-logo-responsive.png'); 
     --green-button-color:  #01dba2;
     --inut-form-color:#818c93;
     --fb-bg:#4267b2;
@@ -94,7 +112,7 @@
     --lightgreen:#358bdc;
     --ellipsis-color:#bfc6cc;
     --heading-color:#a6aeb5;
-    --tab-active-color:#b7bec4;
+    --tab-active-color:#808d99; 
     --tab-border-active-color:#b7bec4;
     --chart-bg-color:#efefef !important; 
     --white:    #888e93;
@@ -110,11 +128,26 @@
     --chart-tooltip-border-Color:#fff;
     --bar-label-Color-y-axis:#b7bec4;
     --chart-tooltip-text-Color:#808d99;
-    --barchart-shadow-color:#eef1f3; 
+    --barchart-shadow-color:#a4a8ad;  
     --table-bottom-border-color:#dddddd;
     --select-border:#dddddd;   
-     --bg-image: url('assets/images/xtrades-bg.jpg');
-     --logo: url('assets/images/Xtrades_Square_Dark2x.png');  
-     --logo-responsive: url('assets/images/Xtrades_Square_Dark2x.png');  
-     --login-bg :#302977;  
-}   
+    --bg-image: url('assets/images/xtrades-bg.jpg');
+    --logo: url('assets/images/Xtrades_Square_Dark2x.png');  
+    --logo-responsive: url('assets/images/Xtrades_Square_Dark2x.png');  
+    --login-bg :#302977;  
+    //sidebar-images-images
+    --icon-grid: url('assets/images/dashboard-icon/grid-light.png');
+    --icon-award: url('assets/images/dashboard-icon/award-light.png');
+    --icon-film: url('assets/images/dashboard-icon/film-light.png'); 
+    --icon-user: url('assets/images/dashboard-icon/user-light.png');  
+    //sidebar-images-hover
+    --icon-grid_hover: url('assets/images/dashboard-icon/grid_hover-light.png'); 
+    --icon-award_hover: url('assets/images/dashboard-icon/award_hover-light.png');
+    --icon-film_hover: url('assets/images/dashboard-icon/film_hover-light.png');
+    --icon-user_hover: url('assets/images/dashboard-icon/user_hover-light.png');
+
+    --icon-hover-bg:#f0f1f1;
+    --icon-hover-text:#0e99ff;  
+    --table-grey-color: #acb1b7;    
+    --icon-hover-button:#22c3aa;
+}      
