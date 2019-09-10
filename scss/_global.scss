@@ -109,7 +109,7 @@ input[type="text"]
     min-width: 200px;
 }
 .button:focus {
-     outline: 0px !important; 
+    outline: 0px !important; 
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
@@ -127,6 +127,11 @@ input[type="text"]
     font-size: 13px; 
 }
 .btn.focus, .btn:hover, .btn:active {
+    outline: 0px !important; 
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.badge.focus, .badge:hover, .badge:active {
     outline: 0px !important; 
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -151,7 +156,7 @@ input[type="text"]
     display: block !important;
 }
 .normal{
-    background: var(--normal-bg-color);
+    background: var(--bar-strip-sec-label-Color);   
 }
 .above{
     background: var(--above-bg-color);
@@ -166,10 +171,78 @@ input[type="text"]
 
 .dropdown-menu {
     right: 0!important;
-    margin-right: 0!important;
-    left: auto !important;
+    margin-right: 0!important;  
+    left: auto !important; 
+    top: 100% !important;
     -webkit-box-shadow: 2px 6px 21px -2px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 6px 21px -2px rgba(0,0,0,0.75);
     box-shadow: 2px 6px 21px -2px rgba(0,0,0,0.75);
 }
 
+.collapse:not(.show) {
+    display: block !important;   
+}
+.animate {
+    animation-duration: 0.8s;
+    -webkit-animation-duration: 0.8s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+
+
+@keyframes slideIn { 
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+    100% {
+        transform:translateY(0rem);
+        opacity: 1;
+    }
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+}
+
+.dropdown-icon {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    min-height: 30px;
+    width: 8px;
+    margin-left: 17px;  
+    margin-top: 0px; 
+    background-image: var(--icon-dropdown);
+    float: right;
+    .nav-link {
+        padding: 0 !important
+    }
+}
+
+.dropdown-icon:hover { 
+ background-image: var(--icon-dropdown_hover); 
+}
+.nav-link { 
+    padding: 0 !important
+}

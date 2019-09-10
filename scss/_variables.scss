@@ -36,6 +36,7 @@
     --bar-label-Color-y-axis:#a4a8ad;
     --chart-series-Color:#22c3aa;
     --bar-strip-label-Color:rgb(36, 199, 175);
+    --bar-strip-sec-label-Color:#77beff;
     --chart-tooltip-background-Color:rgba(35, 50, 73, 1);
     --chart-tooltip-border-Color:rgba(35, 50, 73, 1);
     --chart-tooltip-text-Color:#fff;
@@ -52,11 +53,10 @@
     --icon-award_hover: url('assets/images/dashboard-icon/award_hover.png');
     --icon-film_hover: url('assets/images/dashboard-icon/film_hover.png');
     --icon-user_hover: url('assets/images/dashboard-icon/user_hover.png');
-
     --icon-hover-bg:#233249;
     --icon-hover-text:#22c3aa;
-
-
+ --icon-dropdown: url('assets/images/dropdown-icon/green-dropdown.png');
+ --icon-dropdown_hover: url('assets/images/dropdown-icon/red-dropdown.png'); 
 
     //common-color
     --white:#fff;
@@ -72,9 +72,9 @@
     --bold-font:600; 
     --semibold-font:700;
     --extra-bold-font:800;
-    --regular-font-size:14px;
+    --regular-font-size:14px; 
     //chart-legand-color 
-    --normal-bg-color: #77beff; 
+    --normal-bg-color: #22c3aa; 
     --above-bg-color: #a096ff;
     --high-bg-color: #fee57d; 
     --very-high-bg-color: #f06170;
@@ -124,6 +124,7 @@
     --bar-chartgridLineColor:#dddddd;
     --bar-label-Color:#808d99;
     --bar-strip-label-Color:rgb(73, 141, 206);
+     --bar-strip-sec-label-Color:#22c3aa;
     --chart-tooltip-background-Color:#fff; 
     --chart-tooltip-border-Color:#fff;
     --bar-label-Color-y-axis:#b7bec4;
@@ -145,9 +146,13 @@
     --icon-award_hover: url('assets/images/dashboard-icon/award_hover-light.png');
     --icon-film_hover: url('assets/images/dashboard-icon/film_hover-light.png');
     --icon-user_hover: url('assets/images/dashboard-icon/user_hover-light.png');
+     --icon-dropdown: url('assets/images/dropdown-icon/blue-dropdown.png');
+    --icon-dropdown_hover: url('assets/images/dropdown-icon/red-dropdown.png');  
 
     --icon-hover-bg:#f0f1f1;
     --icon-hover-text:#0e99ff;  
     --table-grey-color: #acb1b7;    
     --icon-hover-button:#22c3aa;
+    
+     --normal-bg-color: #77beff; 
 }      

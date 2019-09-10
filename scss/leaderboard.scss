@@ -8,22 +8,22 @@
                 .container-header {
                     padding: 20px 40px ! important;
                     h2 { 
-                        margin-top: 3px !important;
+                        margin-top: 5px !important;
                     }
                     .fa.fa-ellipsis-v {
-                        margin-top: 6px;
+                        margin-top: 5px;
                     }
                     .table-filter {
-                        float: left;
+                        float: left; 
                         margin-right: 50px;
-                        height: 34px; 
+                        height: 31px; 
                     }
                     .table-filter.mobile {
                         display: none ! important; 
                     }
                     select {
                         width: 140px;
-                        padding: 5px 35px 5px 5px;
+                        padding: 3px 35px 5px 3px;
                         border: 1px solid var(--select-border);  
                         -webkit-appearance: none;
                         -moz-appearance: none;

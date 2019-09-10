@@ -56,7 +56,7 @@
                     display: inline-block;
                     margin :0px;
                     background:var(--con-header);  
-                    padding:25px 40px;
+                    padding:20px 40px;
                     border-top-left-radius:5px;
                     border-top-right-radius: 5px;
                     .leaderboard {
@@ -65,7 +65,7 @@
                         padding: 8px 14px 7px;
                         text-transform: uppercase;
                     }
-                    .header-div{
+                    .header-div{ 
                         float: left;  
                     }
                     h2 {
@@ -74,6 +74,8 @@
                         font-size: 20px;
                         margin: 0;
                         line-height: 24px;
+                        display: table;
+vertical-align: middle !important;
                     }
                     .header-right-items{  
                         float: right;
@@ -185,7 +187,7 @@
                     display: inline-block; 
                     width: auto;
                     margin: 0px 7px;
-                    color: var(--primary-color); 
+                    color: var(--navli-font-color);
                     .lowdiv, .normal, .high, .above{
                         background: var(--lightgreen);
                         width: 12px;
@@ -195,7 +197,7 @@
                         margin: 5px;
                     } 
                     .normal{
-                        background: var(--normal-bg-color);
+                        background: var(--bar-strip-sec-label-Color);
                     }
                     .above{
                         background: var(--above-bg-color);
