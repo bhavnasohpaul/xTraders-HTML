@@ -117,10 +117,9 @@
                                                 </a> 
                                                 <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
                                                 <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="javascript:void(0);">Action</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Another action</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Something else here</a> 
+                                                    <a class="dropdown-item" href="javascript:void(0);">Upgrade Membership Status</a>
+                                                    <a class="dropdown-item" href="javascript:void(0);">Memberships and Ranking Tiers</a> 
+                                                    <a class="dropdown-item" href="javascript:void(0);">My current Membership Benefits</a> 
                                                 </div>
                                             </li>
                                         </ul>
@@ -128,8 +127,8 @@
 
                                 </div> 
                                 <div class="tabs">
-                                    <ul class="nav nav-tabs">
-                                        <li><a class="active" data-toggle="tab" href="#gold">ELITE GOLD MEMBER</a></li>
+                                    <ul class="nav nav-tabs"> 
+                                        <li><a class="active" data-toggle="tab" href="#gold">Earnings</a></li>
                                         <li><a data-toggle="tab" href="#diamond">Membership Status</a></li>
                                     </ul>  
 
@@ -142,26 +141,52 @@
                                             </div>
 
                                             <ul class="content">
-                                                <li>Bonuses<span class="text-li yellowish">$1,330</span></li>
-                                                <li>Recurring Income<span class="text-li green-font">$3,686</span></li> 
-                                                <li>Total Income<span class="text-li">$40,555</span></li> 
+                                                <li>Bonuses<span class="text-li yellowish">&#36;1,330</span></li>
+                                                <li>Recurring Income<span class="text-li green-font">&#36;3,686</span></li> 
+                                                <li>Total Income<span class="text-li">&#36;40,555</span></li> 
                                             </ul>
 
                                             <ul class="content"> 
                                                 <li>Commissions Rate<span class="text-li">30%</span></li> 
-                                                <li>Commissions Level<span class="text-li">4/5</span></li>
+                                                <li>Commissions Level<span class="text-li">4/5</span></li> 
                                                 <li>Next Rate<span class="text-li">40%</span></li>
                                             </ul>
                                             <ul class="content border-0">
-                                                <li>Current Referrals<span class="text-li">35<span><button type="button" class="badge badge-secondary badge-button click-text">Click to See</button></span></span></li>
+                                                <li>Current Referrals<span class="text-li">35<span><button type="button" class="badge badge-button click-text">Click to See</button></span></span></li>
                                                 <li>Active Referrals<span class="text-li">27</span></li>
-                                                <li>New Leads<span class="text-li">13<span><button type="button" class="badge badge-secondary badge-button click-text">Click to See</button></span></span></li>
+                                                <li>New Leads<span class="text-li">13<span><button type="button" class="badge badge-button click-text">Click to See</button></span></span></li>
                                             </ul>
                                         </div>
+
+
                                         <div id="diamond" class="tab-pane fade">
-                                            <h3>Menu</h3> 
+                                            <div class="tab-content" id="b1">  
+                                                <div id="gold" class="tab-pane  in active"> 
+                                                    <h3 class="w-100 clearfix"><span class="heading-text pull-left">Membership Level</span><span class="text pull-left">100</span></h3>
+                                                    <ul class="content membership-level">
+                                                        <li>Member Since<span class="text-li">April, 2015</span></li> 
+                                                        <li>&#36; Saved on Membership Discount</br>(# of months * 62&#36;)<span class="text-li">$3.686</span></li>
+                                                        <li>User Rank<span class="text-li">4/5</span></li>
+                                                    </ul>                                           
+                                                </div>
+                                                <div class="text-center">
+                                                    <button  class="leaderboard button  Cancel-membership-button">Cancel Membership</button>  
+                                                </div> 
+                                            </div>   
+                                              
+                                            <div class="tab-content confirm-cancel" id='d1' style="display: none;">    
+                                                <div id="gold" class="tab-pane  in active"> 
+                                                    <p>You will lose your discount if cancelled confirm cancellation?</p>                                          
+                                                </div> 
+                                                <div class="text-center">
+                                                    <button id="b2" class="leaderboard button  Cancel-membership-button back">Back</button>   
+                                                    <button id="b2" class="leaderboard button  Cancel-membership-button">Confirm</button>   
+                                                </div> 
+                                            </div> 
+
+
                                         </div>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
 
@@ -183,8 +208,10 @@
                                                 <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
                                                     <a class="dropdown-item" href="javascript:void(0);">Action</a>
                                                     <a class="dropdown-item" href="javascript:void(0);">Another action</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Something else here</a> 
+                                                    <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                    <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                                                    <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                    <a class="dropdown-item" href="javascript:void(0);">Another action</a>                                                   
                                                 </div>
                                             </li>
                                         </ul>
@@ -217,11 +244,12 @@
                         <div class="col-md-6 col-sm-12">                            
                             <div class="container">
                                 <!-- container-header --> 
-                                <div class="container-header">
+                                <div class="container-header">  
                                     <div class="header-div"> 
-                                        <h2>My Achievements</h2>
+                                        <h2><sapn class="Achievements-text">My Achievements </sapn><span class="trader-number">56</span></h2>   
                                     </div>
                                     <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
+                                        <span class="badge leaderboard leaderboard-text">view leaderboard</span>
                                         <ul class="navbar-nav ml-auto"> 
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
@@ -229,11 +257,9 @@
                                                 </a> 
                                                 <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
                                                 <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="javascript:void(0);">Action</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Another action</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Something else here</a> 
-                                                </div>
+                                                    <a class="dropdown-item" href="javascript:void(0);"> View Achievements</a>
+                                                    <a class="dropdown-item" href="javascript:void(0);">View Badges</a>
+                                                </div> 
                                             </li>
                                         </ul>
                                     </div>
@@ -262,6 +288,7 @@
                                         <h2>Watchlist</h2>
                                     </div>
                                     <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
+                                        <button class="toggle badge leaderboard watchlist-text">Add To Watchlist</button> 
                                         <ul class="navbar-nav ml-auto"> 
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
@@ -269,15 +296,41 @@
                                                 </a> 
                                                 <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
                                                 <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="javascript:void(0);">Action</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Another action</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Something else here</a> 
+                                                    <a class="dropdown-item" href="javascript:void(0);">Create your Own</a> 
+                                                    <a class="dropdown-item" href="javascript:void(0);">Our Watchlist</a>
                                                 </div>
                                             </li>
                                         </ul>
                                     </div>
                                 </div> 
+
+                                <div id="watchlist-content-div">
+
+                                    <form action=""> 
+                                        <input class="form-group" type="text" name="" id="" placeholder="Input Area">
+                                        <input type="submit" value="Submit" class="submit-button">  
+                                    </form> 
+
+
+                                    <ul class="watchlist-div"> 
+                                        <li class="watchlist-list">
+                                            <div class="content"><span class="left-content">Ticker</span>
+                                                <div class="pull-left"> 
+                                                    <span class="red-font">18%</span><span class="bold-font">Lorem ipsum dolor sit.</span>
+                                                </div> 
+                                                <div class="pull-right ml-auto"> 
+                                                    <span class="green-font">18%</span><span class="bold-font">Lorem ipsum dolor sit.</span>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="watchlist-list">
+                                            <div class="content"><span class="left-content">Notes</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin. Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text.</div>
+                                        </li>
+                                    </ul>
+
+
+                                </div>
                                 <!-- end-of-container-header --> 
                                 <!-- table --> 
                                 <div class="table-box table-responsive">  
@@ -294,25 +347,25 @@
                                             <tr>
                                                 <td class="white-font">APPL</td>
                                                 <td>Mon, Jul 29</td>
-                                                <td class="red-font">$16.20</td> 
+                                                <td class="red-font">&#36;16.20</td> 
                                                 <td>&nbsp;</td>
                                             </tr>
                                             <tr>
                                                 <td class="white-font">OSRK</td>
                                                 <td>Mon, Jul 29</td>
-                                                <td class="green-font">$216.20</td>
+                                                <td class="green-font">&#36;216.20</td>
                                                 <td>Good Offer. Watch <span class="edit-icon"><img src="assets/images/pen.png" alt="icon" class="pen"/></span></td>
                                             </tr>
                                             <tr>
                                                 <td class="white-font">FEYE</td>
                                                 <td>Mon, Jul 29</td>
-                                                <td class="red-font">$156.20</td> 
+                                                <td class="red-font">&#36;156.20</td> 
                                                 <td>&nbsp;</td>
                                             </tr>
                                             <tr>
                                                 <td class="white-font">APPL</td>
                                                 <td>Mon, Jul 29</td>
-                                                <td class="green-font">$216.20</td>
+                                                <td class="green-font">&#36;216.20</td>
                                                 <td>&nbsp;</td>
                                             </tr>
 
@@ -320,7 +373,6 @@
                                     </table>
                                 </div>
                                 <!-- end-of-Table --> 
-
                             </div>
 
 
@@ -373,8 +425,10 @@
                         <!--End-of-col-md-6 col-sm-12-->
                     </div><!--End-of-Row-->
                 </div><!-- end-of page-contents -->
-            </div><!--End-of-#page-content-wrapper-->
+            </div><!--End-of-#page-content-wrapper--> 
         </div><!--End-of-#Wrapper-->
+
+
 
 
         <!--js-files-->
@@ -395,8 +449,46 @@
 
         <script src="https://code.highcharts.com/stock/highstock.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        
+        <script>
+///show///
+$('#b1').click(function(){
+$('#d1').show(1000);
+})
+
+///show///
+$('#b2').click(function(){
+$('#b2').show(1000);
+})
+///hide///
+$('#b2').click(function(){
+$('#b1').show(1000); 
+})
+ 
+ 
+ ///hide/// 
+$('#b1').click(function(){
+$('#b1').hide(1000); 
+})
+ 
+
+///hide/// 
+$('#b2').click(function(){
+$('#d1').hide(1000); 
+})
+</script>
+
+
         <!--theme-switch-wrapper-js -->
         <script>
+            $(document).ready(function () {
+                $('ul li .dropdown-icon').click(function () {
+                    $('li .dropdown-icon').removeClass("active");
+                    $(this).addClass("active");
+                });
+            });
+
+
             const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
             const currentTheme = localStorage.getItem('theme');
 
@@ -440,12 +532,54 @@
                 });
 
             })
+
+            $('.Show').click(function () {
+                $('#watchlist-content-div').show(1000);
+                $('.Show').hide(0);
+                $('.Hide').show(0);
+            });
+            $('.Hide').click(function () {
+                $('#watchlist-content-div').hide(1000);
+                $('.Show').show(0);
+                $('.Hide').hide(0);
+            });
+            $('.toggle').click(function () {
+                $('#watchlist-content-div').toggle('slow');
+            });
+
+
+$('.Show').click(function () {
+                $('#diamond').show(1000); 
+                $('.Show').hide(0);
+                $('.Hide').show(0);
+            });
+
+
         </script> 
 
         <!--text-change-js--> 
+        
         <script>
             $(document).ready(function () {
-                if ($(window).width() < 370) {
+                if ($(window).width() < 900) {
+                    $(".Achievements-text").text("Achievements");
+                } else {
+                    $(".Achievements-text").text("My Achievements");
+                }
+            });
+            $(window).resize(function () {
+                if ($(window).width() < 900) {
+                    $(".Achievements-text").text("Achievements");
+                } else {
+                    $(".Achievements-text").text("My Achievements");
+                }
+            });
+        </script> 
+        
+        
+        <script>
+            $(document).ready(function () {
+                if ($(window).width() < 900) {
                     $(".leaderboard-text").text("Leaderboard");
                 } else {
                     $(".leaderboard-text").text("view leaderboard");
@@ -460,10 +594,9 @@
             });
         </script> 
 
-
         <script>
             $(document).ready(function () {
-                if ($(window).width() < 370) {
+                if ($(window).width() < 900) {
                     $(".watchlist-text").text("Watchlist");
                 } else {
                     $(".watchlist-text").text("Add To Watchlist ");

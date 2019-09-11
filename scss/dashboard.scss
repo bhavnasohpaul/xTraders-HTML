@@ -13,7 +13,7 @@
                 display: inline-block;
                 min-width: 100%;
                 width: 100%;  
-                border: 1.5px solid var(--navyblue);  
+                border: 2px solid var(--navyblue);   
                 padding: 0px;
                 min-height: 100px;
                 border-radius: 5px;
@@ -36,18 +36,19 @@
                     .table {
                         min-width: 450px;
                         margin-bottom: 0px;
-                        th{
-                            border: none !important; 
+                        %table-property{         
                             padding: 15px 0px;
-                            color: var(--primary-color); 
+                            color: var(--primary-color);  
                             font-size: 14px;
                         }
+                        th{  
+                            @extend %table-property;
+                            border: none !important; 
+                        }
                         td{
-                            border: none;
-                            border-bottom: 1.5px solid var(--border-color);
-                            color: var(--primary-color);
-                            padding: 15px 0px;
-                            font-size: 14px;
+                            border-bottom: 2px solid var(--border-color);
+                            @extend %table-property;
+                            border-top: none;
                         }
                     }
                 }
@@ -60,22 +61,30 @@
                     border-top-left-radius:5px;
                     border-top-right-radius: 5px;
                     .leaderboard {
-                        background-color: var(--lightgreen);
-                        margin-right: 20px; 
-                        padding: 8px 14px 7px;
-                        text-transform: uppercase;
+                        @extend %button-property-shared;
+                        float: left;
+                        padding: 10px 9px 9px;
                     }
                     .header-div{ 
                         float: left;  
-                    }
-                    h2 {
-                        color:var(--container-subheading);
-                        font-weight: var(--regular-font);
-                        font-size: 20px;
-                        margin: 0;
-                        line-height: 24px;
-                        display: table;
-vertical-align: middle !important;
+
+                        h2 {
+                            color:var(--container-subheading);
+                            font-weight: var(--regular-font);
+                            font-size: 20px;
+                            margin: 0;
+                            line-height: 24px;
+                            display: table;
+                            vertical-align: middle !important;
+                        }
+                        .trader-number{
+                            margin-top: 1px;
+                            font-size: 16px;
+                            background: #818d99;
+                            padding: 3px 4px;
+                            border-radius: 7px;
+                            margin-left: 10px;
+                        }
                     }
                     .header-right-items{  
                         float: right;
@@ -91,6 +100,67 @@ vertical-align: middle !important;
                 }
                 .tabs {
                     margin: 40px;
+                    .back{
+                        background:var(--back-button);   
+                    }
+                    .Cancel-membership-button {
+                        margin: 20px 10px 120px;
+                        margin-bottom: 100px;
+                        color:var(--text-white);                        
+                    } 
+                    #watchlist-content-div{
+                        background: transparent; 
+                        width: 100%;
+                        padding: 30px 50px 10px; 
+                        display: none;
+                        .form-group {
+                            margin-bottom: 1rem;
+                            background: transparent;
+                            border: 2px solid var(--navyblue);
+                            border-radius: 7px;
+                            width: calc(100% - 100px); 
+                            color: var(--navli-font-color);
+                            padding: 2px 10px;
+                            margin: 20px 0px;
+                        }
+                        .submit-button{
+                            @extend %button-property-shared;
+                            float: right;
+                            margin: 20px 0px;
+                        }
+                        .watchlist-list {
+                            width: 100%;
+                            display: inline-block;
+                            margin: 5px 0px;
+                            .content {
+                                font-weight: var(--regular-font);
+                                color: var(--navli-font-color);
+                                font-size: 14px;
+                                margin-bottom: 10px;
+                                .left-content {
+                                    color: var(--white);
+                                    margin-right: 20px;
+                                    float: left;
+                                }
+                                .bold-font {
+                                    font-weight: var(--bold-font);
+                                    color: var(--white);
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                    #diamond {
+                        min-height: 415px;
+                    } 
+                    .confirm-cancel{ 
+                        p {
+                            color: var(--primary-color);
+                            font-size: 18px;
+                            text-align: center;
+                            margin-top: 100px !important;
+                        }
+                    }
                     .progress { 
                         background-color: var(--lightblue-bg-color); 
                         border-radius: 50px; 
@@ -118,6 +188,7 @@ vertical-align: middle !important;
                             color: var(--lightgreen);
                         } 
                     }
+
                     .content{
                         border-bottom:1px solid var(--content-border); 
                         padding: 1px 0 20px; 
@@ -136,13 +207,13 @@ vertical-align: middle !important;
                             } 
                         }
                     }
+                    .membership-level{
+                        li {
+                            color: var(--primary-color) !important;
+                        }
+                    }
                     .badge-button {
-                        background-color: var(--lightgreen);
-                        margin-left: 20px;
-                        text-transform: uppercase;
-                        border: none;
-                        padding: 7px 9px 6px;   
-                        font-size: 12px;
+                        @extend %button-property-shared;
                     }
                     .nav-tabs {
                         border-bottom: 1px solid var(--nav-border);
@@ -188,22 +259,29 @@ vertical-align: middle !important;
                     width: auto;
                     margin: 0px 7px;
                     color: var(--navli-font-color);
-                    .lowdiv, .normal, .high, .above{
-                        background: var(--lightgreen);
+                    %div-property {
                         width: 12px;
                         height: 12px;
                         border-radius: 4px;
                         float: left;
                         margin: 5px;
+                    }
+                    .lowdiv{
+                        background: var(--lightgreen);
+                        @extend %div-property;
+
                     } 
                     .normal{
                         background: var(--bar-strip-sec-label-Color);
+                        @extend %div-property;
                     }
                     .above{
                         background: var(--above-bg-color);
+                        @extend %div-property;
                     }
                     .high{
                         background: var(--high-bg-color);
+                        @extend %div-property;
                     }
                 }
             }
@@ -328,6 +406,10 @@ vertical-align: middle !important;
                         h2 {
                             font-size: 17px;
                         }
+                        .dropdown-icon {
+                            margin-left: 2px;
+                            margin-top: -4px;
+                        }
                         .leaderboard {
                             padding: 6px 7px 5px;
                             margin: 0px 5px 0px 0px;
@@ -376,6 +458,9 @@ vertical-align: middle !important;
                 padding: 15px !important;
                 margin-top: 15px;
                 .container {
+                    #diamond {
+                        min-height: auto;
+                    } 
                     .outer-padding-div, .outer-padding-div-pie-chart {
                         padding: 4px 4px;
                     } 
@@ -423,16 +508,23 @@ vertical-align: middle !important;
                         margin-bottom: 20px  !important;
                         max-width: 200px; 
                     }
+
                     .container-header {
+                        padding: 10px;
                         .fa.fa-ellipsis-v {
                             font-size: 22px;
                         }
                         h2 {
                             font-size: 16px;
+                            margin-top: 4px;
                         }
                         .leaderboard {
                             margin-right: 10px;
                             padding: 8px 10px 7px;
+                            margin-top: 2px;
+                        }
+                        .dropdown-icon {
+                            margin-left: 5px  !important;
                         }
                     }
                     .table-box { 
@@ -474,6 +566,7 @@ vertical-align: middle !important;
         #page-content-wrapper {
             .page-contents {
                 .container {
+                    padding: 10px 5px;
                     .container-header {
                         .fa.fa-ellipsis-v {
                             font-size: 20px;
@@ -485,6 +578,7 @@ vertical-align: middle !important;
                             margin-right: 5px;
                             padding: 8px 4px 7px; 
                             font-size: 11px;
+                            margin: 0;
                         }
                     }
 
@@ -557,3 +651,4 @@ vertical-align: middle !important;
         }
     }
 }  */
+

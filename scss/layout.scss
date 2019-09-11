@@ -39,7 +39,7 @@
                     }
                     .user-dropdown{
                         background: #112943;
-                        color: #fff;
+                        color:var(--text-white);
                         padding: 10px 20px;
                         min-width: 181px !important;
                         margin-right: 3px !important;
@@ -47,9 +47,9 @@
 
                         .user-button{ 
                             background-color: var(--lightgreen);
-                            color: #fff;
+                            color:var(--text-white);
                             text-transform: uppercase;
-                            font-size: 12px;
+                            font-size: 12px; 
                             width: 100%;
                             margin-top: 10px;
                         }
@@ -162,8 +162,9 @@
             border-right: 1.5px solid var(--border-color); 
             background:  var(--sidebar-wrapper-bg);
             #sidebar_menu {  
-                padding: 30px 20px 20px;
-            }
+                padding: 24px 20px 21px;
+                clear: both;
+            } 
             /*.sidebar-nav li */ 
             .sidebar-nav{
                 display: block; 

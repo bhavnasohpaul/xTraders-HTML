@@ -44,7 +44,7 @@
         h1{
             font-family: "PT Sans", sans-serif;
             font-size: 2.8rem;
-            color: #ffffff;
+            color:var(--text-white);
             text-align: center;
             margin: 0;
         }
@@ -79,7 +79,7 @@
             width: 100%;
             border: none;
             border-radius: 4px;
-            color: var(--login-text-white);
+            color: var(--text-white);
             font-size: 16px;
             font-weight: var(--bold-font);
         } 
@@ -108,7 +108,7 @@
                 margin: 0px 5px 20px;
             }
             .google {
-                background: var(--login-text-white);
+                background: var(--text-white);
             }
             .fb {
                 background: var(--fb-bg);

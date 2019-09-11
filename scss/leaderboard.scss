@@ -34,12 +34,12 @@
                     }
                     select > option
                     {
-                        background-color: #fff !important;
+                        background-color:var(--text-white); 
                         color: var(--primary-color);
                         margin: 5px 2px;
                         font-size: 13px;
                     }
-                    /*                    select:before {
+                    /*                    select:before { 
                                             position: absolute;
                                             top: 10px;
                                             left: 0;
