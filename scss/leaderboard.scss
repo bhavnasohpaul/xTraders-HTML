@@ -5,6 +5,9 @@
                 display: none;
             }
             .container {
+                .container-content {
+                    padding: 0 ! important;
+                }
                 .container-header {
                     padding: 20px 40px ! important;
                     h2 { 
@@ -16,7 +19,7 @@
                     .table-filter {
                         float: left; 
                         margin-right: 50px;
-                        height: 31px; 
+                        height: 31px;  
                     }
                     .table-filter.mobile {
                         display: none ! important; 
@@ -62,7 +65,6 @@
                         display: none;
                     }
                     .table {
-                        padding: 25px 40px; 
                         th{
                             color:var(--white); 
                             text-align: center;
@@ -135,12 +137,18 @@
 }
 
 @media screen and (max-width:900px) { 
-    .leaderboard-page #page-content-wrapper .page-contents .container .container-header {
-        padding: 15px 10px ! important;
-        .table-filter {
-            margin-right: 10px;
+    .leaderboard-page #page-content-wrapper .page-contents .container{
+        .container-content {
+            padding: 0  ! important;
         }
-    }
+        .container-header {
+            padding: 15px 10px ! important;
+            .table-filter {
+                margin-right: 10px;
+            }
+
+        }
+    } 
 }
 
 

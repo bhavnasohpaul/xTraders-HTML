@@ -101,9 +101,6 @@ ul{
     margin: 0;
     padding: 0; 
 }
-a{outline: none;
-  color: var(--primary-color  !important); 
-}
 input[type="text"] 
 {
     min-width: 200px;
@@ -211,7 +208,7 @@ input[type="text"]
 @keyframes slideIn { 
     0% {
         transform: translateY(1rem);
-        opacity: 0;
+        opacity: 0; 
     }
     100% {
         transform:translateY(0rem);

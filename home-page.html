@@ -103,13 +103,15 @@
                 <div class="page-contents"> 
                     <div class="row">
                         <div class="col-md-6 col-sm-12">                            
-                            <div class="container">
+                            <div class="container"> 
                                 <div class="container-header">
                                     <div class="header-div"> 
-                                        <h2>Member status</h2>
-                                    </div>
+                                        <h2>Member status <span class="user-div"><div class="user-number">Platinum </div></span> </h2>
 
-                                    <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
+                                    </div> 
+
+                                    <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent"> 
+                                        <span class="bar-number"><div class="bar-text"></div></span>  
                                         <ul class="navbar-nav ml-auto"> 
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
@@ -126,7 +128,7 @@
                                     </div>
 
                                 </div> 
-                                <div class="tabs">
+                                <div class="tabs container-content">
                                     <ul class="nav nav-tabs"> 
                                         <li><a class="active" data-toggle="tab" href="#gold">Earnings</a></li>
                                         <li><a data-toggle="tab" href="#diamond">Membership Status</a></li>
@@ -160,7 +162,7 @@
 
 
                                         <div id="diamond" class="tab-pane fade">
-                                            <div class="tab-content" id="b1">  
+                                            <div class="tab-content" id="membership-level-div">  
                                                 <div id="gold" class="tab-pane  in active"> 
                                                     <h3 class="w-100 clearfix"><span class="heading-text pull-left">Membership Level</span><span class="text pull-left">100</span></h3>
                                                     <ul class="content membership-level">
@@ -173,19 +175,17 @@
                                                     <button  class="leaderboard button  Cancel-membership-button">Cancel Membership</button>  
                                                 </div> 
                                             </div>   
-                                              
-                                            <div class="tab-content confirm-cancel" id='d1' style="display: none;">    
+
+                                            <div class="tab-content confirm-cancel" id='confirm-cancel-page' style="display: none;">    
                                                 <div id="gold" class="tab-pane  in active"> 
                                                     <p>You will lose your discount if cancelled confirm cancellation?</p>                                          
                                                 </div> 
                                                 <div class="text-center">
-                                                    <button id="b2" class="leaderboard button  Cancel-membership-button back">Back</button>   
-                                                    <button id="b2" class="leaderboard button  Cancel-membership-button">Confirm</button>   
+                                                    <button id="confirm-cancel-butons" class="leaderboard button  Cancel-membership-button back">Back</button>   
+                                                    <button id="confirm-cancel-butons" class="leaderboard button  Cancel-membership-button">Confirm</button>   
                                                 </div> 
-                                            </div> 
-
-
-                                        </div>
+                                            </div>  
+                                        </div> 
                                     </div> 
                                 </div>
                             </div>
@@ -218,7 +218,7 @@
                                     </div>
 
                                 </div> 
-                                <div class="tabs">
+                                <div class="tabs container-content"> 
                                     <ul class="nav nav-tabs">
                                         <li><a class="active" data-toggle="tab" href="#users-tab">NEW USERS JOINED</a></li>
                                         <li><a data-toggle="tab" href="#messages-tab">NUMBER OF MESSAGES</a></li>
@@ -245,12 +245,12 @@
                             <div class="container">
                                 <!-- container-header --> 
                                 <div class="container-header">  
-                                    <div class="header-div"> 
-                                        <h2><sapn class="Achievements-text">My Achievements </sapn><span class="trader-number">56</span></h2>   
+                                    <div class="header-div">  
+                                        <h2><sapn class="Achievements-text">My Achievements </sapn> <span class="trader-number"><div class="text-number">12</div></span></h2>   
                                     </div>
                                     <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
-                                        <span class="badge leaderboard leaderboard-text">view leaderboard</span>
-                                        <ul class="navbar-nav ml-auto"> 
+                                        <button class="leaderboard-toggle badge leaderboard leaderboard-text">view leaderboard</button> 
+                                        <ul class="navbar-nav ml-auto">  
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
                                                     <span class="dropdown-icon cusom-dropdown"></span>                 
@@ -265,8 +265,22 @@
                                     </div>
                                 </div> 
                                 <!-- end-of-container-header --> 
+
+                                <div id="leaderboard-content-div"  style="display: none;">   
+                                    <hr class="hr-line mt-0">
+                                    <div class="tabs container-content"> 
+                                        <h3 class="w-100 clearfix"><span class="heading-text pull-left">Karma </span><span class="text pull-left">89.9</span></h3>
+                                        <h3 class="w-100 clearfix"><span class="heading-text pull-left">Earnings </span><span class="text pull-left">$1.3</span></h3>
+                                        <hr class="hr-line">
+                                        <ul class="content">
+                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin. Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text is credited with discovering the source behind the ubiquitous filler text.</li>
+                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin. Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text is credited with discovering the source behind the ubiquitous filler text.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
                                 <!-- Ranking-chart -->  
-                                <div class="outer-padding-div">
+                                <div class="tabs container-content">
                                     <div id="barcontainer"></div>
                                     <div class="barcontainer-ranking">
                                         <div class="white-font">Ranking %</div>
@@ -277,7 +291,6 @@
                                     </div>
                                     <!-- end-of-Ranking-chart --> 
                                 </div>
-
                             </div>
 
                             <!--Watchlist-->
@@ -288,7 +301,7 @@
                                         <h2>Watchlist</h2>
                                     </div>
                                     <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
-                                        <button class="toggle badge leaderboard watchlist-text">Add To Watchlist</button> 
+                                        <button class="add-toggle badge leaderboard watchlist-text">Add To Watchlist</button> 
                                         <ul class="navbar-nav ml-auto"> 
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
@@ -304,75 +317,74 @@
                                     </div>
                                 </div> 
 
-                                <div id="watchlist-content-div">
-
-                                    <form action=""> 
-                                        <input class="form-group" type="text" name="" id="" placeholder="Input Area">
-                                        <input type="submit" value="Submit" class="submit-button">  
-                                    </form> 
-
-
-                                    <ul class="watchlist-div"> 
-                                        <li class="watchlist-list">
-                                            <div class="content"><span class="left-content">Ticker</span>
-                                                <div class="pull-left"> 
-                                                    <span class="red-font">18%</span><span class="bold-font">Lorem ipsum dolor sit.</span>
-                                                </div> 
-                                                <div class="pull-right ml-auto"> 
-                                                    <span class="green-font">18%</span><span class="bold-font">Lorem ipsum dolor sit.</span>
+                                <div class="container-content">                           
+                                    <div id="watchlist-content-div">
+                                        <form action=""> 
+                                            <input class="form-group" type="text" name="" id="" placeholder="Input Area">
+                                            <input type="submit" value="Submit" class="submit-button">  
+                                        </form> 
+                                        <ul class="watchlist-div"> 
+                                            <li class="watchlist-list">
+                                                <div class="content"><span class="left-content">Ticker</span>
+                                                    <div class="pull-left"> 
+                                                        <span class="red-font">18%</span><span class="bold-font">Lorem ipsum dolor sit.</span>
+                                                    </div> 
+                                                    <div class="pull-right ml-auto"> 
+                                                        <span class="green-font">18%</span><span class="bold-font">Lorem ipsum dolor sit.</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </li>
+                                            </li>
 
-                                        <li class="watchlist-list">
-                                            <div class="content"><span class="left-content">Notes</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin. Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text.</div>
-                                        </li>
-                                    </ul>
+                                            <li class="watchlist-list">
+                                                <div class="content"><span class="left-content">Notes</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin. Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text.</div>
+                                            </li>
+                                        </ul>
+                                    </div>
 
+                                    <!-- end-of-container-header --> 
+                                    <!-- table --> 
+                                    <div class="table-box table-responsive">  
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Symbol</th>                                            
+                                                    <th>Time</th>
+                                                    <th>Price</th>
+                                                    <th>Note</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="white-font">APPL</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="red-font">&#36;16.20</td> 
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="white-font">OSRK</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="green-font">&#36;216.20</td>
+                                                    <td>Good Offer. Watch <span class="edit-icon"><img src="assets/images/pen.png" alt="icon" class="pen"/></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="white-font">FEYE</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="red-font">&#36;156.20</td> 
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="white-font">APPL</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="green-font">&#36;216.20</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- end-of-Table --> 
 
                                 </div>
-                                <!-- end-of-container-header --> 
-                                <!-- table --> 
-                                <div class="table-box table-responsive">  
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Symbol</th>                                            
-                                                <th>Time</th>
-                                                <th>Price</th>
-                                                <th>Note</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="white-font">APPL</td>
-                                                <td>Mon, Jul 29</td>
-                                                <td class="red-font">&#36;16.20</td> 
-                                                <td>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="white-font">OSRK</td>
-                                                <td>Mon, Jul 29</td>
-                                                <td class="green-font">&#36;216.20</td>
-                                                <td>Good Offer. Watch <span class="edit-icon"><img src="assets/images/pen.png" alt="icon" class="pen"/></span></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="white-font">FEYE</td>
-                                                <td>Mon, Jul 29</td>
-                                                <td class="red-font">&#36;156.20</td> 
-                                                <td>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="white-font">APPL</td>
-                                                <td>Mon, Jul 29</td>
-                                                <td class="green-font">&#36;216.20</td>
-                                                <td>&nbsp;</td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- end-of-Table --> 
                             </div>
 
 
@@ -401,19 +413,18 @@
                                 </div> 
                                 <!-- end-of-container-header --> 
                                 <!-- pie-chart -->
-                                <div class="row">
-                                    <div class="outer-padding-div-pie-chart"> 
-                                        <div class="col-md-6 col-sm-6 col-xs-12 text-center pull-left no-padding">   
-                                            <div id="piecontainer"></div>   
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12  pull-right no-padding">  
-                                            <div class="piechart-color">
-                                                <div class=""><span class="lowdiv"></span>Low</div>
-                                                <div class=""><span class="normal"></span>Normal</div>
-                                                <div class=""><span class="above"></span>Above Average</div> 
-                                                <div class=""><span class="high"></span>High</div>
-                                                <div class=""><span class="very-high"></span>Very High</div>
-                                            </div>
+
+                                <div class="container-content"> 
+                                    <div class="col-md-6 col-sm-6 col-xs-12 text-center pull-left no-padding">   
+                                        <div id="piecontainer"></div>   
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12  pull-right no-padding">  
+                                        <div class="piechart-color">
+                                            <div class=""><span class="lowdiv"></span>Low</div>
+                                            <div class=""><span class="normal"></span>Normal</div>
+                                            <div class=""><span class="above"></span>Above Average</div> 
+                                            <div class=""><span class="high"></span>High</div>
+                                            <div class=""><span class="very-high"></span>Very High</div>
                                         </div>
                                     </div>
                                 </div> 
@@ -449,34 +460,34 @@
 
         <script src="https://code.highcharts.com/stock/highstock.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        
+
         <script>
 ///show///
-$('#b1').click(function(){
-$('#d1').show(1000);
-})
+            $('#membership-level-div').click(function () {
+                $('#confirm-cancel-page').show(1000);
+            })
 
 ///show///
-$('#b2').click(function(){
-$('#b2').show(1000);
-})
+            $('#confirm-cancel-butons').click(function () {
+                $('#confirm-cancel-butons').show(1000);
+            })
 ///hide///
-$('#b2').click(function(){
-$('#b1').show(1000); 
-})
- 
- 
- ///hide/// 
-$('#b1').click(function(){
-$('#b1').hide(1000); 
-})
- 
+            $('#confirm-cancel-butons').click(function () {
+                $('#membership-level-div').show(1000);
+            })
+
+
+            ///hide///  
+            $('#membership-level-div').click(function () {
+                $('#membership-level-div').hide(1000);
+            })
+
 
 ///hide/// 
-$('#b2').click(function(){
-$('#d1').hide(1000); 
-})
-</script>
+            $('#confirm-cancel-butons').click(function () {
+                $('#confirm-cancel-page').hide(1000);
+            })
+        </script>
 
 
         <!--theme-switch-wrapper-js -->
@@ -543,13 +554,28 @@ $('#d1').hide(1000);
                 $('.Show').show(0);
                 $('.Hide').hide(0);
             });
-            $('.toggle').click(function () {
+            $('.add-toggle').click(function () {
                 $('#watchlist-content-div').toggle('slow');
             });
 
 
-$('.Show').click(function () {
-                $('#diamond').show(1000); 
+            $('.Show').click(function () {
+                $('#leaderboard-content-div').show(1000);
+                $('.Show').hide(0);
+                $('.Hide').show(0);
+            });
+            $('.Hide').click(function () {
+                $('#leaderboard-content-div').hide(1000);
+                $('.Show').show(0);
+                $('.Hide').hide(0);
+            });
+            $('.leaderboard-toggle').click(function () {
+                $('#leaderboard-content-div').toggle('slow');
+            });
+
+
+            $('.Show').click(function () {
+                $('#diamond').show(1000);
                 $('.Show').hide(0);
                 $('.Hide').show(0);
             });
@@ -558,7 +584,7 @@ $('.Show').click(function () {
         </script> 
 
         <!--text-change-js--> 
-        
+
         <script>
             $(document).ready(function () {
                 if ($(window).width() < 900) {
@@ -575,8 +601,8 @@ $('.Show').click(function () {
                 }
             });
         </script> 
-        
-        
+
+
         <script>
             $(document).ready(function () {
                 if ($(window).width() < 900) {

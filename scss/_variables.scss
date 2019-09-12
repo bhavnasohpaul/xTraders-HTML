@@ -17,7 +17,7 @@
     --ellipsis-color:#fff;
     --heading-color:#fff;
     --tab-active-color:#fff;
-    --text-white:#fff;
+    --text-white:#fff; 
     --navli-font-color:#a4a8ad; 
     --yellowish-color:#bf9f1c; 
     --Tealish-Grey-color:#22c3aa ;
@@ -41,7 +41,8 @@
     --chart-tooltip-border-Color:rgba(35, 50, 73, 1);
     --chart-tooltip-text-Color:#fff;
     --barchart-shadow-color:rgba(238,241,243,0.2);  
-     --icon-hover-button:#0e99ff;
+    --icon-hover-button:#0e99ff; 
+    --trader-number-bg:#818d99;
 
     //sidebar-images-path
     --icon-grid: url('assets/images/dashboard-icon/grid.png');
@@ -55,8 +56,26 @@
     --icon-user_hover: url('assets/images/dashboard-icon/user_hover.png');
     --icon-hover-bg:#233249;
     --icon-hover-text:#22c3aa;
- --icon-dropdown: url('assets/images/dropdown-icon/red-dropdown.png');
- --icon-dropdown_hover: url('assets/images/dropdown-icon/green-dropdown.png');  
+    --icon-dropdown: url('assets/images/dropdown-icon/red-dropdown.png');
+    --icon-dropdown_hover: url('assets/images/dropdown-icon/green-dropdown.png'); 
+
+    --icon-sticks: url('assets/images/sticks.png');
+    --icon-sticks_hover: url('assets/images/sticks.png'); 
+
+    --icon-member: url('assets/images/user.png');
+    --icon-member_hover: url('assets/images/user.png');
+
+    --icon-candle: url('assets/images/candle.png');
+    --icon-candle_hover: url('assets/images/candle.png'); 
+
+    --icon-bar: url('assets/images/bar.png'); 
+    --icon-bar_hover: url('assets/images/bar.png');
+
+    --icon-setting: url('assets/images/setting.png'); 
+    --icon-setting_hover: url('assets/images/setting.png');
+    --hr-line:#34445d;
+    --number-bg:#fff;
+    --number-text-color:#021c33;
 
     //common-color
     --white:#fff;
@@ -126,14 +145,17 @@
     --bar-chartgridLineColor:#dddddd;
     --bar-label-Color:#808d99;
     --bar-strip-label-Color:rgb(73, 141, 206);
-     --bar-strip-sec-label-Color:#22c3aa;
+    --bar-strip-sec-label-Color:#22c3aa;
     --chart-tooltip-background-Color:#fff; 
     --chart-tooltip-border-Color:#fff;
     --bar-label-Color-y-axis:#b7bec4;
     --chart-tooltip-text-Color:#808d99;
     --barchart-shadow-color:#a4a8ad;  
     --table-bottom-border-color:#dddddd;
-    --select-border:#dddddd;   
+    --select-border:#dddddd;  
+    --trader-number-bg:#d3d0d0;    
+
+
     --bg-image: url('assets/images/xtrades-bg.jpg');
     --logo: url('assets/images/Xtrades_Square_Dark2x.png');  
     --logo-responsive: url('assets/images/Xtrades_Square_Dark2x.png');  
@@ -148,12 +170,30 @@
     --icon-award_hover: url('assets/images/dashboard-icon/award_hover-light.png');
     --icon-film_hover: url('assets/images/dashboard-icon/film_hover-light.png');
     --icon-user_hover: url('assets/images/dashboard-icon/user_hover-light.png');
-     --icon-dropdown: url('assets/images/dropdown-icon/red-dropdown.png');
-    --icon-dropdown_hover: url('assets/images/dropdown-icon/blue-dropdown.png');   
+    --icon-dropdown: url('assets/images/dropdown-icon/red-dropdown.png');
+    --icon-dropdown_hover: url('assets/images/dropdown-icon/blue-dropdown.png'); 
 
+    --icon-sticks: url('assets/images/blue-sticks.png');
+    --icon-sticks_hover: url('assets/images/sticks.png');  
+
+    --icon-member: url('assets/images/blue-user.png');
+    --icon-member_hover: url('assets/images/user.png');
+
+    --icon-candle: url('assets/images/blue-candle.png'); 
+    --icon-candle_hover: url('assets/images/candle.png');
+
+    --icon-bar: url('assets/images/blue-bar.png');   
+    --icon-bar_hover: url('assets/images/bar.png');
+
+    --icon-setting: url('assets/images/setting.png'); 
+    --icon-setting_hover: url('assets/images/setting.png');   
+
+    --hr-line:#dfdfdf;
+    --number-bg:#efefef;  
+    --number-text-color:#808d99;
     --icon-hover-bg:#f0f1f1;
     --icon-hover-text:#0e99ff;  
     --table-grey-color: #acb1b7;    
     --icon-hover-button:#22c3aa;   
-     --normal-bg-color: #77beff; 
+    --normal-bg-color: #77beff; 
 }      

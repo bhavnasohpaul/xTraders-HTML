@@ -9,30 +9,21 @@
             display: inline-block;
             width: 100%;
             padding: 50px; 
-            .container { 
+            .container {  
                 display: inline-block;
-                min-width: 100%;
-                width: 100%;  
-                border: 2px solid var(--navyblue);   
+                min-width: 100%; 
+                width: 100%;    
                 padding: 0px;
                 min-height: 100px;
                 border-radius: 5px;
                 margin-bottom: 50px;
-                .outer-padding-div{
-                    padding: 25px 29px;
+                .container-content{
+                    padding: 40px;
+                    border: 2px solid var(--navyblue);
                     width: 100%;
                     display: inline-block;
-                }
-                .outer-padding-div-pie-chart{ 
-                    padding: 0px 29px;
-                    width: 100%;
-                    display: inline-block;
-                }
-                .table-responsive {
-                    width: auto;
                 }
                 .table-box{
-                    margin:50px;
                     .table {
                         min-width: 450px;
                         margin-bottom: 0px;
@@ -46,7 +37,7 @@
                             border: none !important; 
                         }
                         td{
-                            border-bottom: 2px solid var(--border-color);
+                            border-bottom: 1px solid var(--border-color); 
                             @extend %table-property;
                             border-top: none;
                         }
@@ -54,12 +45,12 @@
                 }
                 .container-header {
                     width: 100%;
-                    display: inline-block;
                     margin :0px;
                     background:var(--con-header);  
                     padding:20px 40px;
                     border-top-left-radius:5px;
                     border-top-right-radius: 5px;
+                    float: left;
                     .leaderboard {
                         @extend %button-property-shared;
                         float: left;
@@ -78,12 +69,31 @@
                             vertical-align: middle !important;
                         }
                         .trader-number{
-                            margin-top: 1px;
-                            font-size: 16px;
-                            background: #818d99;
-                            padding: 3px 4px;
-                            border-radius: 7px;
-                            margin-left: 10px;
+                            position: absolute;
+                            background: var(--chart-bg-color);  
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            margin-left: 10px;   
+                            background-image: var(--icon-candle);
+                            height: 36px;
+                            border: 2px solid var(--lightgreen); 
+                            border-radius: 100%;
+                            width: 36px;
+                            .text-number{
+                                position: relative;
+                                font-size: 12px; 
+                                background-color: var(--lightgreen);
+                                color: var(--con-header);
+                                width: 20px;
+                                height: 20px; 
+                                top: -4px; 
+                                right: -21px;
+                                border-radius: 100%;
+                                text-align: center;
+                                line-height: 12px;
+                                padding-top: 2px;
+                                border: 2px solid var(--con-header);
+                            }
                         }
                     }
                     .header-right-items{  
@@ -98,8 +108,79 @@
                         color:var(--ellipsis-color);
                     }
                 }
+                .user-div{
+                    position: absolute;
+                    background: var(--chart-bg-color);  
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    margin-left: 10px;   
+                    background-image: var(--icon-member);
+                    height: 36px;
+                    border: 2px solid var(--lightgreen);
+                    border-radius: 100%;
+                    width: 36px;
+                    .user-number{
+                        position: relative; 
+                        top: -4px;
+                        right: -24px;
+                        font-size: 12px;
+                        background: var(--number-bg);
+                        color: var(--number-text-color);
+                        border-radius: 12px;
+                        text-align: center;
+                        display: table;
+                        vertical-align: middle !important;
+                        border: 2px solid var(--con-header);
+                        padding: 0px 8px;
+                    }
+                }
+
+
+                #watchlist-content-div{
+                    background: transparent; 
+                    width: 100%;
+                    display: none;
+                    .form-group {
+                        margin-bottom: 1rem;
+                        background: transparent;
+                        border: 2px solid var(--navyblue);
+                        border-radius: 7px;
+                        width: calc(100% - 100px); 
+                        color: var(--navli-font-color);
+                        padding: 2px 10px;
+                        margin: 20px 0px;
+                    }
+                    .submit-button{
+                        @extend %button-property-shared;
+                        float: right;
+                        margin: 20px 0px;
+                    }
+                    .watchlist-list {
+                        width: 100%;
+                        display: inline-block;
+                        margin: 5px 0px;
+                        .content {
+                            font-weight: var(--regular-font);
+                            color: var(--navli-font-color);
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                            .left-content {
+                                color: var(--white);
+                                margin-right: 20px;
+                                float: left;
+                            }
+                            .bold-font {
+                                font-weight: var(--bold-font);
+                                color: var(--white);
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+                #diamond {
+                    min-height: 415px;
+                }
                 .tabs {
-                    margin: 40px;
                     .back{
                         background:var(--back-button);   
                     }
@@ -107,52 +188,7 @@
                         margin: 20px 10px 120px;
                         margin-bottom: 100px;
                         color:var(--text-white);                        
-                    } 
-                    #watchlist-content-div{
-                        background: transparent; 
-                        width: 100%;
-                        padding: 30px 50px 10px; 
-                        display: none;
-                        .form-group {
-                            margin-bottom: 1rem;
-                            background: transparent;
-                            border: 2px solid var(--navyblue);
-                            border-radius: 7px;
-                            width: calc(100% - 100px); 
-                            color: var(--navli-font-color);
-                            padding: 2px 10px;
-                            margin: 20px 0px;
-                        }
-                        .submit-button{
-                            @extend %button-property-shared;
-                            float: right;
-                            margin: 20px 0px;
-                        }
-                        .watchlist-list {
-                            width: 100%;
-                            display: inline-block;
-                            margin: 5px 0px;
-                            .content {
-                                font-weight: var(--regular-font);
-                                color: var(--navli-font-color);
-                                font-size: 14px;
-                                margin-bottom: 10px;
-                                .left-content {
-                                    color: var(--white);
-                                    margin-right: 20px;
-                                    float: left;
-                                }
-                                .bold-font {
-                                    font-weight: var(--bold-font);
-                                    color: var(--white);
-                                    margin-left: 5px;
-                                }
-                            }
-                        }
-                    }
-                    #diamond {
-                        min-height: 415px;
-                    } 
+                    }                     
                     .confirm-cancel{ 
                         p {
                             color: var(--primary-color);
@@ -408,7 +444,7 @@
                         }
                         .dropdown-icon {
                             margin-left: 2px;
-                            margin-top: -4px;
+                            margin-top: 0;
                         }
                         .leaderboard {
                             padding: 6px 7px 5px;
@@ -422,6 +458,10 @@
                 }
                 padding: 15px;
                 margin-top: 15px;
+            }
+            .bar-number {
+                right: 52px;
+
             }
         }
     }
@@ -454,18 +494,22 @@
 @media screen and (max-width:900px) { 
     #wrapper {
         #page-content-wrapper {
+            .bar-number {
+
+                right: 52px;
+
+            }
             .page-contents {
                 padding: 15px !important;
                 margin-top: 15px;
                 .container {
+                    .container-content {
+                        padding: 15px;
+                    }
                     #diamond {
                         min-height: auto;
                     } 
-                    .outer-padding-div, .outer-padding-div-pie-chart {
-                        padding: 4px 4px;
-                    } 
                     .tabs {
-                        margin: 15px;
                         .nav-tabs {
                             margin-bottom: 40px;
                         }
@@ -474,7 +518,7 @@
                         margin: 15px; 
                     }
                     .container-header {
-                        padding: 15px 10px;
+                        padding: 25px 10px;
                     }               
                 }
             }
@@ -510,7 +554,6 @@
                     }
 
                     .container-header {
-                        padding: 10px;
                         .fa.fa-ellipsis-v {
                             font-size: 22px;
                         }
@@ -553,7 +596,6 @@
                                 padding: 10px 0px 10px; 
                             }
                         }
-                        margin: 15px;
                     }
                 }
                 padding: 10px;
@@ -567,6 +609,9 @@
             .page-contents {
                 .container {
                     padding: 10px 5px;
+                    .user-div {
+                        display: none;
+                    }
                     .container-header {
                         .fa.fa-ellipsis-v {
                             font-size: 20px;
@@ -652,3 +697,45 @@
     }
 }  */
 
+
+.bar-number{
+    position: absolute;
+    background: var(--chart-bg-color);  
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 10px;   
+    background-image: var(--icon-sticks); 
+    height: 36px;
+    border: 2px solid var(--lightgreen);
+    border-radius: 100%; 
+    width: 36px;
+    right: 90px;
+    .bar-text{   
+        position: relative;
+        width: 20px;
+        height: 20px;
+        top: -4px;
+        right: -11px;
+        background: var(--number-bg); 
+        color: var(--number-text-color);
+        border-radius: 100%;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        margin-left: 10px; 
+        background-image: var(--icon-setting);
+        border: 2px solid var(--con-header); 
+    }
+} 
+
+#leaderboard-content-div {
+    background: var(--con-header);
+    top: 0; 
+    li{
+        background: var(--body-background) !important; 
+        padding: 25px !important;
+        color: var(--primary-color) !important; 
+    }
+    .hr-line{
+        background: var(--hr-line);
+    }
+}
