@@ -19,7 +19,7 @@
                 <div id="sidebar-wrapper">
                     <!-- sidebar_menu --> 
                     <div id="sidebar_menu">
-                        <div class="sidebar-brand"><a href="#">
+                        <div class="sidebar-brand"><a href="javascript:void(0);">
                                 <img src="assets/images/dashboard-icon/menu-light.png" alt="icon"/></a></div>  
                     </div>
                     <!-- sidebar-nav --> 
@@ -65,28 +65,32 @@
                                     <span class="form-control-feedback"><i class="fa fa-search" aria-hidden="true"></i></span>
                                 </div>
                             </form> 
-
                             <div class="nav-item dropdown  header-right-items">  
-                                <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/> </div>
-                                </a>
-                                <div class="dropdown-menu user-dropdown" aria-labelledby="navbarDropdown">                        
-                                    <div class="widget-pic">
-                                        <div class="user-text">Robert Millan</div> 
-                                    </div> 
-                                    <div class="widget-logout"> 
-                                        <button class="btn user-button">Logout</button>
-                                    </div>
-
-                                </div>                            
+                                <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
+                                    <ul class="navbar-nav ml-auto"> 
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
+                                                <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/> </div>               
+                                            </a>  
+                                            <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                            <div class="dropdown-menu user-dropdown dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                                <div class="widget-pic">
+                                                    <div class="user-text">Robert Millan</div> 
+                                                </div> 
+                                                <div class="widget-logout"> 
+                                                    <button class="btn user-button">Logout</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-
                         </div> 
                     </div>
                     <div class="mobile-small-size">  
                         <form class="search-container">
                             <input type="text" id="search-bar" placeholder="Search"> 
-                            <a href="#"><span class="form-control-search search-icon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+                            <a href="javascript:void(0);"><span class="form-control-search search-icon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
                         </form>
                     </div>
                 </header>
@@ -96,7 +100,7 @@
                 <div class="page-contents">   
                     <div class="first-tab">   
                         <div class="container border-0 mb-0">
-                            <div class="tabs ml-0 mr-0 videos-tabs"> 
+                            <div class="tabs ml-0 mr-0 videos-tabs product-first-tab">  
                                 <ul class="nav nav-tabs">
                                     <li><a class="active" data-toggle="tab" href="#elite">ELITE</a></li>
                                     <li><a data-toggle="tab" href="#gold">ELITE GOLD</a></li>
@@ -104,7 +108,7 @@
                                 </ul>
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12">                            
-                                        <div class="container">
+                                        <div class="container"> 
                                             <div class="tab-content"> 
                                                 <!-- gold-member-->
                                                 <div id="elite" class="tab-pane active">
@@ -113,20 +117,25 @@
                                                             <h2>Elite Page</h2>
                                                         </div>
 
-                                                        <div class="nav-item dropdown">
-                                                            <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
-                                                            </a>
-                                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                                <a class="dropdown-item" href="#">Action</a>
-                                                                <a class="dropdown-item" href="#">Another action</a>
-                                                                <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                            </div> 
+                                                        <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
+                                                            <ul class="navbar-nav ml-auto"> 
+                                                                <li class="nav-item dropdown">
+                                                                    <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
+                                                                        <span class="dropdown-icon cusom-dropdown"></span>                 
+                                                                    </a> 
+                                                                    <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                                                    <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                                        <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="javascript:void(0);">Something else here</a> 
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
                                                         </div>
 
-                                                    </div>
-                                                    <ul class="tabs"> 
+                                                    </div> 
+                                                    <ul class="tabs container-content elite-bg-border">
                                                         <li>
                                                             <p class="pull-left left-div">New Leads Lorem ipsum dolor sit amet, consectetur adipiscing Referrals.pdf
                                                             </p> 
@@ -211,20 +220,25 @@
                                                             <h2>Elite Gold Page</h2>
                                                         </div>
 
-                                                        <div class="nav-item dropdown">
-                                                            <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
-                                                            </a>
-                                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                                <a class="dropdown-item" href="#">Action</a>
-                                                                <a class="dropdown-item" href="#">Another action</a>
-                                                                <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                            </div>
+                                                        <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
+                                                            <ul class="navbar-nav ml-auto"> 
+                                                                <li class="nav-item dropdown">
+                                                                    <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
+                                                                        <span class="dropdown-icon cusom-dropdown"></span>                 
+                                                                    </a> 
+                                                                    <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                                                    <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                                        <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="javascript:void(0);">Something else here</a> 
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
                                                         </div>
 
                                                     </div>
-                                                    <ul class="tabs"> 
+                                                  <ul class="tabs container-content gold-bg-border">
                                                         <li>
                                                             <p class="pull-left left-div">New Leads Lorem ipsum dolor sit amet, consectetur adipiscing Referrals.pdf
                                                             </p> 
@@ -298,7 +312,7 @@
                                                             </div>
                                                         </li>
 
-                                                    </ul> 
+                                                    </ul>
 
                                                 </div> 
                                                 <!-- end-of-elite-member-->                                   
@@ -309,20 +323,25 @@
                                                             <h2>Platinum Page</h2>  
                                                         </div>
 
-                                                        <div class="nav-item dropdown">
-                                                            <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
-                                                            </a>
-                                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                                <a class="dropdown-item" href="#">Action</a>
-                                                                <a class="dropdown-item" href="#">Another action</a>
-                                                                <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                            </div>
+                                                        <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
+                                                            <ul class="navbar-nav ml-auto"> 
+                                                                <li class="nav-item dropdown">
+                                                                    <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
+                                                                        <span class="dropdown-icon cusom-dropdown"></span>                 
+                                                                    </a> 
+                                                                    <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                                                    <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                                                        <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                                        <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="javascript:void(0);">Something else here</a> 
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
                                                         </div>
 
                                                     </div>
-                                                    <ul class="tabs"> 
+                                                    <ul class="tabs container-content platinum-bg-border">
                                                         <li>
                                                             <p class="pull-left left-div">New Leads Lorem ipsum dolor sit amet, consectetur adipiscing Referrals.pdf
                                                             </p> 
@@ -417,20 +436,25 @@
                                     <div class="header-div">
                                         <h2>Videos</h2>
                                     </div>
-                                    <div class="nav-item dropdown">
-                                        <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
+                                    <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
+                                        <ul class="navbar-nav ml-auto"> 
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
+                                                    <span class="dropdown-icon cusom-dropdown"></span>                 
+                                                </a> 
+                                                <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                    <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="javascript:void(0);">Something else here</a> 
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
 
                                 </div>
-                                <div class="tabs videos-tabs"> 
+                                <div class="tabs container-content videos-tabs"> 
                                     <ul class="nav nav-tabs">
                                         <li><a class="active" data-toggle="tab" href="#course">COURSES</a></li>
                                         <li><a data-toggle="tab" href="#video">VIDEO LESSONS</a></li>
@@ -688,23 +712,28 @@
                             <div class="container">
                                 <div class="container-header">
                                     <div class="header-div">
-                                        <h2>Custom Scripts</h2>
+                                        <h2>Custom Scripts</h2> 
+                                    </div>
+                                    <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
+                                        <ul class="navbar-nav ml-auto"> 
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
+                                                    <span class="dropdown-icon cusom-dropdown"></span>                 
+                                                </a> 
+                                                <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                    <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="javascript:void(0);">Something else here</a> 
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
 
-                                    <div class="nav-item dropdown">
-                                        <a class="toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class=""> <i class="fa fa-ellipsis-v" aria-hidden="true"></i></span>
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
 
                                 </div>
-                                <div class="tabs swim-tab">
+                                <div class="tabs container-content swim-tab">
                                     <ul class="nav nav-tabs">
                                         <li><a class="active" data-toggle="tab" href="#swim">THINK OR SWIM</a></li>
                                         <li><a data-toggle="tab" href="#trade">ETRADE SCANNERS</a></li>
@@ -1124,7 +1153,7 @@
                         </div><!--End-of-col-->
                     </div><!--End-of-Row-->
                     <!--end-of-Custom-Scripts-tabs-->
-
+ 
                 </div><!-- end-of page-contents -->
             </div><!--End-of-#page-content-wrapper-->
         </div><!--End-of-#Wrapper-->
@@ -1141,77 +1170,59 @@
             const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
             const currentTheme = localStorage.getItem('theme');
             if (currentTheme) {
-            document.documentElement.setAttribute('data-theme', currentTheme);
-            if (currentTheme === 'dark') {
-            toggleSwitch.checked = true;
+                document.documentElement.setAttribute('data-theme', currentTheme);
+                if (currentTheme === 'dark') {
+                    toggleSwitch.checked = true;
+                }
             }
-            }
-
             //add class to html tag
             $('html').addClass('dark');
             $("#checkbox").prop("checked", false);
             function switchTheme(e) {
-            if ($('html').hasClass('dark')) {
-            $('html').addClass('light');
-            $('html').removeClass('dark');
-            } else {
-            $('html').addClass('dark');
-            $('html').removeClass('light');
-            }
+                if ($('html').hasClass('dark')) {
+                    $('html').addClass('light');
+                    $('html').removeClass('dark');
+                } else {
+                    $('html').addClass('dark');
+                    $('html').removeClass('light');
+                }
 
-            if (e.target.checked) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            document.documentElement.addClass('data-theme');
-            localStorage.setItem('theme', 'dark');
-            } else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-            }
+                if (e.target.checked) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    document.documentElement.addClass('data-theme');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                }
             }
             toggleSwitch.addEventListener('change', switchTheme, false);
         </script>
         <!--sidebar-wrapper-js--> 
         <script>
             $(document).ready(function () {
-            $('#sidebar-wrapper').click(function () {
-            $('#sidebar').toggleClass('visible');
-            $('.body-menu').toggleClass('.body-menu-left');
-            });
+                $('#sidebar-wrapper').click(function () {
+                    $('#sidebar').toggleClass('visible');
+                    $('.body-menu').toggleClass('.body-menu-left');
+                });
             })
         </script> 
-        <!--Dropdown-js--> 
+        <!--text-change-js -->
         <script>
-                    $(document).ready(function () {
-            $(".dropdown").hover(
-                    function () {
-                    $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideDown("fast");
-                    $(this).toggleClass('open');
-                    },
-                    function () {
-                    $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideUp("fast");
-                    $(this).toggleClass('open');
-                    }
-            );
+            $(document).ready(function () {
+                if ($(window).width() < 767) {
+                    $("h1").text("Members Product  ");
+                } else {
+                    $("h1").text("Members Product Page ");
+                }
             });
-        </script>
-
-        <script>
-           $(document).ready(function(){
-   if($( window ).width() < 370){
-       $("h1").text("Members Product Page ");
-   }else{
-       $("h1").text("Members Product Page ");
-   }
-});
-$( window ).resize(function() {
-	if($( window ).width() < 370){
-       $("h1").text("Members Product ");
-   }else{
-       $("h1").text("Members Product Page ");
-   }
-});
+            $(window).resize(function () {
+                if ($(window).width() < 767) {
+                    $("h1").text("Members Product ");
+                } else {
+                    $("h1").text("Members Product Page ");
+                }
+            });
         </script> 
-
-
     </body>
-</html>
+</html> 
