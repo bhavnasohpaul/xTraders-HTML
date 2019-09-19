@@ -236,20 +236,22 @@
                         }
                     }
 
-
+.l-sidebar-icon { 
+    outline: none;
+}
 
                     a {
                         color:var(--primary-color); 
                         display: block;
-                        float: left;
                         text-decoration: none;
                         width: 315px;
-                        -webkit-transition: background .5s; 
+/*                        -webkit-transition: background .5s; 
                         -moz-transition: background .5s;
                         -o-transition: background .5s;
                         -ms-transition: background .5s;
-                        transition: background .5s;
+                        transition: background .5s;*/
                         padding: 10px 0px;
+                            clear: both;
                     }
                 }
                 .sub_icon{

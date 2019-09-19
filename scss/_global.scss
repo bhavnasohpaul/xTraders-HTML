@@ -129,6 +129,10 @@ button:focus {
     color:var(--text-white);
     border-radius: 5px;
     min-width: 79px;
+    font-weight: var(--bold-font)!important;
+}
+.button{
+    @extend %button-property-shared;
 }
 
 #checkbox {
@@ -284,7 +288,7 @@ button:focus {
 
 
 
-
+/*
 .elite-bg-border {
     border: 2px solid var(--elite-bg) !important; 
 } 
@@ -293,4 +297,4 @@ button:focus {
 }
 .platinum-bg-border {
     border: 2px solid var(--platinium-bg) !important;  
-}
+}*/ 
