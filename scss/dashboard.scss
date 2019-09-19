@@ -91,7 +91,7 @@
                             width: 30px;
                             .text-number{
                                 position: relative;
-                                font-size: 12px; 
+                                font-size: 10px; 
                                 background-color: var(--lightgreen);
                                 color: var(--con-header);
                                 width: 20px; 
@@ -231,7 +231,6 @@
                             .left-content {
                                 color: var(--white);
                                 margin-right: 20px;
-                                float: left;
                                 font-size: 15px;
                             }
                             .bold-font {
@@ -241,10 +240,11 @@
                         }
                     } 
                 }
-                .tabs {
-                    .back{
+                .back{
                         background:var(--back-button);   
                     }
+                .tabs { 
+                    
                     .Cancel-membership-button {
                         margin: 20px 10px; 
                         color:var(--text-white);                        
@@ -568,7 +568,7 @@
 
     }
     #wrapper {
-        #page-content-wrapper {
+        #page-content-wrapper { 
             .page-contents {
                 padding: 15px !important;
                 margin-top: 15px;
