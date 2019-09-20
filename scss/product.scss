@@ -6,15 +6,19 @@
                 .tabs{
                     margin-bottom: 50px;
                 }
-            }  
+            }   
             .container {
+                .container-content {
+                    max-height: 510px;
+                    overflow-y: scroll;
+                }
                 p {
                     float: left;
-                    width: calc(100% - 190px);
+                    width: calc(100% - 200px);
                     color: var(--heading-color);              
                 } 
                 .right-div{ 
-                    width: 190px;
+                    width: 200px;
                     float: right;
                     text-align: right;
                     .size {
@@ -66,10 +70,8 @@
             } 
         } 
     } 
- 
-
 @media screen and (max-width:680px) {  
-    #wrapper { 
+    .product-page { 
         .header { 
             .search-form.desktop {
                 display: none;
@@ -151,8 +153,6 @@
         }
     } 
 }
-
-
 @media screen and (max-width:580px) { 
     .product-page {
         #page-content-wrapper {
@@ -186,4 +186,4 @@
             }
         }
     }
-} 
+}  

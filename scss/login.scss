@@ -1,14 +1,4 @@
 /*login-style*/
-.dark{
-    .trade-heading {
-        display: none;
-    }
-}
-.light{
-    .trade-heading{
-        display :block;
-    }
-} 
 .login {
     background-image:var(--bg-image);  
     position: fixed;
@@ -75,13 +65,21 @@
         .button {
             background: var(--green-button-color);
             padding: 1.1rem .9rem; 
-            font-size: 1rem; 
             width: 100%;
             border: none;
             border-radius: 4px;
             color: var(--text-white);
             font-size: 16px;
-            font-weight: var(--bold-font);
+            margin: 0px;
+            &:hover {
+                background: var(--icon-hover-button) !important;
+            }
+            &:focus {
+                background: var(--icon-hover-button) !important;
+            }
+            &:active {
+                background: var(--icon-hover-button) !important;
+            }
         } 
         .account-text {
             color: var(--green-button-color);
@@ -118,30 +116,41 @@
             } 
         }
     }
+    /*login-social-style*/
+    .login-social{
+        .login-social-div{ 
+            max-width: 320px;
+            margin: 0px auto;
+            .google-text {
+                color: #000;
+                font-size: var(--regular-font-size);   
+            }
+            .fb-text {
+                font-size: var(--regular-font-size);   
+            }
+            .discord-text {
+                font-size: var(--regular-font-size);   
+            }
+        }  
+    }
 }
-/*login-social-style*/
 .login-switch-wrapper {
     position: absolute;
     z-index: 9;
     top: 30px;
     left: 30px;
 }
-.login-social{
-    .login-social-div{ 
-        max-width: 320px;
-        margin: 0px auto;
-        .google-text {
-            color: #000;
-            font-size: var(--regular-font-size);   
-        }
-        .fb-text {
-            font-size: var(--regular-font-size);   
-        }
-        .discord-text {
-            font-size: var(--regular-font-size);   
-        }
-    }  
+.dark{
+    .trade-heading {
+        display: none;
+    }
 }
+.light{
+    .trade-heading{
+        display :block;
+    }
+}
+
 /*Responsive-style*/
 @media only screen and (max-width: 767px) { 
     .login-switch-wrapper {
@@ -182,11 +191,9 @@
 }
 @media only screen and (max-width: 480px) {
     .logo {
-        background-image:var(--logo-responsive) !important             
+        background-image:var(--logo-responsive) !important ;            
     }
 }
-
-
 @media only screen and (max-width: 420px) {
     .login{
         .container{

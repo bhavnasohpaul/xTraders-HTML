@@ -1,12 +1,3 @@
-
-$(document).ready(function () {
-    $('ul li .dropdown-icon').click(function () {
-        $('li .dropdown-icon').removeClass("active");
-        $(this).addClass("active");
-    });
-});
-
-
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const currentTheme = localStorage.getItem('theme');
 
@@ -18,16 +9,16 @@ if (currentTheme) {
     }
 }
 
-//add class to html tag
+//add class to html tag 
 $('html').addClass('dark');
 $("#checkbox").prop("checked", false);
 function switchTheme(e) {
     if ($('html').hasClass('dark')) {
-        $('html').addClass('dark');
+        $('html').addClass('light');
         $('html').removeClass('dark');
     } else {
         $('html').addClass('dark');
-        $('html').removeClass('dark');
+        $('html').removeClass('light');
     }
 
     if (e.target.checked) {
@@ -35,13 +26,41 @@ function switchTheme(e) {
         document.documentElement.addClass('data-theme');
         localStorage.setItem('theme', 'dark');
     } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
     }
 }
 toggleSwitch.addEventListener('change', switchTheme, false);
 
 
 
+
+$('#sidebar-wrapper').click(function () {
+    $('#sidebar').toggleClass('visible');
+    $('.body-menu').toggleClass('.body-menu-left');
+});
+
+
+
+$(document).ready(function () {
+    var nice = $("html").niceScroll({ cursorborder: "var(--con-header)", cursorcolor: "var(--con-header)", boxzoom: true });  // The document page (body)       
+
+    $(".container-content").niceScroll({ cursorborder: "var(--con-header)", cursorcolor: "var(--con-header)", boxzoom: true });
+    $(".table-responsive").niceScroll({ cursorborder: "var(--green-color)", cursorcolor: "var(--green-color)", boxzoom: true });
+
+});
+
+
+function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML =
+                this.responseText;
+        }
+    };
+    xhttp.open("GET", "ajax_info.txt", true);
+    xhttp.send();
+}
 
 

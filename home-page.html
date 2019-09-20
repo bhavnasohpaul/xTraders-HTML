@@ -1,1032 +1,822 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Mobile Specific Meta -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Site Title -->
-        <title> Crypto Traders </title>			
-        <!--  font-css  -->
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    </head> 
 
-    <body>
-        <!-- wrapper -->
-        <div id="wrapper" class="home-page font-family">  
-            <!-- sidebar --> 
-            <div id="sidebar">      
-                <!-- sidebar-wrapper -->            
-                <div id="sidebar-wrapper">
-                    <!-- sidebar_menu --> 
-                    <div id="sidebar_menu">
-                        <div class="sidebar-brand"><a href="javascript:void(0);">
-                                <img src="assets/images/dashboard-icon/menu-light.png" alt="icon"/></a>
-                        </div>  
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Site Title -->
+    <title> Crypto Traders </title>
+    <!--  font-css  -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div id="wrapper" class="home-page font-family">
+        <!-- sidebar -->
+        <div id="sidebar">
+            <!-- sidebar-wrapper -->
+            <div id="sidebar-wrapper">
+                <!-- sidebar_menu -->
+                <div id="sidebar_menu">
+                    <div class="sidebar-brand"><a href="javascript:void(0);">
+                            <img src="assets/images/dashboard-icon/menu-light.png" alt="icon" /></a>
                     </div>
-                    <!-- sidebar-nav --> 
-                    <ul class="sidebar-nav">       
-                        <li><a href="home-page.html" class="l-sidebar-icon">Dashboard
-                                <span class="sub_icon l-sidebar-icon-grid"></span>
-                            </a>
-                        </li>  
-                        <li><a href="leaderboard-page.html" class="l-sidebar-icon">Leaderboard
-                                <span class="sub_icon l-sidebar-icon-award"></span>
-                            </a>
-                        </li>
-                        <li><a href="product-page.html" class="l-sidebar-icon">Members Product Page 
-                                <span class="sub_icon l-sidebar-icon-film"></span>    
-                            </a>
-                        </li>
-                        <li><a href="chat-page.html" class="l-sidebar-icon">Chat Page  
-                                <span class="sub_icon l-sidebar-icon-user"></span>
-                            </a>
-                        </li>
-                    </ul>  
-                </div>   
-                <!-- end-of-sidebar-wrapper -->
-            </div>  
+                </div>
+                <!-- sidebar-nav -->
+                <ul class="sidebar-nav">
+                    <li><a href="home-page.html" class="l-sidebar-icon" onclick="loadDoc()">Dashboard
+                            <span class="sub_icon l-sidebar-icon-grid"></span>
+                        </a>
+                    </li>
+                    <li><a href="leaderboard-page.html" class="l-sidebar-icon" onclick="loadDoc()">Leaderboard
+                            <span class="sub_icon l-sidebar-icon-award"></span>
+                        </a>
+                    </li>
+                    <li><a href="product-page.html" class="l-sidebar-icon" onclick="loadDoc()">Members Product Page
+                            <span class="sub_icon l-sidebar-icon-film"></span>
+                        </a>
+                    </li>
+                    <li><a href="chat-page.html" class="l-sidebar-icon" onclick="loadDoc()">Chat Page
+                            <span class="sub_icon l-sidebar-icon-user"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- end-of-sidebar-wrapper -->
+        </div>
 
-            <!-- page-content-wrapper -->
-            <div id="page-content-wrapper"> 
-                <!-- header -->
-                <header class="header">
-                    <div class="header-inner clearfix">
-                        <h1 class="heading">Dashboard</h1>
-                        <div class="theme-switch-wrapper mt-3">
-                            <label class="theme-switch" for="checkbox"> 
-                                <input type="checkbox" id="checkbox" />
-                                <div class="slider round"></div>
-                            </label>
-                        </div> 
-                        <div class="header-icons-group">
-                            <form action="" class="search-form desktop"> 
-                                <div class="form-group has-feedback">
-                                    <label for="search" class="sr-only">Search</label>
-                                    <input type="text" class="form-control" name="search" id="search" placeholder="Search">
-                                    <span class="form-control-feedback"><i class="fa fa-search" aria-hidden="true"></i></span>
+        <!-- page-content-wrapper -->
+        <div id="page-content-wrapper">
+            <!-- header -->
+            <header class="header">
+                <div class="header-inner clearfix">
+                    <h1 class="heading">Dashboard</h1>
+                    <div class="theme-switch-wrapper mt-3">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" />
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                    <div class="header-icons-group">
+                        <form action="" class="search-form desktop">
+                            <div class="form-group has-feedback">
+                                <label for="search" class="sr-only">Search</label>
+                                <input type="text" class="form-control" name="search" id="search" placeholder="Search">
+                                <span class="form-control-feedback"><i class="fa fa-search"
+                                        aria-hidden="true"></i></span>
+                            </div>
+                        </form>
+
+                        <div class="nav-item dropdown  header-right-items">
+                            <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link l-sidebar-icon" href="javascript:void(0);"
+                                            id="navbarDropdown" role="button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            <div class="user"><img src="assets/images/dashboard-icon/user.jpg"
+                                                    alt="icon" class="user-pic" /> </div>
+                                        </a>
+                                        <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                        <div class="dropdown-menu user-dropdown dropdown-menu-right animate slideIn"
+                                            aria-labelledby="navbarDropdown">
+                                            <div class="widget-pic">
+                                                <div class="user-text">Robert Millan</div>
+                                            </div>
+                                            <div class="widget-logout">
+                                                <button class="btn user-button">Logout</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mobile-small-size">
+                    <form class="search-container">
+                        <input type="text" id="search-bar" placeholder="Search">
+                        <a href="javascript:void(0);"><span class="form-control-search search-icon"><i
+                                    class="fa fa-search" aria-hidden="true"></i></span></a>
+                    </form>
+                </div>
+            </header>
+            <!-- end-of-header -->
+
+            <!-- page-contents -->
+            <div class="page-contents">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="container outer-div">
+                            <div class="container-header">
+                                <div class="header-div">   
+                                    <h2><span class="">Elite Member</span><span class="hide">Gold Member</span><span class="hide">Platinum Member</span></h2>
+                                    <div>
+                                        <span class="user-div elite-member">
+                                            <div class="user-number elite-member-bg-border">Elite </div>
+                                        </span>
+                                        <span class="user-div gold-member hide">
+                                            <div class="user-number elite-member-bg-border">Elite Gold </div>
+                                        </span>
+                                        <span class="user-div plantium-member hide">
+                                            <div class="user-number elite-member-bg-border">Platinum </div>
+                                        </span>
+                                    </div>
                                 </div>
-                            </form>  
 
-                            <div class="nav-item dropdown  header-right-items">  
-                                <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
-                                    <ul class="navbar-nav ml-auto"> 
+                                <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
+                                    <span class="bar-number">
+                                        <div class="bar-text"></div>
+                                    </span>
+                                    <ul class="navbar-nav ml-auto">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
-                                                <div class="user"><img src="assets/images/dashboard-icon/user.jpg" alt="icon" class="user-pic"/> </div>               
-                                            </a>  
+                                            <a class="nav-link l-sidebar-icon" href="javascript:void(0);"
+                                                id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                <span class="dropdown-icon cusom-dropdown"></span>
+                                            </a>
                                             <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-                                            <div class="dropdown-menu user-dropdown dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                                                <div class="widget-pic">
-                                                    <div class="user-text">Robert Millan</div> 
-                                                </div> 
-                                                <div class="widget-logout"> 
-                                                    <button class="btn user-button">Logout</button>
-                                                </div>
+                                            <div class="dropdown-menu dropdown-menu-right animate slideIn"
+                                                aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="javascript:void(0);">Upgrade Membership
+                                                    Status</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Memberships and
+                                                    Ranking Tiers</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">My current
+                                                    Membership Benefits</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabs container-content membership-div-tabs">
+                                <ul class="nav nav-tabs  membership-nav-tabs">
+                                    <li><a class="active" data-toggle="tab" href="#gold">Earnings</a></li>
+                                    <li><a data-toggle="tab" href="#diamond">Membership Status</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="gold" class="tab-pane  in active">
+                                        <h3 class="w-100 clearfix"><span class="heading-text pull-left">Commission
+                                                Rate</span><span class="text pull-left">30%</span></h3>
+
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue" role="progressbar" style="width: 30%"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+
+                                        <ul class="content">
+                                            <li>Bonuses<span class="text-li yellowish">&#36;1,330</span></li>
+                                            <li>Recurring Income<span class="text-li green-font">&#36;3,686</span></li>
+                                            <li>Total Income<span class="text-li">&#36;40,555</span></li>
+                                        </ul>
+
+                                        <ul class="content">
+                                            <li>Commissions Rate<span class="text-li">30%</span></li>
+                                            <li>Commissions Level<span class="text-li">4/5</span></li>
+                                            <li>Next Rate<span class="text-li">40%</span></li>
+                                        </ul>
+                                        <ul class="content border-0">
+                                            <li>Current Referrals<span class="text-li">35<span><button type="button"
+                                                            class="badge badge-button click-text">Click to
+                                                            See</button></span></span></li>
+                                            <li>Active Referrals<span class="text-li">27</span></li>
+                                            <li>New Leads<span class="text-li">13<span><button type="button"
+                                                            class="badge badge-button click-text">Click to
+                                                            See</button></span></span></li>
+                                        </ul>
+                                    </div>
+
+                                    <div id="diamond" class="tab-pane fade  membership-status">
+                                        <div class="tab-content" id="membership-level-div">
+                                            <div id="gold" class="tab-pane  in active">
+                                                <h3 class="w-100 clearfix"><span
+                                                        class="heading-text pull-left">Membership Level</span><span
+                                                        class="text pull-left">100</span></h3>
+                                                <ul class="content membership-level">
+                                                    <li>Member Since<span class="text-li">April, 2015</span></li>
+                                                    <li>&#36; Saved on Membership Discount</br>(# of months *
+                                                        62&#36;)<span class="text-li">$3.686</span></li>
+                                                    <li>User Rank<span class="text-li">4/5</span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="text-center">
+                                                <button class="leaderboard button  Cancel-membership-button">Cancel
+                                                    Membership</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="confirm-cancel-page" class="confirm-cancel-div" style="display: none;">
+                                <div class="tab-content confirm-cancel container-content">
+                                    <div id="gold" class="tab-pane  in active">
+                                        <p class="cancelled-text">You will lose your discount if cancelled confirm
+                                            cancellation?</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <button id="confirm-cancel-butons"
+                                            class="leaderboard button  Cancel-membership-button back">Back</button>
+                                        <button id="confirm-cancel-butons"
+                                            class="leaderboard button  Cancel-membership-button">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--                            Charts-->
+                        <div class="container">
+                            <div class="container-header">
+                                <div class="header-div">
+                                    <h2>Charts</h2>
+                                </div>
+
+                                <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link l-sidebar-icon" href="javascript:void(0);"
+                                                id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                <span class="dropdown-icon cusom-dropdown"></span>
+                                            </a>
+                                            <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                            <div class="dropdown-menu dropdown-menu-right animate slideIn"
+                                                aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="tabs container-content">
+                                <ul class="nav nav-tabs">
+                                    <li><a class="active" data-toggle="tab" href="#users-tab">NEW USERS JOINED</a></li>
+                                    <li><a data-toggle="tab" href="#messages-tab">NUMBER OF MESSAGES</a></li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="users-tab" class="tab-pane  in active w-100">
+                                        <div id="users"></div>
+                                    </div>
+                                    <div id="messages-tab" class="tab-pane fade w-100">
+                                        <div id="messages"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--End-of-col-md-6 col-sm-12-->
+
+
+
+                    <div class="col-md-6 col-sm-12">
+                        <div class="container outer-div">
+                            <!-- container-header -->
+                            <div class="container-header">
+                                <div class="header-div">
+                                    <h2>
+                                        <sapn class="Achievements-text">My Achievements </sapn>
+                                    </h2>
+                                    <div class="trader-number">
+                                        <div class="text-number">12</div>
+                                    </div>
+                                </div>
+                                <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
+                                    <button class="toggle-bar badge leaderboard leaderboard-text">view
+                                        leaderboard</button>
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link l-sidebar-icon" href="javascript:void(0);"
+                                                id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                <span class="dropdown-icon cusom-dropdown"></span>
+                                            </a>
+                                            <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                            <div class="dropdown-menu dropdown-menu-right animate slideIn"
+                                                aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="javascript:void(0);"> View
+                                                    Achievements</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">View Badges</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end-of-container-header -->
+
+
+
+                            <!-- Ranking-chart -->
+                            <div id="barcontainer-content-after" class="tabs container-content barcontainer-div">
+                                <div id="barcontainer"></div>
+                                <div class="barcontainer-ranking">
+                                    <div class="white-font">Ranking %</div>
+                                    <div class=""><span class="lowdiv"></span>1,5%</div>
+                                    <div class=""><span class="normal"></span>10,8%</div>
+                                    <div class=""><span class="above"></span> 5,8%</div>
+                                    <div class=""><span class="high"></span> 11%</div>
+                                </div>
+                            </div> <!-- end-of-Ranking-chart -->
+
+                            <div id="leaderboard-content-div" class="hide barcontainer-div">
+                                <div class="tabs container-content">
+                                    <h3 class="w-100 clearfix"><span class="heading-text pull-left">Karma </span><span
+                                            class="text pull-left">89.9</span></h3>
+                                    <h3 class="w-100 clearfix"><span class="heading-text pull-left">Earnings
+                                        </span><span class="text pull-left">$1.3</span></h3>
+                                    <hr class="hr-line">
+                                    <ul class="content border-0">
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin
+                                            because in its youth, centuries ago, it was Latin. Richard McClintock, a
+                                            Latin scholar from Hampden-Sydney College, is credited with discovering the
+                                            source behind the ubiquitous filler text is credited with discovering the
+                                            source behind the ubiquitous filler text.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin
+                                            because in its youth, centuries ago, it was Latin. Richard McClintock, a
+                                            Latin scholar from Hampden-Sydney College, is credited with discovering the
+                                            source behind the ubiquitous filler text is credited with discovering the
+                                            source behind the ubiquitous filler text.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Watchlist-->
+                        <div class="container">
+                            <!-- container-header -->
+                            <div class="container-header">
+                                <div class="header-div">
+                                    <h2>Watchlist</h2>
+                                </div>
+                                <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
+                                    <button class="toggle badge leaderboard  add add-text">Add To Watchlist</button>
+                                    <button class="toggle badge leaderboard  edit-watch">Edit Watchlist</button>
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link l-sidebar-icon" href="javascript:void(0);"
+                                                id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                <span class="dropdown-icon cusom-dropdown"></span>
+                                            </a>
+                                            <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                            <div class="dropdown-menu dropdown-menu-right animate slideIn"
+                                                aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="javascript:void(0);">Create your Own</a>
+                                                <a class="dropdown-item" href="javascript:void(0);">Our Watchlist</a>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
-                        </div> 
-                    </div>
-                    <div class="mobile-small-size">  
-                        <form class="search-container">
-                            <input type="text" id="search-bar" placeholder="Search"> 
-                            <a href="javascript:void(0);"><span class="form-control-search search-icon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
-                        </form>
-                    </div>
-                </header>
-                <!-- end-of-header --> 
+                            <!-- end-of-container-header -->
 
-                <!-- page-contents -->
-                <div class="page-contents"> 
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">                            
-                            <div class="container outer-div"> 
-                                <div class="container-header">
-                                    <div class="header-div"> 
-                                        <h2>Member status</h2>
-                                        <div>
-                                            <span class="user-div elite-member"> <div class="user-number elite-member-bg-border">Elite </div></span>
-                                            <span class="user-div gold-member hide"> <div class="user-number elite-member-bg-border">Elite Gold </div> </span>
-                                            <span class="user-div plantium-member hide"> <div class="user-number elite-member-bg-border">Platinum </div> </span>
-                                        </div>
-                                    </div>  
+                            <!-- table -->
+                            <div id="watchlist-content-before">
+                                <div class="container-content delete-table-bg hide">
+                                    <div class="table-box table-responsive">
+                                        <table class="table delete-outer-div">
+                                            <thead>
+                                                <tr>
+                                                    <th>Symbol</th>
+                                                    <th>Time</th>
+                                                    <th>Price</th>
+                                                    <th>Note</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="white-font"><span class="pull-left delete-div"><span
+                                                                class="delete-text">-</span></span>APPL</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="red-font">&#36;16.20</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="white-font"><span class="pull-left delete-div"><span
+                                                                class="delete-empty-text">-</span></span>OSRK</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="green-font">&#36;216.20</td>
+                                                    <td>Good Offer. Watch <span class="edit-icon"><img
+                                                                src="assets/images/pen.png" alt="icon"
+                                                                class="pen" /></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="white-font"><span class="pull-left delete-div"><span
+                                                                class="delete-text">
+                                                            </span></span>FEYE</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="red-font">&#36;156.20</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="white-font"><span class="pull-left delete-div"><span
+                                                                class="delete-text">-</span></span>APPL</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="green-font">&#36;216.20</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
 
-                                    <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent"> 
-                                        <span class="bar-number"><div class="bar-text"></div></span>  
-                                        <ul class="navbar-nav ml-auto"> 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
-                                                    <span class="dropdown-icon cusom-dropdown"></span>                 
-                                                </a> 
-                                                <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-                                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="javascript:void(0);">Upgrade Membership Status</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Memberships and Ranking Tiers</a> 
-                                                    <a class="dropdown-item" href="javascript:void(0);">My current Membership Benefits</a> 
-                                                </div>
-                                            </li>
-                                        </ul>
+                                                <tr class="border-0 mt-2">
+                                                    <td>3 Data Selected</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td><button class="button delete-selection pull-right mt-1">Delete
+                                                            Selection</button> </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
                                     </div>
+                                </div>
+                                <!-- end-of-Table -->
 
-                                </div> 
-                                <div class="tabs container-content membership-div-tabs"> 
-                                    <ul class="nav nav-tabs  membership-nav-tabs">  
-                                        <li><a class="active" data-toggle="tab" href="#gold">Earnings</a></li>
-                                        <li><a data-toggle="tab" href="#diamond">Membership Status</a></li> 
-                                    </ul>  
-                                    <div class="tab-content">  
-                                        <div id="gold" class="tab-pane  in active"> 
-                                            <h3 class="w-100 clearfix"><span class="heading-text pull-left">Commission Rate</span><span class="text pull-left">30%</span></h3>
 
-                                            <div class="progress">
-                                                <div class="progress-bar bg-blue" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
+                                <div class="container-content">
+                                    <div class="table-box table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Symbol</th>
+                                                    <th>Time</th>
+                                                    <th>Price</th>
+                                                    <th>Note</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="white-font">APPL</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="red-font">&#36;16.20</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="white-font">OSRK</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="green-font">&#36;216.20</td>
+                                                    <td>Good Offer. Watch <span class="edit-icon"><img
+                                                                src="assets/images/pen.png" alt="icon"
+                                                                class="pen" /></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="white-font">FEYE</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="red-font">&#36;156.20</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="white-font">APPL</td>
+                                                    <td>Mon, Jul 29</td>
+                                                    <td class="green-font">&#36;216.20</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- end-of-Table -->
+                            </div>
+
+                            <div id="watchlist-content-after" class="hide table-box table-responsive">
+                                <div class="container-content">
+                                    <form action="">
+                                        <input class="form-group" type="text" name="" id="" placeholder="Input Area">
+                                        <input type="submit" value="Submit" class="submit-button">
+                                    </form>
+                                    <ul class="watchlist-div">
+                                        <li class="watchlist-list">
+                                            <div class="content"><span class="left-content pull-left">Ticker</span>
+                                                <div class="pull-left content-first">
+                                                    <span class="red-font">18%</span><span class="bold-font">Lorem ipsum
+                                                        dolor sit.</span>
+                                                </div>
+                                                <div class="pull-right ml-auto content-sec">
+                                                    <span class="green-font">18%</span><span class="bold-font">Lorem
+                                                        ipsum dolor sit.</span>
+                                                </div>
                                             </div>
+                                        </li>
 
-                                            <ul class="content">
-                                                <li>Bonuses<span class="text-li yellowish">&#36;1,330</span></li>
-                                                <li>Recurring Income<span class="text-li green-font">&#36;3,686</span></li> 
-                                                <li>Total Income<span class="text-li">&#36;40,555</span></li> 
-                                            </ul>
-
-                                            <ul class="content"> 
-                                                <li>Commissions Rate<span class="text-li">30%</span></li> 
-                                                <li>Commissions Level<span class="text-li">4/5</span></li> 
-                                                <li>Next Rate<span class="text-li">40%</span></li>
-                                            </ul>
-                                            <ul class="content border-0">
-                                                <li>Current Referrals<span class="text-li">35<span><button type="button" class="badge badge-button click-text">Click to See</button></span></span></li>
-                                                <li>Active Referrals<span class="text-li">27</span></li>
-                                                <li>New Leads<span class="text-li">13<span><button type="button" class="badge badge-button click-text">Click to See</button></span></span></li>
-                                            </ul>
-                                        </div>
-
-                                        <div id="diamond" class="tab-pane fade  membership-status"> 
-                                            <div class="tab-content" id="membership-level-div">  
-                                                <div id="gold" class="tab-pane  in active"> 
-                                                    <h3 class="w-100 clearfix"><span class="heading-text pull-left">Membership Level</span><span class="text pull-left">100</span></h3>
-                                                    <ul class="content membership-level">
-                                                        <li>Member Since<span class="text-li">April, 2015</span></li> 
-                                                        <li>&#36; Saved on Membership Discount</br>(# of months * 62&#36;)<span class="text-li">$3.686</span></li>
-                                                        <li>User Rank<span class="text-li">4/5</span></li>
-                                                    </ul>                                           
-                                                </div>
-                                                <div class="text-center">
-                                                    <button  class="leaderboard button  Cancel-membership-button">Cancel Membership</button>  
-                                                </div> 
-                                            </div> 
-
-                                        </div> 
-                                    </div> 
+                                        <li class="watchlist-list">
+                                            <div class="content"><span class="left-content">Notes</span>Lorem ipsum
+                                                dolor sit amet, consectetur adipiscing elit”, looks like Latin because
+                                                in its youth, centuries ago, it was Latin. Richard McClintock, a Latin
+                                                scholar from Hampden-Sydney College, is credited with discovering the
+                                                source behind the ubiquitous filler text.</div>
+                                        </li>
+                                    </ul>
                                 </div>
-
-                                <div  id="confirm-cancel-page" class="confirm-cancel-div"  style="display: none;"> 
-                                    <div class="tab-content confirm-cancel container-content">    
-                                        <div id="gold" class="tab-pane  in active"> 
-                                            <p>You will lose your discount if cancelled confirm cancellation?</p>                                          
-                                        </div> 
-                                        <div class="text-center">
-                                            <button id="confirm-cancel-butons" class="leaderboard button  Cancel-membership-button back">Back</button>   
-                                            <button id="confirm-cancel-butons" class="leaderboard button  Cancel-membership-button">Confirm</button>   
-                                        </div> 
-                                    </div> 
-                                </div>                               
                             </div>
+                        </div>
 
-                            <!--                            Charts-->
-                            <div class="container">
-                                <div class="container-header">
-                                    <div class="header-div">
-                                        <h2>Charts</h2>
-                                    </div>
+                        <!--Market Volatility-->
+                        <div class="container">
+                            <!-- container-header -->
+                            <div class="container-header">
+                                <div class="header-div">
+                                    <h2>Market Volatility</h2>
+                                </div>
+                                <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link l-sidebar-icon" href="javascript:void(0);"
+                                                id="navbarDropdown" role="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                <span class="dropdown-icon cusom-dropdown"></span>
+                                            </a>
+                                            <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                            <div class="dropdown-menu dropdown-menu-right animate slideIn"
+                                                aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="javascript:void(0);"> Momentum </a>
+                                                <a class="dropdown-item" href="javascript:void(0);"> Trading </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end-of-container-header -->
+                            <!-- pie-chart -->
 
-                                    <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
-                                        <ul class="navbar-nav ml-auto"> 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
-                                                    <span class="dropdown-icon cusom-dropdown"></span>                 
-                                                </a> 
-                                                <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-                                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="javascript:void(0);">Action</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Another action</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Action</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Another action</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Action</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">Another action</a>                                                   
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div> 
-                                <div class="tabs container-content"> 
-                                    <ul class="nav nav-tabs">
-                                        <li><a class="active" data-toggle="tab" href="#users-tab">NEW USERS JOINED</a></li>
-                                        <li><a data-toggle="tab" href="#messages-tab">NUMBER OF MESSAGES</a></li>
-                                    </ul> 
-
-                                    <div class="tab-content">
-                                        <div id="users-tab" class="tab-pane  in active w-100"> 
-                                            <div id="users"></div>
-                                        </div>
-                                        <div id="messages-tab" class="tab-pane fade w-100"> 
-                                            <div id="messages"></div>
-
-                                        </div>
+                            <div class="container-content">
+                                <div class="col-md-6 col-sm-6 col-xs-12 text-center pull-left no-padding">
+                                    <div id="piecontainer"></div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12  pull-right no-padding">
+                                    <div class="piechart-color">
+                                        <div class=""><span class="lowdiv"></span>Low</div>
+                                        <div class=""><span class="normal"></span>Normal</div>
+                                        <div class=""><span class="above"></span>Above Average</div>
+                                        <div class=""><span class="high"></span>High</div>
+                                        <div class=""><span class="very-high"></span>Very High</div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- end-of-pie-chart -->
 
                         </div>
-                        <!--End-of-col-md-6 col-sm-12-->
+                    </div>
+
+                    <!--End-of-col-md-6 col-sm-12-->
+                </div>
+                <!--End-of-Row-->
+            </div><!-- end-of page-contents -->
+        </div>
+        <!--End-of-#page-content-wrapper-->
+    </div>
+    <!--End-of-#Wrapper-->
 
 
+    <!--js-files-->
+    <script src="./bundle.js"></script>
+    <!--bootstrap-js-files-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-                        <div class="col-md-6 col-sm-12">                            
-                            <div class="container outer-div">
-                                <!-- container-header --> 
-                                <div class="container-header">  
-                                    <div class="header-div">  
-                                        <h2><sapn class="Achievements-text">My Achievements </sapn></h2>
-                                        <div class="trader-number"><div class="text-number">12</div></div> 
-                                    </div>
-                                    <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
-                                        <button class="toggle-bar badge leaderboard leaderboard-text">view leaderboard</button>  
-                                        <ul class="navbar-nav ml-auto">  
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
-                                                    <span class="dropdown-icon cusom-dropdown"></span>                 
-                                                </a> 
-                                                <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-                                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="javascript:void(0);"> View Achievements</a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">View Badges</a>
-                                                </div> 
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>  
-                                <!-- end-of-container-header --> 
+    <!--highcharts-js-files-->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
+    <!--solid-gaugejs-->
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
 
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-                                <!-- Ranking-chart -->  
-                                <div id="barcontainer-content-after" class="tabs container-content barcontainer-div">
-                                    <div id="barcontainer"></div>
-                                    <div class="barcontainer-ranking">
-                                        <div class="white-font">Ranking %</div>
-                                        <div class=""><span class="lowdiv"></span>1,5%</div>
-                                        <div class=""><span class="normal"></span>10,8%</div>
-                                        <div class=""><span class="above"></span> 5,8%</div> 
-                                        <div class=""><span class="high"></span> 11%</div> 
-                                    </div>
-                                </div>   <!-- end-of-Ranking-chart -->  
+    <script src="./js/_common.js" type="text/javascript"></script>
+    <script src="./js/jquery.nicescroll.min.js"></script>
 
-                                <div id="leaderboard-content-div"  class="hide barcontainer-div">                                       
-                                    <div class="tabs container-content"> 
-                                        <h3 class="w-100 clearfix"><span class="heading-text pull-left">Karma </span><span class="text pull-left">89.9</span></h3>
-                                        <h3 class="w-100 clearfix"><span class="heading-text pull-left">Earnings </span><span class="text pull-left">$1.3</span></h3>
-                                        <hr class="hr-line">
-                                        <ul class="content border-0">
-                                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin. Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text is credited with discovering the source behind the ubiquitous filler text.</li>
-                                            <li >Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin. Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text is credited with discovering the source behind the ubiquitous filler text.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+    <script>
+        ///leaderboard//
+        $('.toggle-bar').click(function () {
+            $('#barcontainer-content-after').toggleClass('hide'); 
+            $('#leaderboard-content-div').toggleClass('hide');
+        }); 
+        ///watchlist-js///
+        $('.toggle').click(function () {
+            $('#watchlist-content-after').toggleClass('hide');
+            $('#watchlist-content-before').toggleClass('hide'); 
+        });
 
-                            <!--Watchlist-->
-                            <div class="container">
-                                <!-- container-header --> 
-                                <div class="container-header">
-                                    <div class="header-div">
-                                        <h2>Watchlist</h2>
-                                    </div>
-                                    <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
-                                        <button class="toggle badge leaderboard  add">Add To Watchlist</button> 
-                                        <button class="toggle badge leaderboard  edit-watch">Edit Watchlist</button>  
-                                        <ul class="navbar-nav ml-auto"> 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
-                                                    <span class="dropdown-icon cusom-dropdown"></span>                 
-                                                </a> 
-                                                <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-                                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="javascript:void(0);">Create your Own</a> 
-                                                    <a class="dropdown-item" href="javascript:void(0);">Our Watchlist</a>
-                                                </div>
-                                            </li> 
-                                        </ul>
-                                    </div>
-                                </div>  
+        ///membership-js///
+        $('#membership-level-div').click(function () {
+            $('#confirm-cancel-page').show(1000);
+        })
+        ///show///
+        $('#confirm-cancel-butons').click(function () {
+            $('#confirm-cancel-butons').show(1000);
+        })
+        ///hide///
+        $('#confirm-cancel-butons').click(function () {
+            $('#membership-level-div').show(1000);
+        })
+        ///hide///  
+        $('#membership-level-div').click(function () {
+            $('#membership-level-div').hide(1000);
+            $('.membership-div-tabs').hide(1000);
+        })
+        $('#confirm-cancel-butons').click(function () {
+            $('.membership-div-tabs').show(1000);
+        })
+        ///hide/// 
+        $('#confirm-cancel-butons').click(function () {
+            $('#confirm-cancel-page').hide(1000);
+        })
+    </script>
 
-                                <!-- end-of-container-header --> 
-                                
-                                <!-- table --> 
-                                <div id="watchlist-content-before">
-                                    <div class="container-content table-box table-responsive delete-table-bg hide"> 
-                                        <div class="table-box table-responsive">   
-                                            <table class="table"> 
-                                                <thead>
-                                                    <tr>
-                                                        <th>Symbol</th>                                            
-                                                        <th>Time</th>
-                                                        <th>Price</th>
-                                                        <th>Note</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="white-font delete-outer-div"><span class="pull-left delete-div"><span class="delete-text">-</span></span>APPL</td>
-                                                        <td>Mon, Jul 29</td>
-                                                        <td class="red-font">&#36;16.20</td> 
-                                                        <td>&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="white-font delete-outer-div"><span class="pull-left delete-div"><span class="delete-empty-text">-</span></span>OSRK</td>
-                                                        <td>Mon, Jul 29</td>
-                                                        <td class="green-font">&#36;216.20</td>
-                                                        <td>Good Offer. Watch <span class="edit-icon"><img src="assets/images/pen.png" alt="icon" class="pen"/></span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="white-font delete-outer-div"><span class="pull-left delete-div"><span class="delete-text"> </span></span>FEYE</td> 
-                                                        <td>Mon, Jul 29</td>
-                                                        <td class="red-font">&#36;156.20</td> 
-                                                        <td>&nbsp;</td>
-                                                    </tr> 
-                                                    <tr>
-                                                        <td class="white-font delete-outer-div"><span class="pull-left delete-div"><span class="delete-text">-</span></span>APPL</td>
-                                                        <td>Mon, Jul 29</td>
-                                                        <td class="green-font">&#36;216.20</td>
-                                                        <td>&nbsp;</td>
-                                                    </tr>
+    <script>
+        function toggleText() {
+            if ($(window).width() < 900) {
+                $(".Achievements-text").text("Achievements");
+            } else {
+                $(".Achievements-text").text("My Achievements");
+            }
 
-                                                    <tr class="border-0 mt-2">
-                                                        <td>3 Data Selected</td>
-                                                        <td>&nbsp;</td>
-                                                        <td>&nbsp;</td>
-                                                        <td><button class="button delete-selection pull-right mt-1">Delete Selection</button> </td>
-                                                    </tr>
+            if ($(window).width() < 900) {
+                $(".leaderboard-text").text("Leaderboard");
+            } else {
+                $(".leaderboard-text").text("view leaderboard");
+            }
 
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <!-- end-of-Table --> 
-                                    
-                                    
-                                    
-                                    <div class="container-content table-box table-responsive"> 
-                                        <div class="table-box table-responsive">   
-                                            <table class="table"> 
-                                                <thead>
-                                                    <tr>
-                                                        <th>Symbol</th>                                            
-                                                        <th>Time</th>
-                                                        <th>Price</th>
-                                                        <th>Note</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="white-font delete-outer-div">APPL</td>
-                                                        <td>Mon, Jul 29</td>
-                                                        <td class="red-font">&#36;16.20</td> 
-                                                        <td>&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="white-font delete-outer-div">OSRK</td>
-                                                        <td>Mon, Jul 29</td>
-                                                        <td class="green-font">&#36;216.20</td>
-                                                        <td>Good Offer. Watch <span class="edit-icon"><img src="assets/images/pen.png" alt="icon" class="pen"/></span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="white-font delete-outer-div">FEYE</td> 
-                                                        <td>Mon, Jul 29</td>
-                                                        <td class="red-font">&#36;156.20</td> 
-                                                        <td>&nbsp;</td>
-                                                    </tr> 
-                                                    <tr>
-                                                        <td class="white-font delete-outer-div">APPL</td>
-                                                        <td>Mon, Jul 29</td>
-                                                        <td class="green-font">&#36;216.20</td>
-                                                        <td>&nbsp;</td>
-                                                    </tr>
+            if ($(window).width() < 900) {
+                $(".watchlist-text").text("Watchlist");
+            } else {
+                $(".watchlist-text").text("Add To Watchlist ");
+            }
 
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <!-- end-of-Table --> 
-                                </div> 
-
-                                <div id="watchlist-content-after" class="hide table-box table-responsive">
-                                    <div class="container-content">  
-                                        <form action=""> 
-                                            <input class="form-group" type="text" name="" id="" placeholder="Input Area">
-                                            <input type="submit" value="Submit" class="submit-button">  
-                                        </form> 
-                                        <ul class="watchlist-div"> 
-                                            <li class="watchlist-list">
-                                                <div class="content"><span class="left-content pull-left">Ticker</span>
-                                                    <div class="pull-left content-first">   
-                                                        <span class="red-font">18%</span><span class="bold-font">Lorem ipsum dolor sit.</span>
-                                                    </div> 
-                                                    <div class="pull-right ml-auto content-sec"> 
-                                                        <span class="green-font">18%</span><span class="bold-font">Lorem ipsum dolor sit.</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-
-                                            <li class="watchlist-list">
-                                                <div class="content"><span class="left-content">Notes</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin. Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text.</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+            if ($(window).width() < 500) {
+                $(".click-text").text("Click");
+            } else {
+                $(".click-text").text("Click to See");
+            }
 
 
-                                <div id="watchlist-content-after" class="hide table-box table-responsive">
-                                    <div class="container-content">  
-                                        <form action=""> 
-                                            <input class="form-group" type="text" name="" id="" placeholder="Input Area">
-                                            <input type="submit" value="Submit" class="submit-button">  
-                                        </form> 
-                                        <ul class="watchlist-div"> 
-                                            <li class="watchlist-list">
-                                                <div class="content"><span class="left-content pull-left">Ticker</span>
-                                                    <div class="pull-left content-first">   
-                                                        <span class="red-font">18%</span><span class="bold-font">Lorem ipsum dolor sit.</span>
-                                                    </div> 
-                                                    <div class="pull-right ml-auto content-sec"> 
-                                                        <span class="green-font">18%</span><span class="bold-font">Lorem ipsum dolor sit.</span>
-                                                    </div>
-                                                </div>
-                                            </li>
+            if ($(window).width() < 1270) {
+                $(".add-text").text("Edit");
+            } else {
+                $(".add-text").text("Edit To Watchlist");
+            }
 
-                                            <li class="watchlist-list">
-                                                <div class="content"><span class="left-content">Notes</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit”, looks like Latin because in its youth, centuries ago, it was Latin. Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text.</div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+            if ($(window).width() < 1270) {
+                $(".edit-watch").text("Add");
+            } else {
+                $(".edit-watch").text("Add To Watchlist");
+            }
 
+            if ($(window).width() < 900) {
+                $(".Achievements-text").text("Achievements");
+            } else {
+                $(".Achievements-text").text("My Achievements");
+            }
 
-                            </div>
+            if ($(window).width() < 900) {
+                $(".leaderboard-text").text("Leaderboard");
+            } else {
+                $(".leaderboard-text").text("view leaderboard");
+            }
 
-                            <!--Market Volatility-->
-                            <div class="container">
-                                <!-- container-header --> 
-                                <div class="container-header">
-                                    <div class="header-div">
-                                        <h2>Market Volatility</h2>
-                                    </div>
-                                    <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">  
-                                        <ul class="navbar-nav ml-auto"> 
-                                            <li class="nav-item dropdown">
-                                                <a class="nav-link l-sidebar-icon" href="javascript:void(0);" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">        
-                                                    <span class="dropdown-icon cusom-dropdown"></span>                 
-                                                </a> 
-                                                <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-                                                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="javascript:void(0);"> Momentum </a>
-                                                    <a class="dropdown-item" href="javascript:void(0);">  Trading </a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> 
-                                <!-- end-of-container-header --> 
-                                <!-- pie-chart -->
+            if ($(window).width() < 900) {
+                $(".watchlist-text").text("Watchlist");
+            } else {
+                $(".watchlist-text").text("Add To Watchlist ");
+            }
 
-                                <div class="container-content"> 
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-center pull-left no-padding">   
-                                        <div id="piecontainer"></div>   
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12  pull-right no-padding">  
-                                        <div class="piechart-color">
-                                            <div class=""><span class="lowdiv"></span>Low</div>
-                                            <div class=""><span class="normal"></span>Normal</div>
-                                            <div class=""><span class="above"></span>Above Average</div> 
-                                            <div class=""><span class="high"></span>High</div>
-                                            <div class=""><span class="very-high"></span>Very High</div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <!-- end-of-pie-chart --> 
+            if ($(window).width() < 500) {
+                $(".click-text").text("Click");
+            } else {
+                $(".click-text").text("Click to See");
+            }
+        }
 
-                            </div>
-                        </div> 
+        $(document).ready(function () {
+            toggleText();
+        });
+        $(window).resize(function () {
+            toggleText();
+        });
+    </script>
 
-                        <!--End-of-col-md-6 col-sm-12-->
-                    </div><!--End-of-Row-->
-                </div><!-- end-of page-contents -->
-            </div><!--End-of-#page-content-wrapper--> 
-        </div><!--End-of-#Wrapper-->
-
-
-
-
-        <!--js-files-->
-        <script src="./bundle.js"></script> 
-        <!--bootstrap-js-files-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-        <!--highcharts-js-files-->
-        <script src="https://code.highcharts.com/stock/highstock.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/modules/export-data.js"></script>
-
-        <!--solid-gaugejs-->
-        <script src="https://code.highcharts.com/highcharts-more.js"></script>
-        <script src="https://code.highcharts.com/modules/solid-gauge.js"></script> 
-
-        <script src="https://code.highcharts.com/stock/highstock.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-
-        <script>
-            ///leaderboard//
-            $('.toggle-bar').click(function () {
-                $('#barcontainer-content-after').toggleClass('hide ');
-                $('#leaderboard-content-div').toggleClass('hide');
-            });
-
-
-            ///watchlist-js///
-            $('.toggle').click(function () {
-                $('#watchlist-content-after').toggleClass('hide');
-                $('#watchlist-content-before').toggleClass('hide');
-            });
-
-
-
-///membership-js///
-            $('#membership-level-div').click(function () {
-                $('#confirm-cancel-page').show(1000);
-            })
-
-///show///
-            $('#confirm-cancel-butons').click(function () {
-                $('#confirm-cancel-butons').show(1000);
-            })
-///hide///
-            $('#confirm-cancel-butons').click(function () {
-                $('#membership-level-div').show(1000);
-            })
-            ///hide///  
-            $('#membership-level-div').click(function () {
-                $('#membership-level-div').hide(1000);
-                $('.membership-div-tabs').hide(1000);
-            })
-            $('#confirm-cancel-butons').click(function () {
-                $('.membership-div-tabs').show(1000);
-            })
-
-///hide/// 
-            $('#confirm-cancel-butons').click(function () {
-                $('#confirm-cancel-page').hide(1000);
-            })
-        </script>
-
-
-      
-        <!--sidebar-wrapper-js--> 
-        <script>
+    <!--bar-chart-js-->
+    <script>
+        $(function () {
+            var chart, merge = Highcharts.merge;
             $(document).ready(function () {
-                $('#sidebar-wrapper').click(function () {
-                    $('#sidebar').toggleClass('visible');
-                    $('.body-menu').toggleClass('.body-menu-left');
-                });
-
-            })
-        </script> 
-        <script src="./js/_common.js" type="text/javascript"></script>
-
-        <script>
-            $(document).ready(function () {
-                if ($(window).width() < 900) {
-                    $(".Achievements-text").text("Achievements");
-                } else {
-                    $(".Achievements-text").text("My Achievements");
-                }
-            });
-            $(window).resize(function () {
-                if ($(window).width() < 900) {
-                    $(".Achievements-text").text("Achievements");
-                } else {
-                    $(".Achievements-text").text("My Achievements");
-                }
-            });
-        </script> 
-
-
-        <script>
-            $(document).ready(function () {
-                if ($(window).width() < 900) {
-                    $(".leaderboard-text").text("Leaderboard");
-                } else {
-                    $(".leaderboard-text").text("view leaderboard");
-                }
-            });
-            $(window).resize(function () {
-                if ($(window).width() < 370) {
-                    $(".leaderboard-text").text("leaderboard");
-                } else {
-                    $(".leaderboard-text").text("view leaderboard");
-                }
-            });
-        </script> 
-
-        <script>
-            $(document).ready(function () {
-                if ($(window).width() < 900) {
-                    $(".watchlist-text").text("Watchlist");
-                } else {
-                    $(".watchlist-text").text("Add To Watchlist ");
-                }
-            });
-            $(window).resize(function () {
-                if ($(window).width() < 370) {
-                    $(".watchlist-text").text("Watchlist");
-                } else {
-                    $(".watchlist-text").text("Add To Watchlist ");
-                }
-            });
-        </script>  
-        <script>
-            $(document).ready(function () {
-                if ($(window).width() < 500) {
-                    $(".click-text").text("Click");
-                } else {
-                    $(".click-text").text("Click to See");
-                }
-            });
-            $(window).resize(function () {
-                if ($(window).width() < 500) {
-                    $(".click-text").text("Click");
-                } else {
-                    $(".click-text").text("Click to See");
-                }
-            });
-        </script> 
-
-        <!--bar-chart-js--> 
-        <script>
-            $(function () {
-                var chart, merge = Highcharts.merge;
-                $(document).ready(function () {
-                    var perShapeGradient = {
-                        x1: 0,
-                        y1: 0,
-                        x2: 1,
-                        y2: 0
-                    };
-                    var colors = Highcharts.getOptions().colors;
-                    colors = [{
-                            linearGradient: perShapeGradient,
-                            stops: [
-                                [0, 'var(--bar-strip-label-Color)'],
-                            ]
-                        }, {
-                            linearGradient: merge(perShapeGradient),
-                            stops: [
-                                [0, 'var(--bar-strip-sec-label-Color)']
-                            ]
-                        }, {
-                            linearGradient: merge(perShapeGradient),
-                            stops: [
-                                [0, 'rgb(160, 150, 255)'],
-                            ]},
-                        {
-                            linearGradient: merge(perShapeGradient),
-                            stops: [
-                                [0, 'rgb(254, 229, 125)'],
-                                [1, 'rgb(264, 249, 145)']
-                            ]},
+                var perShapeGradient = {
+                    x1: 0,
+                    y1: 0,
+                    x2: 1,
+                    y2: 0
+                };
+                var colors = Highcharts.getOptions().colors;
+                colors = [{
+                    linearGradient: perShapeGradient,
+                    stops: [
+                        [0, 'var(--bar-strip-label-Color)'],
                     ]
-                    chart = new Highcharts.Chart({
-
-                        chart: {
-                            renderTo: 'barcontainer',
-                            type: 'column',
-                            backgroundColor: 'var(--chart-bg-color)'
-                        },
-                        xAxis: {
-                            categories: ['Activity', 'Conversations', 'Invites', 'Alerts'],
-                            lineColor: 'var(--bar-chartgridLineColor)',
-                            labels: {
-                                style: {
-                                    color: 'var(--bar-label-Color)'
-                                }
-                            }
-                        },
-                        title: {
-                            text: '',
-                            style: {
-                            }
-                        },
-                        yAxis: {
-                            gridLineColor: 'var(--bar-chartgridLineColor) ',
-                            title: {
-                                text: '',
-                            },
-                            labels: {
-                                style: {
-                                    color: 'var(--bar-label-Color-y-axis)'
-                                }
-                            }
-                        },
-
-                        legend: {
-                            shadow: true
-                        },
-
-                        plotOptions: {
-                            series: {
-                                pointWidth: '16',
-                                borderWidth: '0',
-                                borderRadius: '4',
-                                shadow: true
-                            }
-                        },
-                        series: [{
-                                name: name,
-                                data: [{
-                                        y: 1355.11,
-                                        color: colors[0]
-                                    }, {
-                                        y: 181.63,
-                                        color: colors[1]
-                                    }, {
-                                        y: 450.63,
-                                        color: colors[2]
-                                    }, {
-                                        y: 181.94,
-                                        color: colors[3]
-                                    }],
-                                shadow: {
-                                    color: new Highcharts.Color('var(--barchart-shadow-color)').setOpacity('0.4').get(),
-                                    width: 10,
-                                    offsetX: 0,
-                                    offsetY: 0
-                                },
-                            }],
-
-                        tooltip: {
-                            outside: true,
-                            useHTML: true,
-                            borderColor: 'var(--chart-tooltip-border-Color)',
-                            borderRadius: 5,
-                            backgroundColor: 'var(--chart-tooltip-background-Color)',
-                            opacity: 0.5,
-                            style: {opacity: 0.7, color: 'var(--chart-tooltip-text-Color)'},
-                        },
-
-                        exporting: {
-                            enabled: true
-                        },
-                        credits: {enabled: true},
-                        legend: {enabled: true},
-                    });
-                });
-
-            });
-        </script> 
-
-        <!--users-line-chart-js -->
-        <script>
-            Highcharts.chart('users', {
-                chart: {
-                    type: 'spline',
-                    backgroundColor: 'var(--chart-bg-color)',
-                },
-                title: {
-                    text: '',
-                },
-                subtitle: {
-                    text: '',
-                },
-                rangeSelector: {
-                    enabled: true,
-                    inputEnabled: false,
-                    Color: 'var(--chartgridLineColor)',
-                    fill: '#000',
-                    buttonPosition: {
-                        align: 'right',
-                    },
-                    buttonTheme: {// styles for the buttons
-                        style: {
-                            fontWeight: 'regular'
-                        },
-                        states: {
-                            hover: {
-                            },
-                            select: {
-                                style: {
-                                    color: '#22c3aa'
-                                }
-                            }
-                            // disabled: { ... }
-                        }
-                    },
-
-                    labelStyle: {
-                        display: 'none'
-                    },
-                    buttons: [{
-
-                            type: 'month',
-                            count: 1,
-                            text: '1d'
-                        },
-                        {
-                            type: 'month',
-                            count: 3,
-                            text: '3d'
-                        },
-                        {
-                            type: 'month',
-                            count: 1,
-                            text: '1w'
-                        },
-                        {
-                            type: 'year',
-                            count: 1,
-                            text: '1m'
-                        }
+                }, {
+                    linearGradient: merge(perShapeGradient),
+                    stops: [
+                        [0, 'var(--bar-strip-sec-label-Color)']
+                    ]
+                }, {
+                    linearGradient: merge(perShapeGradient),
+                    stops: [
+                        [0, 'rgb(160, 150, 255)'],
                     ]
                 },
-
-                xAxis: {
-                    categories: ['25.07', '26.07', '27.07', '28.07', '29.07', '30.07', '31.07'],
-                    lineColor: 'var(--chartgridLineColor)'
-                },
-                yAxis: {
-                    gridLineColor: 'var(--chartgridLineColor)',
-                    title: {
-                        text: '',
-                    },
-                    labels: {
-                        style: {
-                            color: 'var(--bar-label-Color-y-axis)'
-                        }
-                    }
-                },
-                plotOptions: {
-                    line: {
-                        dataLabels: {
-                            enabled: false
-                        },
-                        enableMouseTracking: true
-                    },
-                    series: {
-                        showInLegend: false,
-                        color: 'var(--chart-series-Color)'
-                    }
-                },
-                tooltip: {
-                    outside: true,
-                    useHTML: true,
-                    borderColor: 'var(--chart-tooltip-border-Color)',
-                    borderRadius: 5,
-                    backgroundColor: 'var(--chart-tooltip-background-Color)',
-                    opacity: 0.5,
-                    style: {opacity: 0.7, color: 'var(--chart-tooltip-text-Color)'},
-                },
-                series: [{
-                        name: '',
-                        data: [0, 5, 0.5, 20.5, 18.4, 10.5, 25.2],
-                    }]
-            });
-
-        </script>
-
-        <!--Messages-line-chart-js -->
-        <script>
-            Highcharts.chart('messages', {
-
-                chart: {
-                    type: 'spline',
-                    backgroundColor: 'var(--chart-bg-color)',
-                },
-                title: {
-                    text: '',
-                },
-                subtitle: {
-                    text: '',
-                },
-                rangeSelector: {
-                    enabled: true,
-                    inputEnabled: false,
-                    selected: 2,
-                    buttonPosition: {
-                        align: 'right',
-                    },
-                    buttonTheme: {// styles for the buttons
-                        color: 'black',
-                        style: {
-                            color: 'black'
-                        },
-                        states: {
-                            hover: {
-                                color: '#22c3aa',
-                            },
-                            select: {
-                                style: {
-                                    color: '#22c3aa'
-                                }
-                            }
-                            // disabled: { ... }
-                        }
-                    },
-                    labelStyle: {
-                        display: 'none'
-                    },
-                    buttons: [{
-                            type: 'month',
-                            count: 1,
-                            text: '1d'
-                        },
-                        {
-                            type: 'month',
-                            count: 3,
-                            text: '3d'
-                        },
-                        {
-                            type: 'month',
-                            count: 1,
-                            text: '1w',
-                        },
-                        {
-                            type: 'year',
-                            count: 1,
-                            text: '1m'
-                        }
+                {
+                    linearGradient: merge(perShapeGradient),
+                    stops: [
+                        [0, 'rgb(254, 229, 125)'],
+                        [1, 'rgb(264, 249, 145)']
                     ]
                 },
+                ]
+                chart = new Highcharts.Chart({
 
-                xAxis: {
-                    categories: ['25.07', '26.07', '27.07', '28.07', '29.07', '30.07', '31.07'],
-                    lineColor: 'var(--chartgridLineColor)'
-                },
-                yAxis: {
-                    gridLineColor: 'var(--chartgridLineColor)',
-                    title: {
-                        text: '',
-                    }, labels: {
-                        style: {
-                            color: 'var(--bar-label-Color-y-axis)'
-                        }
-                    }
-                },
-                plotOptions: {
-                    line: {
-                        dataLabels: {
-                            enabled: false
-                        },
-                        enableMouseTracking: true
-                    },
-                    series: {
-                        showInLegend: false,
-                        color: 'var(--chart-series-Color)'
-                    }
-                },
-                tooltip: {
-                    outside: true,
-                    useHTML: true,
-                    borderColor: 'var(--chart-tooltip-border-Color)',
-                    borderRadius: 5,
-                    backgroundColor: 'var(--chart-tooltip-background-Color)',
-                    opacity: 0.5,
-                    style: {opacity: 0.7, color: 'var(--chart-tooltip-text-Color)'},
-                },
-                series: [{
-                        name: '',
-                        data: [0, 5, 0.5, 20.5, 18.4, 10.5, 25.2],
-                    }]
-            });
-        </script>
-
-        <!--pie-chart-js -->
-        <script>
-            // Uncomment to style it like Apple Watch
-
-            if (!Highcharts.theme) {
-                Highcharts.setOptions({
                     chart: {
+                        renderTo: 'barcontainer',
+                        type: 'column',
                         backgroundColor: 'var(--chart-bg-color)'
                     },
-                    colors: ['var(--lightgreen)', '#77beff', '#a096ff', '#fee57d', '#f06170'],
-                    title: {
-                        style: {
-                            color: 'silver'
+                    xAxis: {
+                        categories: ['Activity', 'Conversations', 'Invites', 'Alerts'],
+                        lineColor: 'var(--bar-chartgridLineColor)',
+                        labels: {
+                            style: {
+                                color: 'var(--bar-label-Color)'
+                            }
                         }
                     },
+                    title: {
+                        text: '',
+                        style: {
+                        }
+                    },
+                    yAxis: {
+                        gridLineColor: 'var(--bar-chartgridLineColor) ',
+                        title: {
+                            text: '',
+                        },
+                        labels: {
+                            style: {
+                                color: 'var(--bar-label-Color-y-axis)'
+                            }
+                        }
+                    },
+
+                    legend: {
+                        shadow: true
+                    },
+
+                    plotOptions: {
+                        series: {
+                            pointWidth: '16',
+                            borderWidth: '0',
+                            borderRadius: '4',
+                            shadow: true
+                        }
+                    },
+                    series: [{
+                        name: name,
+                        data: [{
+                            y: 1355.11,
+                            color: colors[0]
+                        }, {
+                            y: 181.63,
+                            color: colors[1]
+                        }, {
+                            y: 450.63,
+                            color: colors[2]
+                        }, {
+                            y: 181.94,
+                            color: colors[3]
+                        }],
+                        shadow: {
+                            color: new Highcharts.Color('var(--barchart-shadow-color)').setOpacity('0.4').get(),
+                            width: 10,
+                            offsetX: 0,
+                            offsetY: 0
+                        },
+                    }],
+
                     tooltip: {
                         outside: true,
                         useHTML: true,
@@ -1034,131 +824,249 @@
                         borderRadius: 5,
                         backgroundColor: 'var(--chart-tooltip-background-Color)',
                         opacity: 0.5,
-                        style: {opacity: 0.7, color: 'var(--chart-tooltip-text-Color)'},
+                        style: { opacity: 0.7, color: 'var(--chart-tooltip-text-Color)' },
                     },
 
+                    exporting: {
+                        enabled: true
+                    },
+                    credits: { enabled: true },
+                    legend: { enabled: true },
                 });
-            }
+            });
 
+        });
+    </script>
 
-            /**
-             * In the chart render event, add icons on top of the circular shapes
-             */
-            function renderIcons() {
-
-                // Move icon
-                if (!this.series[0].icon) {
-                    this.series[0].icon = this.renderer.path([])
-                            .attr({
-                                stroke: 'var(--chart-bg-color)',
-                                'stroke-linecap': 'round',
-                                'stroke-linejoin': 'round',
-                                'stroke-width': 10,
-                                zIndex: 10
-                            })
-                            .add(this.series[2].group);
-                }
-                this.series[0].icon.translate(
-                        this.chartWidth / 2 - 10,
-                        this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
-                        (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
-                        );
-
-                // Move icon
-                if (!this.series[0].icon) {
-                    this.series[0].icon = this.renderer.path([])
-                            .attr({
-                                stroke: 'var(--chart-bg-color)',
-                                'stroke-linecap': 'round',
-                                'stroke-linejoin': 'round',
-                                'stroke-width': 10,
-                                zIndex: 10
-                            })
-                            .add(this.series[2].group);
-                }
-                this.series[0].icon.translate(
-                        this.chartWidth / 2 - 10,
-                        this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
-                        (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
-                        );
-
-
-                // Move icon
-                if (!this.series[0].icon) {
-                    this.series[0].icon = this.renderer.path([])
-                            .attr({
-                                stroke: 'var(--chart-bg-color)',
-                                'stroke-linecap': 'round',
-                                'stroke-linejoin': 'round',
-                                'stroke-width': 10,
-                                zIndex: 10
-                            })
-                            .add(this.series[2].group);
-                }
-                this.series[0].icon.translate(
-                        this.chartWidth / 2 - 10,
-                        this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
-                        (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
-                        );
-
-
-                // Exercise icon
-                if (!this.series[1].icon) {
-                    this.series[1].icon = this.renderer.path(
-                            []
-                            )
-                            .attr({
-                                stroke: 'var(--chart-bg-color)',
-                                'stroke-linecap': 'round',
-                                'stroke-linejoin': 'round',
-                                'stroke-width': 10,
-                                zIndex: 10
-                            })
-                            .add(this.series[2].group);
-                }
-                this.series[1].icon.translate(
-                        this.chartWidth / 2 - 10,
-                        this.plotHeight / 2 - this.series[1].points[0].shapeArgs.innerR -
-                        (this.series[1].points[0].shapeArgs.r - this.series[1].points[0].shapeArgs.innerR) / 2
-                        );
-
-                // Stand icon
-                if (!this.series[2].icon) {
-                    this.series[2].icon = this.renderer.path([])
-                            .attr({
-                                stroke: 'var(--chart-bg-color)',
-                                'stroke-linecap': 'round',
-                                'stroke-linejoin': 'round',
-                                'stroke-width': 10,
-                                zIndex: 10
-                            })
-                            .add(this.series[2].group);
-                }
-
-                this.series[2].icon.translate(
-                        this.chartWidth / 2 - 10,
-                        this.plotHeight / 2 - this.series[2].points[0].shapeArgs.innerR -
-                        (this.series[2].points[0].shapeArgs.r - this.series[2].points[0].shapeArgs.innerR) / 2
-                        );
-            }
-
-            Highcharts.chart('piecontainer', {
-
-                chart: {
-                    type: 'solidgauge',
-                    height: '110%',
-                    events: {
-                        render: renderIcons
+    <!--users-line-chart-js -->
+    <script>
+        Highcharts.chart('users', {
+            chart: {
+                type: 'spline',
+                backgroundColor: 'var(--chart-bg-color)',
+            },
+            title: {
+                text: '',
+            },
+            subtitle: {
+                text: '',
+            },
+            rangeSelector: {
+                enabled: true,
+                inputEnabled: false,
+                Color: 'var(--chartgridLineColor)',
+                fill: '#000',
+                buttonPosition: {
+                    align: 'right',
+                },
+                buttonTheme: {// styles for the buttons
+                    style: {
+                        fontWeight: 'regular'
+                    },
+                    states: {
+                        hover: {
+                        },
+                        select: {
+                            style: {
+                                color: '#22c3aa'
+                            }
+                        }
+                        // disabled: { ... }
                     }
                 },
 
+                labelStyle: {
+                    display: 'none'
+                },
+                buttons: [{
+
+                    type: 'month',
+                    count: 1,
+                    text: '1d'
+                },
+                {
+                    type: 'month',
+                    count: 3,
+                    text: '3d'
+                },
+                {
+                    type: 'month',
+                    count: 1,
+                    text: '1w'
+                },
+                {
+                    type: 'year',
+                    count: 1,
+                    text: '1m'
+                }
+                ]
+            },
+
+            xAxis: {
+                categories: ['25.07', '26.07', '27.07', '28.07', '29.07', '30.07', '31.07'],
+                lineColor: 'var(--chartgridLineColor)'
+            },
+            yAxis: {
+                gridLineColor: 'var(--chartgridLineColor)',
                 title: {
                     text: '',
+                },
+                labels: {
                     style: {
-                        fontSize: '12px'
+                        color: 'var(--bar-label-Color-y-axis)'
+                    }
+                }
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: false
+                    },
+                    enableMouseTracking: true
+                },
+                series: {
+                    showInLegend: false,
+                    color: 'var(--chart-series-Color)'
+                }
+            },
+            tooltip: {
+                outside: true,
+                useHTML: true,
+                borderColor: 'var(--chart-tooltip-border-Color)',
+                borderRadius: 5,
+                backgroundColor: 'var(--chart-tooltip-background-Color)',
+                opacity: 0.5,
+                style: { opacity: 0.7, color: 'var(--chart-tooltip-text-Color)' },
+            },
+            series: [{
+                name: '',
+                data: [0, 5, 0.5, 20.5, 18.4, 10.5, 25.2],
+            }]
+        });
+
+    </script>
+
+    <!--Messages-line-chart-js -->
+    <script>
+        Highcharts.chart('messages', {
+
+            chart: {
+                type: 'spline',
+                backgroundColor: 'var(--chart-bg-color)',
+            },
+            title: {
+                text: '',
+            },
+            subtitle: {
+                text: '',
+            },
+            rangeSelector: {
+                enabled: true,
+                inputEnabled: false,
+                selected: 2,
+                buttonPosition: {
+                    align: 'right',
+                },
+                buttonTheme: {// styles for the buttons
+                    color: 'black',
+                    style: {
+                        color: 'black'
+                    },
+                    states: {
+                        hover: {
+                            color: '#22c3aa',
+                        },
+                        select: {
+                            style: {
+                                color: '#22c3aa'
+                            }
+                        }
+                        // disabled: { ... }
                     }
                 },
+                labelStyle: {
+                    display: 'none'
+                },
+                buttons: [{
+                    type: 'month',
+                    count: 1,
+                    text: '1d'
+                },
+                {
+                    type: 'month',
+                    count: 3,
+                    text: '3d'
+                },
+                {
+                    type: 'month',
+                    count: 1,
+                    text: '1w',
+                },
+                {
+                    type: 'year',
+                    count: 1,
+                    text: '1m'
+                }
+                ]
+            },
 
+            xAxis: {
+                categories: ['25.07', '26.07', '27.07', '28.07', '29.07', '30.07', '31.07'],
+                lineColor: 'var(--chartgridLineColor)'
+            },
+            yAxis: {
+                gridLineColor: 'var(--chartgridLineColor)',
+                title: {
+                    text: '',
+                }, labels: {
+                    style: {
+                        color: 'var(--bar-label-Color-y-axis)'
+                    }
+                }
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: false
+                    },
+                    enableMouseTracking: true
+                },
+                series: {
+                    showInLegend: false,
+                    color: 'var(--chart-series-Color)'
+                }
+            },
+            tooltip: {
+                outside: true,
+                useHTML: true,
+                borderColor: 'var(--chart-tooltip-border-Color)',
+                borderRadius: 5,
+                backgroundColor: 'var(--chart-tooltip-background-Color)',
+                opacity: 0.5,
+                style: { opacity: 0.7, color: 'var(--chart-tooltip-text-Color)' },
+            },
+            series: [{
+                name: '',
+                data: [0, 5, 0.5, 20.5, 18.4, 10.5, 25.2],
+            }]
+        });
+    </script>
+
+    <!--pie-chart-js -->
+    <script>
+        // Uncomment to style it like Apple Watch
+
+        if (!Highcharts.theme) {
+            Highcharts.setOptions({
+                chart: {
+                    backgroundColor: 'var(--chart-bg-color)'
+                },
+                colors: ['var(--lightgreen)', '#77beff', '#a096ff', '#fee57d', '#f06170'],
+                title: {
+                    style: {
+                        color: 'silver'
+                    }
+                },
                 tooltip: {
                     outside: true,
                     useHTML: true,
@@ -1166,116 +1074,249 @@
                     borderRadius: 5,
                     backgroundColor: 'var(--chart-tooltip-background-Color)',
                     opacity: 0.5,
-                    style: {opacity: 0.7, color: 'var(--chart-tooltip-text-Color)'},
+                    style: { opacity: 0.7, color: 'var(--chart-tooltip-text-Color)' },
                 },
 
-                pane: {
-                    startAngle: 360,
-                    endAngle: 0,
-                    background: 'transparent' [{// Track for Move
-                        outerRadius: '100%',
-                        innerRadius: '90%',
-                        backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[0])
-                                .setOpacity(0)
-                                .get(),
-                        borderWidth: 0
-                    }, {// Track for Exercise
+            });
+        }
+
+
+        /**
+         * In the chart render event, add icons on top of the circular shapes
+         */
+        function renderIcons() {
+
+            // Move icon
+            if (!this.series[0].icon) {
+                this.series[0].icon = this.renderer.path([])
+                    .attr({
+                        stroke: 'var(--chart-bg-color)',
+                        'stroke-linecap': 'round',
+                        'stroke-linejoin': 'round',
+                        'stroke-width': 10,
+                        zIndex: 10
+                    })
+                    .add(this.series[2].group);
+            }
+            this.series[0].icon.translate(
+                this.chartWidth / 2 - 10,
+                this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
+                (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
+            );
+
+            // Move icon
+            if (!this.series[0].icon) {
+                this.series[0].icon = this.renderer.path([])
+                    .attr({
+                        stroke: 'var(--chart-bg-color)',
+                        'stroke-linecap': 'round',
+                        'stroke-linejoin': 'round',
+                        'stroke-width': 10,
+                        zIndex: 10
+                    })
+                    .add(this.series[2].group);
+            }
+            this.series[0].icon.translate(
+                this.chartWidth / 2 - 10,
+                this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
+                (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
+            );
+
+
+            // Move icon
+            if (!this.series[0].icon) {
+                this.series[0].icon = this.renderer.path([])
+                    .attr({
+                        stroke: 'var(--chart-bg-color)',
+                        'stroke-linecap': 'round',
+                        'stroke-linejoin': 'round',
+                        'stroke-width': 10,
+                        zIndex: 10
+                    })
+                    .add(this.series[2].group);
+            }
+            this.series[0].icon.translate(
+                this.chartWidth / 2 - 10,
+                this.plotHeight / 2 - this.series[0].points[0].shapeArgs.innerR -
+                (this.series[0].points[0].shapeArgs.r - this.series[0].points[0].shapeArgs.innerR) / 2
+            );
+
+
+            // Exercise icon
+            if (!this.series[1].icon) {
+                this.series[1].icon = this.renderer.path(
+                    []
+                )
+                    .attr({
+                        stroke: 'var(--chart-bg-color)',
+                        'stroke-linecap': 'round',
+                        'stroke-linejoin': 'round',
+                        'stroke-width': 10,
+                        zIndex: 10
+                    })
+                    .add(this.series[2].group);
+            }
+            this.series[1].icon.translate(
+                this.chartWidth / 2 - 10,
+                this.plotHeight / 2 - this.series[1].points[0].shapeArgs.innerR -
+                (this.series[1].points[0].shapeArgs.r - this.series[1].points[0].shapeArgs.innerR) / 2
+            );
+
+            // Stand icon
+            if (!this.series[2].icon) {
+                this.series[2].icon = this.renderer.path([])
+                    .attr({
+                        stroke: 'var(--chart-bg-color)',
+                        'stroke-linecap': 'round',
+                        'stroke-linejoin': 'round',
+                        'stroke-width': 10,
+                        zIndex: 10
+                    })
+                    .add(this.series[2].group);
+            }
+
+            this.series[2].icon.translate(
+                this.chartWidth / 2 - 10,
+                this.plotHeight / 2 - this.series[2].points[0].shapeArgs.innerR -
+                (this.series[2].points[0].shapeArgs.r - this.series[2].points[0].shapeArgs.innerR) / 2
+            );
+        }
+
+        Highcharts.chart('piecontainer', {
+
+            chart: {
+                type: 'solidgauge',
+                height: '110%',
+                events: {
+                    render: renderIcons
+                }
+            },
+
+            title: {
+                text: '',
+                style: {
+                    fontSize: '12px'
+                }
+            },
+
+            tooltip: {
+                outside: true,
+                useHTML: true,
+                borderColor: 'var(--chart-tooltip-border-Color)',
+                borderRadius: 5,
+                backgroundColor: 'var(--chart-tooltip-background-Color)',
+                opacity: 0.5,
+                style: { opacity: 0.7, color: 'var(--chart-tooltip-text-Color)' },
+            },
+
+            pane: {
+                startAngle: 360,
+                endAngle: 0,
+                background: 'transparent'[{// Track for Move
+                    outerRadius: '100%',
+                    innerRadius: '90%',
+                    backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[0])
+                        .setOpacity(0)
+                        .get(),
+                    borderWidth: 0
+                }, {// Track for Exercise
                         outerRadius: '90%',
                         innerRadius: '80%',
                         backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[1])
-                                .setOpacity(0)
-                                .get(),
+                            .setOpacity(0)
+                            .get(),
                         borderWidth: 0
                     }, {// Track for Stand
                         outerRadius: '80%',
                         innerRadius: '70%',
                         backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[2])
-                                .setOpacity(0)
-                                .get(),
+                            .setOpacity(0)
+                            .get(),
                         borderWidth: 0
                     }, {// Track for Stand
                         outerRadius: '70%',
                         innerRadius: '60%',
                         backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[3])
-                                .setOpacity(0)
-                                .get(),
+                            .setOpacity(0)
+                            .get(),
                         borderWidth: 0
                     }, {// Track for Stand
                         outerRadius: '60%',
                         innerRadius: '50%',
                         backgroundColor: Highcharts.Color(Highcharts.getOptions().colors[4])
-                                .setOpacity(0)
-                                .get(),
+                            .setOpacity(0)
+                            .get(),
                         borderWidth: 0
                     }]
-                },
+            },
 
-                yAxis: {
-                    min: 0,
-                    max: 100,
-                    lineWidth: 0,
-                    tickPositions: []
-                },
+            yAxis: {
+                min: 0,
+                max: 100,
+                lineWidth: 0,
+                tickPositions: []
+            },
 
-                plotOptions: {
-                    solidgauge: {
+            plotOptions: {
+                solidgauge: {
+                    dataLabels: {
+                        enabled: false
+                    },
+                    line: {
                         dataLabels: {
                             enabled: false
                         },
-                        line: {
-                            dataLabels: {
-                                enabled: false
-                            },
-                            enableMouseTracking: false
-                        },
-                        linecap: 'round',
-                        stickyTracking: false,
-                        rounded: true
-                    }
-                },
-                series: [{
-                        name: 'Low',
-                        data: [{
-                                color: Highcharts.getOptions().colors[0],
-                                radius: '100%',
-                                innerRadius: '90%',
-                                y: 65
-                            }]
-                    }, {
-                        name: 'Normal',
-                        data: [{
-                                color: Highcharts.getOptions().colors[1],
-                                radius: '80%',
-                                innerRadius: '70%',
-                                y: 80
-                            }]
-                    }, {
-                        name: 'Above Average',
-                        data: [{
-                                color: Highcharts.getOptions().colors[2],
-                                radius: '60%',
-                                innerRadius: '50%',
-                                y: 85
-                            }]
-                    }, {
-                        name: 'High',
-                        data: [{
-                                color: Highcharts.getOptions().colors[3],
-                                radius: '40%',
-                                innerRadius: '30%',
-                                y: 75
-                            }]
-                    }, {
-                        name: 'Very High',
-                        data: [{
-                                color: Highcharts.getOptions().colors[4],
-                                radius: '20%',
-                                innerRadius: '10%',
-                                y: 73
-                            }]
-                    }]
-            });
+                        enableMouseTracking: false
+                    },
+                    linecap: 'round',
+                    stickyTracking: false,
+                    rounded: true
+                }
+            },
+            series: [{
+                name: 'Low',
+                data: [{
+                    color: Highcharts.getOptions().colors[0],
+                    radius: '100%',
+                    innerRadius: '90%',
+                    y: 65
+                }]
+            }, {
+                name: 'Normal',
+                data: [{
+                    color: Highcharts.getOptions().colors[1],
+                    radius: '80%',
+                    innerRadius: '70%',
+                    y: 80
+                }]
+            }, {
+                name: 'Above Average',
+                data: [{
+                    color: Highcharts.getOptions().colors[2],
+                    radius: '60%',
+                    innerRadius: '50%',
+                    y: 85
+                }]
+            }, {
+                name: 'High',
+                data: [{
+                    color: Highcharts.getOptions().colors[3],
+                    radius: '40%',
+                    innerRadius: '30%',
+                    y: 75
+                }]
+            }, {
+                name: 'Very High',
+                data: [{
+                    color: Highcharts.getOptions().colors[4],
+                    radius: '20%',
+                    innerRadius: '10%',
+                    y: 73
+                }]
+            }]
+        });
 
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>

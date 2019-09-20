@@ -96,10 +96,13 @@ body {
 }
 li{
     list-style: none;
-}
+} 
 ul{
     margin: 0;
     padding: 0; 
+}
+a{
+     outline: none; 
 }
 input[type="text"] 
 {
@@ -107,17 +110,24 @@ input[type="text"]
 }
 .button{ 
     @extend %button-property-shared;
+    &:hover {
+        background: var(--icon-hover-button) !important;
+    }
+    &:focus {
+        background: var(--icon-hover-button) !important;
+        outline: none !important; 
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+    &:active {
+        background: var(--icon-hover-button) !important;
+    }
 }
 button:focus {
     outline: none !important;
 }
 .no-padding {
     padding: 0px !important;
-}
-.button:focus { 
-    outline: none !important; 
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
 }
 %button-property-shared{          
     background-color: var(--lightgreen);
@@ -136,7 +146,7 @@ button:focus {
 }
 
 #checkbox {
-    margin: 30px;
+    margin: 30px 10px;
 }
 .red-font{
     color: #f23658 !important; 
@@ -165,9 +175,9 @@ button:focus {
     color:var(--green-color)!important;
 }
 .hide {
-    display: none !important;
-    -webkit-transition: display 2s; 
+    display: none !important; 
 }
+
 //chart-scss
 #users, #messages{ 
     .highcharts-point {
@@ -275,6 +285,8 @@ button:focus {
 .nav-link { 
     padding: 0 !important
 }
+
+
 
 .elite-bg {
     background:var(--elite-bg) !important; 

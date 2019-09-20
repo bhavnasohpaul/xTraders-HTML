@@ -264,19 +264,11 @@
                 }
             }
         }
-    } 
-
-    .chat-btn:hover, .chat-btn:focus, .chat-btn:active, .login .container .button:hover, .leaderboard:hover, .leaderboard:focus, .leaderboard:active{  
-        background: var(--icon-hover-button) !important; 
-    }
+    }    
 }
-
 
 /*Responsive-scss-*/ 
 @media only screen and (max-width: 1100px) and (min-width: 767px) {
-        #checkbox { 
-    margin: 10px;
-}
     #wrapper { 
         .header {
             .header-inner {
@@ -298,9 +290,6 @@
     }
 }
 @media screen and (max-width:900px) { 
-    #checkbox { 
-    margin: 10px;
-}
     #wrapper {
         #page-content-wrapper{
             .header {
@@ -380,9 +369,10 @@
                     border: 1px solid var(--navyblue); 
                     outline: none;
                     background: var(--navyblue); 
-                    color: var(--white); 
+                    color: var(--white) !important;  
                     border-radius: 90px;
                     font-size: 15px;
+                    padding-right: 38px;
                     &:focus{
                         border: 1px solid var(--primary-bg-color); 
                         transition: 0.35s ease;
@@ -444,14 +434,15 @@
                     height: 55px; 
                     .header-icons-group {
                         .user {
-                            margin: 9px 15px;
+                            margin: 9px 10px;
                             width: 35px !important;
                             height: 35px;
                         }
                     }
                     .heading {
+                        margin-left: 10px;
                         font-size: 17px;
-                    }
+                      }
                     .search-form.desktop {
                         display: none;
                     }

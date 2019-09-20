@@ -43,6 +43,15 @@
                 text-transform: uppercase;
                 font-size: 14px;
                 font-weight:  var(--extra-bold-font);
+                &:hover {
+                    background: var(--icon-hover-button) !important;
+                }
+                &:focus {
+                    background: var(--icon-hover-button) !important;
+                }
+                &:active {
+                    background: var(--icon-hover-button) !important;
+                }
             }
         }
     } 
@@ -56,6 +65,7 @@
         }
     }
 }
+
 /*Responsive-scss-*/
 @media screen and (max-width:1200px) {
     .chat-page{
@@ -71,8 +81,6 @@
         }
     }
 }
-
-/*Responsive-scss-*/
 @media screen and (max-width:767px) {
     .chat-page{
         .center-div {
@@ -96,7 +104,6 @@
         }
     }
 } 
-
 @media screen and (max-width:370px) { 
     .chat-page{
         .ph-pic{
