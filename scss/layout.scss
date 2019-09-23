@@ -8,7 +8,7 @@
             -moz-transition: padding 0.5s ease-in-out;
             -ms-transition: padding 0.5s ease-in-out;
             -o-transition: padding 0.5s ease-in-out;
-            transition: padding 0.5s ease-in-out;
+            transition: padding 0.5s ease-in-out; 
             .mobile-small-size {
                 display: none;
             } 
@@ -137,19 +137,21 @@
     /*.sidebar-visible*/  
     #sidebar.visible{ 
         left:0px;
-        transition: left 0.3s linear; 
+
     }
     /*.sidebar*/ 
     #sidebar{
         background:  var(--sidebar-wrapper-bg); 
-        width: 190px;
+        width: 221px;
         height:100%;
         display: block;
         position: fixed;
-        left:-190px;
+        left:-221px;
         top:0px;
-        transition: left 0.3s linear;
-        z-index: 99;     
+        z-index: 99; 
+        opacity: 1;
+        transition: all 0.75s;
+        -webkit-transition: all 0.75s;    
         #sidebar-wrapper{
             display: inline-block;
             vertical-align: middle;
@@ -164,6 +166,9 @@
             #sidebar_menu {  
                 padding: 24px 20px 21px;
                 clear: both;
+                height: 70px;
+                transition: all 0.5s;
+                -webkit-transition: all 0.75s;
             } 
             /*.sidebar-nav li */ 
             .sidebar-nav{
@@ -185,6 +190,8 @@
                         width: 28px;
                         margin-left: 17px; 
                         margin-top: 12px;
+                        -webkit-transition: background .5s;
+                        transition: background .5s;
                     }
                     .l-sidebar-icon-grid {
                         @extend %sidebar-icon-shared;
@@ -236,20 +243,17 @@
                         }
                     }
 
-
+                    .l-sidebar-icon { 
+                        outline: none;
+                    }
 
                     a {
                         color:var(--primary-color); 
                         display: block;
-                        float: left;
                         text-decoration: none;
-                        width: 315px;
-                        -webkit-transition: background .5s; 
-                        -moz-transition: background .5s;
-                        -o-transition: background .5s;
-                        -ms-transition: background .5s;
-                        transition: background .5s;
+                        width: 280px;
                         padding: 10px 0px;
+                        clear: both;
                     }
                 }
                 .sub_icon{
@@ -262,19 +266,11 @@
                 }
             }
         }
-    } 
-
-    .chat-btn:hover, .chat-btn:focus, .chat-btn:active, .login .container .button:hover, .leaderboard:hover, .leaderboard:focus, .leaderboard:active{  
-        background: var(--icon-hover-button) !important; 
-    }
+    }    
 }
-
 
 /*Responsive-scss-*/ 
 @media only screen and (max-width: 1100px) and (min-width: 767px) {
-        #checkbox { 
-    margin: 10px;
-}
     #wrapper { 
         .header {
             .header-inner {
@@ -296,9 +292,6 @@
     }
 }
 @media screen and (max-width:900px) { 
-    #checkbox { 
-    margin: 10px;
-}
     #wrapper {
         #page-content-wrapper{
             .header {
@@ -335,7 +328,9 @@
                 right: -40px;
                 #sidebar_menu {
                     width: 40px;
-                    padding: 24px 10px;
+                    padding: 24px 10px; 
+                    height: 70px;
+                    -webkit-transition: display 2s;
                 }
                 .sidebar-nav{
                     .menu { 
@@ -378,9 +373,10 @@
                     border: 1px solid var(--navyblue); 
                     outline: none;
                     background: var(--navyblue); 
-                    color: var(--white); 
-                    border-radius: 90px;
+                    color: var(--white) !important;  
+                    border-radius: 90px; 
                     font-size: 15px;
+                    padding-right: 38px;
                     &:focus{
                         border: 1px solid var(--primary-bg-color); 
                         transition: 0.35s ease;
@@ -442,12 +438,13 @@
                     height: 55px; 
                     .header-icons-group {
                         .user {
-                            margin: 9px 15px;
+                            margin: 9px 10px;
                             width: 35px !important;
                             height: 35px;
                         }
                     }
                     .heading {
+                        margin-left: 10px;
                         font-size: 17px;
                     }
                     .search-form.desktop {

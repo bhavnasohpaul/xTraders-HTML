@@ -96,10 +96,13 @@ body {
 }
 li{
     list-style: none;
-}
+} 
 ul{
     margin: 0;
     padding: 0; 
+}
+a{
+     outline: none; 
 }
 input[type="text"] 
 {
@@ -107,17 +110,24 @@ input[type="text"]
 }
 .button{ 
     @extend %button-property-shared;
+    &:hover {
+        background: var(--icon-hover-button) !important;
+    }
+    &:focus {
+        background: var(--icon-hover-button) !important;
+        outline: none !important; 
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+    &:active {
+        background: var(--icon-hover-button) !important;
+    }
 }
 button:focus {
     outline: none !important;
 }
 .no-padding {
     padding: 0px !important;
-}
-.button:focus { 
-    outline: none !important; 
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
 }
 %button-property-shared{          
     background-color: var(--lightgreen);
@@ -129,10 +139,14 @@ button:focus {
     color:var(--text-white);
     border-radius: 5px;
     min-width: 79px;
+    font-weight: var(--bold-font)!important;
+}
+.button{
+    @extend %button-property-shared;
 }
 
 #checkbox {
-    margin: 30px;
+    margin: 30px 10px;
 }
 .red-font{
     color: #f23658 !important; 
@@ -161,9 +175,9 @@ button:focus {
     color:var(--green-color)!important;
 }
 .hide {
-    display: none !important;
-    -webkit-transition: display 2s; 
+    display: none !important; 
 }
+
 //chart-scss
 #users, #messages{ 
     .highcharts-point {
@@ -272,6 +286,8 @@ button:focus {
     padding: 0 !important
 }
 
+
+
 .elite-bg {
     background:var(--elite-bg) !important; 
 } 
@@ -283,8 +299,7 @@ button:focus {
 }
 
 
-
-
+/*
 .elite-bg-border {
     border: 2px solid var(--elite-bg) !important; 
 } 
@@ -293,4 +308,78 @@ button:focus {
 }
 .platinum-bg-border {
     border: 2px solid var(--platinium-bg) !important;  
+}*/ 
+/*PRELOADING------------ */
+/*
+#overlayer {
+  width:100%;
+  height:100%;  
+  position:absolute;
+  z-index:1;
+  background:#000;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index:3;
+  border: 4px solid #Fff;
+  top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  animation: loader 0s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}*/
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
 }
