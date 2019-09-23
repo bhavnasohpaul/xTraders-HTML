@@ -1,148 +1,151 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <!-- Mobile Specific Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Site Title -->
-    <title> Crypto Traders </title>
-    <!--  font-css  -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
+    <head>
+        <!-- Mobile Specific Meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Site Title -->
+        <title> Crypto Traders </title>
+        <!--  font-css  -->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="./bundle.js"></script>
+    </head>
 
-<body class="dark-bg-color">
-    <!-- wrapper -->
-    <div id="wrapper" class="chat-page font-family">
-        <!-- sidebar -->
-        <div id="sidebar">
-            <!-- sidebar-wrapper -->
-            <div id="sidebar-wrapper">
-                <!-- sidebar_menu -->
-                <div id="sidebar_menu">
-                    <div class="sidebar-brand"><a href="javascript:void(0);">
-                            <img src="assets/images/dashboard-icon/menu-light.png" alt="icon" /></a></div>
-                </div>
-                <!-- sidebar-nav -->
-                <ul class="sidebar-nav">
-                    <li><a href="home-page.html" class="l-sidebar-icon">Dashboard
-                            <span class="sub_icon l-sidebar-icon-grid"></span>
-                        </a>
-                    </li>
-                    <li><a href="leaderboard-page.html" class="l-sidebar-icon">Leaderboard
-                            <span class="sub_icon l-sidebar-icon-award"></span>
-                        </a>
-                    </li>
-                    <li><a href="product-page.html" class="l-sidebar-icon">Members Product Page
-                            <span class="sub_icon l-sidebar-icon-film"></span>
-                        </a>
-                    </li>
-                    <li><a href="chat-page.html" class="l-sidebar-icon">Chat Page
-                            <span class="sub_icon l-sidebar-icon-user"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- end-of-sidebar-wrapper -->
-        </div>
-
-        <!-- page-content-wrapper -->
-        <div id="page-content-wrapper">
-            <!-- header -->
-            <header class="header">
-                <div class="header-inner clearfix">
-                    <h1 class="heading">Join Chat</h1>
-                    <div class="theme-switch-wrapper mt-3">
-                        <label class="theme-switch" for="checkbox">
-                            <input type="checkbox" id="checkbox" />
-                            <div class="slider round"></div>
-                        </label>
+    <body>
+        <!-- wrapper -->
+        <div id="wrapper" class="home-page font-family chat-page">
+            <div id="overlayer"></div>
+            <span class="loader">
+                <span class="loader-inner"></span>
+            </span>
+            <!-- sidebar -->
+            <div id="sidebar">
+                <!-- sidebar-wrapper -->
+                <div id="sidebar-wrapper">
+                    <!-- sidebar_menu -->
+                    <div id="sidebar_menu">
+                        <div class="sidebar-brand"><a href="javascript:void(0);">
+                                <img src="assets/images/dashboard-icon/menu-light.png" alt="icon" /></a>
+                        </div>
                     </div>
-                    <div class="header-icons-group">
-                        <form action="" class="search-form desktop">
-                            <div class="form-group has-feedback">
-                                <label for="search" class="sr-only">Search</label>
-                                <input type="text" class="form-control" name="search" id="search" placeholder="Search">
-                                <span class="form-control-feedback"><i class="fa fa-search"
-                                        aria-hidden="true"></i></span>
-                            </div>
-                        </form>
+                    <!-- sidebar-nav -->
+                    <ul class="sidebar-nav">
+                        <li><a href="home-page.html" class="l-sidebar-icon" onclick="loadDoc()">Dashboard
+                                <span class="sub_icon l-sidebar-icon-grid"></span>
+                            </a>
+                        </li>
+                        <li><a href="leaderboard-page.html" class="l-sidebar-icon" onclick="loadDoc()">Leaderboard
+                                <span class="sub_icon l-sidebar-icon-award"></span>
+                            </a>
+                        </li>
+                        <li><a href="product-page.html" class="l-sidebar-icon" onclick="loadDoc()">Members Product Page
+                                <span class="sub_icon l-sidebar-icon-film"></span>
+                            </a>
+                        </li>
+                        <li><a href="chat-page.html" class="l-sidebar-icon" onclick="loadDoc()">Chat Page
+                                <span class="sub_icon l-sidebar-icon-user"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end-of-sidebar-wrapper -->
+            </div>
 
-                        <div class="nav-item dropdown  header-right-items">
-                            <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link l-sidebar-icon" href="javascript:void(0);"
-                                            id="navbarDropdown" role="button" data-toggle="dropdown"
-                                            aria-haspopup="true" aria-expanded="false">
-                                            <div class="user"><img src="assets/images/dashboard-icon/user.jpg"
-                                                    alt="icon" class="user-pic" /> </div>
-                                        </a>
-                                        <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-                                        <div class="dropdown-menu user-dropdown dropdown-menu-right animate slideIn"
-                                            aria-labelledby="navbarDropdown">
-                                            <div class="widget-pic">
-                                                <div class="user-text">Robert Millan</div>
+            <!-- page-content-wrapper -->
+            <div id="page-content-wrapper">
+                <!-- header -->
+                <header class="header">
+                    <div class="header-inner clearfix">
+                        <h1 class="heading">Join Chat</h1>
+                        <div class="theme-switch-wrapper mt-2">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox" />
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                        <div class="header-icons-group">
+                            <form action="" class="search-form desktop">
+                                <div class="form-group has-feedback">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <input type="text" class="form-control" name="search" id="search" placeholder="Search">
+                                    <span class="form-control-feedback"><i class="fa fa-search"
+                                                                           aria-hidden="true"></i></span>
+                                </div>
+                            </form>
+
+                            <div class="nav-item dropdown  header-right-items">
+                                <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link l-sidebar-icon" href="javascript:void(0);"
+                                               id="navbarDropdown" role="button" data-toggle="dropdown"
+                                               aria-haspopup="true" aria-expanded="false">
+                                                <div class="user"><img src="assets/images/dashboard-icon/user.jpg"
+                                                                       alt="icon" class="user-pic" /> </div>
+                                            </a>
+                                            <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                                            <div class="dropdown-menu user-dropdown dropdown-menu-right animate slideIn"
+                                                 aria-labelledby="navbarDropdown">
+                                                <div class="widget-pic">
+                                                    <div class="user-text">Robert Millan</div>
+                                                </div>
+                                                <div class="widget-logout">
+                                                    <button class="btn user-button">Logout</button>
+                                                </div>
                                             </div>
-                                            <div class="widget-logout">
-                                                <button class="btn user-button">Logout</button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
+
+                        </div>
+                    </div>
+                    <div class="mobile-small-size">
+                        <form class="search-container">
+                            <input type="text" id="search-bar" placeholder="Search">
+                            <a href="javascript:void(0);"><span class="form-control-search search-icon"><i
+                                        class="fa fa-search" aria-hidden="true"></i></span></a>
+                        </form>
+                    </div>
+                </header>
+                <!-- end-of-header -->
+
+                <!-- page-contents -->
+                <div class="page-contents"> 
+                    <div class="center-div text-center">
+
+                        <div class="content">
+                            <h2>LOGO</h2>
+                            <p>Lorem ipsum invites you to join the chat</p>
+                            <h4>www.Lorem ipsum.com</h4>
+                            <button type="button" class="btn chat-btn">JOIN THE CHAT</button>
+                            <!-- End-of-center-div -->
+
+                        </div><!-- End-of-center-div -->
+
+                        <div class="ph-pic">
+                            <img src="assets/images/ph-pic.png" alt="icon" class="ph-pic-img" />
                         </div>
 
-                    </div>
-                </div>
-                <div class="mobile-small-size">
-                    <form class="search-container">
-                        <input type="text" id="search-bar" placeholder="Search">
-                        <a href="javascript:void(0);"><span class="form-control-search search-icon"><i
-                                    class="fa fa-search" aria-hidden="true"></i></span></a>
-                    </form>
-                </div>
-            </header>
-            <!-- end-of-header -->
-
-            <!-- page-contents -->
-            <div class="page-contents">
-
-                <div class="center-div text-center">
-
-                    <div class="content">
-                        <h2>LOGO</h2>
-                        <p>Lorem ipsum invites you to join the chat</p>
-                        <h4>www.Lorem ipsum.com</h4>
-                        <button type="button" class="btn chat-btn">JOIN THE CHAT</button>
                         <!-- End-of-center-div -->
 
-                    </div><!-- End-of-center-div -->
-
-                    <div class="ph-pic">
-                        <img src="assets/images/ph-pic.png" alt="icon" class="ph-pic-img" />
-                    </div>
-
-                    <!-- End-of-center-div -->
-
-                </div><!-- end-of page-contents -->
+                    </div><!-- end-of page-contents -->
+                </div>
+                <!--End-of-#page-content-wrapper-->
             </div>
-            <!--End-of-#page-content-wrapper-->
         </div>
+        <!--End-of-#Wrapper-->
+        <!--js-files-->
 
-    </div>
-    <!--End-of-#Wrapper-->
-    <!--js-files-->
-    <script src="./bundle.js"></script>
 
-    <!--bootstrap-js-files-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!--bootstrap-js-files-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="./js/_common.js" type="text/javascript"></script>
+        <script src="./js/jquery.nicescroll.min.js"></script>
 
-    <script src="./js/_common.js" type="text/javascript"></script>
-    <script src="./js/jquery.nicescroll.min.js"></script>
-
-</body>
+    </body>
 
 </html>

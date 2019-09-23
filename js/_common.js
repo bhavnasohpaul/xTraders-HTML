@@ -33,34 +33,21 @@ function switchTheme(e) {
 toggleSwitch.addEventListener('change', switchTheme, false);
 
 
-
-
-$('#sidebar-wrapper').click(function () {
-    $('#sidebar').toggleClass('visible');
+$('#sidebar_menu').click(function () {
+    $('#sidebar').toggleClass('visible'); 
     $('.body-menu').toggleClass('.body-menu-left');
 });
 
-
-
 $(document).ready(function () {
     var nice = $("html").niceScroll({ cursorborder: "var(--con-header)", cursorcolor: "var(--con-header)", boxzoom: true });  // The document page (body)       
-
     $(".container-content").niceScroll({ cursorborder: "var(--con-header)", cursorcolor: "var(--con-header)", boxzoom: true });
     $(".table-responsive").niceScroll({ cursorborder: "var(--green-color)", cursorcolor: "var(--green-color)", boxzoom: true });
 
 });
 
 
-function loadDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("demo").innerHTML =
-                this.responseText;
-        }
-    };
-    xhttp.open("GET", "ajax_info.txt", true);
-    xhttp.send();
-}
-
-
+// $(window).load(function() {
+// 	$(".loader").delay(2000).fadeOut("slow");
+//   $("#overlayer").delay(2000).fadeOut("slow");
+// })
+        
