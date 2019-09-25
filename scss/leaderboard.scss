@@ -26,7 +26,7 @@
                     }
                     select {
                         width: 140px;
-                        padding: 4px 35px 1px 5px;
+                        padding: 0px 35px 0px 5px;
                         border: 1px solid var(--select-border);  
                         -webkit-appearance: none;
                         -moz-appearance: none;
@@ -49,7 +49,8 @@
                                             content: "\f000";
                                         }*/
                     select.form-control:not([size]):not([multiple]) {
-                        height: auto;
+                        height: 34px;
+                        padding: 3px 35px 0 8px;
                     }
                     select::-ms-expand { 
                         display: none; /* remove default arrow on ie10 and ie11 */
@@ -180,7 +181,8 @@
             height: 34px;
         } 
         select.form-control:not([size]):not([multiple]) {
-            height: auto;
+            height: 34px;
+            padding: 3px 35px 0 8px;
         }
         select::-ms-expand { 
             display: none; /* remove default arrow on ie10 and ie11 */

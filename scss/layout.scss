@@ -4,11 +4,6 @@
         .header { 
             width: 100%;
             display: inline-block;
-            -webkit-transition: padding 0.5s ease-in-out;
-            -moz-transition: padding 0.5s ease-in-out;
-            -ms-transition: padding 0.5s ease-in-out;
-            -o-transition: padding 0.5s ease-in-out;
-            transition: padding 0.5s ease-in-out; 
             .mobile-small-size {
                 display: none;
             } 
@@ -167,8 +162,6 @@
                 padding: 24px 20px 21px;
                 clear: both;
                 height: 70px;
-                transition: all 0.5s;
-                -webkit-transition: all 0.75s;
             } 
             /*.sidebar-nav li */ 
             .sidebar-nav{
@@ -266,7 +259,7 @@
                 }
             }
         }
-    }    
+    }      
 }
 
 /*Responsive-scss-*/ 
@@ -324,13 +317,12 @@
         }
         #sidebar{
             #sidebar-wrapper { 
-                width: 40px;
+                width: 40px; 
                 right: -40px;
                 #sidebar_menu {
                     width: 40px;
                     padding: 24px 10px; 
-                    height: 70px;
-                    -webkit-transition: display 2s;
+                    height: auto;
                 }
                 .sidebar-nav{
                     .menu { 
