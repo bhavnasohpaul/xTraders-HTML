@@ -23,12 +23,12 @@
                     color: var(--white);
                     font-size: 20px;
                     text-align: center;
-                    margin: 10px;
+                    padding: 10px;
                 }
                 .container-content {
                     padding: 40px;
                     border: 2px solid var(--navyblue);
-                    width: 100%;
+                    width: 100% !important;
                     display: inline-block;
                 }
                 .table-box {
@@ -63,7 +63,7 @@
                         margin-left: -27px;
                         text-align: center;
                         font-size: 17px;
-                        line-height: 17px;
+                        line-height: 16px;
                         width: 18px;
                         height: 18px;
                         border: 1px solid var(--container-subheading);
@@ -120,24 +120,30 @@
                             width: 30px;
                             .text-number {
                                 position: relative;
-                                font-size: 10px;
+                                font-size: 10.5px;
                                 background-color: var(--lightgreen);
                                 color: var(--con-header);
                                 width: 20px;
-                                height: 20px;
+                                height: 20px; 
                                 top: -4px;
                                 right: -21px;
                                 border-radius: 100%;
                                 text-align: center;
-                                line-height: 12px;
-                                padding-top: 4px;
+                                line-height: 10px;
                                 border: 2px solid var(--con-header);
                                 line-height: 10px;
+                                display: table;
+                                .text {
+                                    vertical-align: middle;
+                                    display: table-cell;
+                                    width: 100%;
+
+                                }
                             }
                         }
                     }
                     .header-right-items {
-                        float: right;
+                        float: right; 
                         margin-right: 0px;
                     }
                     .fa.fa-ellipsis-v {
@@ -172,6 +178,11 @@
                         vertical-align: middle !important;
                         border: 2px solid var(--con-header);
                         padding: 0px 8px;
+                        display:table;
+                        .text {
+                            display: table-cell;
+                            vertical-align: middle;
+                        } 
                     }
                 }
                 #membership-level-div {
@@ -300,8 +311,8 @@
                     h3 {
                         color: var(--white);
                         font-size: 20px;
-                        margin: 20px 0px;
-                        .heading-text {
+                        padding: 20px 0px;
+                        .heading-text { 
                             margin-top: 4px;
                         }
                         .text {
@@ -594,6 +605,7 @@
         }
     }
 }
+
 @media screen and (max-width: 900px) {   
     #wrapper {
         #page-content-wrapper {
@@ -627,6 +639,33 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {   
+    #wrapper {
+        #page-content-wrapper {
+            .page-contents {
+                padding: 15px;
+                margin-top: 0px;
+                .container {  
+                    #membership-level-div {
+                        min-height: auto;
+                    }
+                    .cancelled-text {
+                        font-size: 15px;
+                    }
+                    .confirm-cancel-div {
+                        height: auto;
+                    }
+                    .button {
+                        margin-left: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 580px) {
     #wrapper {
         #page-content-wrapper {
@@ -684,7 +723,7 @@
                             td {
                                 padding: 15px 0px;
                             }
-                        }
+                        } 
                     }
                     .tabs {
                         .nav-tabs {
