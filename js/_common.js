@@ -10,7 +10,6 @@ if (currentTheme) {
         toggleSwitch.checked = true;
     }
 }
-//add class to html tag 
 $('html').addClass('dark');
 $("#checkbox").prop("checked", false);
 function switchTheme(e) {
@@ -19,7 +18,7 @@ function switchTheme(e) {
         $('html').removeClass('dark');
     } else {
         $('html').addClass('dark');
-        $('html').removeClass('light'); 
+        $('html').removeClass('light');
     }
 
     if (e.target.checked) {
@@ -35,7 +34,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 //Sidebar-toggle-js
 $('#sidebar_menu').click(function () {
-    $('#sidebar').toggleClass('visible'); 
+    $('#sidebar').toggleClass('visible');
     $('.body-menu').toggleClass('.body-menu-left');
 });
 
@@ -49,20 +48,13 @@ $(document).ready(function () {
 
 // Loader-js
 
-// $(window).load(function() {
-// 	$(".loader").delay(2000).fadeOut("slow");
-//   $("#overlayer").delay(2000).fadeOut("slow");
-// })
-        
+$(window).load(function () {
+    $(".loader").delay(2000).fadeOut("slow");
+    $("#overlayer").delay(2000).fadeOut("slow");
+})
 
 
-$(document).ready(function(){
-    $("#sidebar-menu").on("click", function(){
-       $("#menu").css("opacity", "0");
-        $("#lgMenu").addClass("enter");
-    });
-        $("#exit").on("click", function(){
-           $("#lgMenu").removeClass("enter");
-            $("#menu").css("opacity", "1");
-        });
-    });
+// cross-js
+function myFunction(x) {
+    x.classList.toggle("change");
+}

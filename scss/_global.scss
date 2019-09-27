@@ -1,307 +1,297 @@
 html {
-    height: 100%;
-} 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; 
-} 
-body {
-    background-color: var(--body-background) !important; 
-    color: var(--font-color);
-    font: 100% var(--font-stack);
-    color: var(--primary-color);  
-    font-weight: var(--regular-font);  
+  height: 100%;
 }
-//General-scss 
-.font-family{
-    font-family: 'DM Sans', sans-serif !important;
-} 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--body-background) !important;
+  color: var(--font-color);
+  font: 100% var(--font-stack);
+  color: var(--primary-color);
+  font-weight: var(--regular-font);
+}
+//General-scss
+.font-family {
+  font-family: "DM Sans", sans-serif !important;
+}
 //font-scss
 @font-face {
-    font-family: 'DMSansRegular';
-    src: url('../fonts/DMSansRegular.eot');
-    src: url('../fonts/DMSansRegular.eot') format('embedded-opentype'),
-        url('../fonts/DMSansRegular.woff2') format('woff2'),
-        url('../fonts/DMSansRegular.woff') format('woff'),
-        url('../fonts/DMSansRegular.ttf') format('truetype'),
-        url('../fonts/DMSansRegular.svg#DMSansRegular') format('svg');
+  font-family: "DMSansRegular";
+  src: url("../fonts/DMSansRegular.eot");
+  src: url("../fonts/DMSansRegular.eot") format("embedded-opentype"),
+    url("../fonts/DMSansRegular.woff2") format("woff2"), url("../fonts/DMSansRegular.woff") format("woff"),
+    url("../fonts/DMSansRegular.ttf") format("truetype"), url("../fonts/DMSansRegular.svg#DMSansRegular") format("svg");
 }
 @font-face {
-    font-family: 'NunitoSansBold';
-    src: url('../fonts/NunitoSansBold.eot');
-    src: url('../fonts/NunitoSansBold.eot') format('embedded-opentype'),
-        url('../fonts/NunitoSansBold.woff2') format('woff2'),
-        url('../fonts/NunitoSansBold.woff') format('woff'),
-        url('../fonts/NunitoSansBold.ttf') format('truetype'),
-        url('../fonts/NunitoSansBold.svg#NunitoSansBold') format('svg');
+  font-family: "NunitoSansBold";
+  src: url("../fonts/NunitoSansBold.eot");
+  src: url("../fonts/NunitoSansBold.eot") format("embedded-opentype"),
+    url("../fonts/NunitoSansBold.woff2") format("woff2"), url("../fonts/NunitoSansBold.woff") format("woff"),
+    url("../fonts/NunitoSansBold.ttf") format("truetype"),
+    url("../fonts/NunitoSansBold.svg#NunitoSansBold") format("svg");
 }
 @font-face {
-    font-family: 'NunitoSansLight';
-    src: url('../fonts/NunitoSansLight.eot');
-    src: url('../fonts/NunitoSansLight.eot') format('embedded-opentype'),
-        url('../fonts/NunitoSansLight.woff2') format('woff2'),
-        url('../fonts/NunitoSansLight.woff') format('woff'),
-        url('../fonts/NunitoSansLight.ttf') format('truetype'),
-        url('../fonts/NunitoSansLight.svg#NunitoSansLight') format('svg');
+  font-family: "NunitoSansLight";
+  src: url("../fonts/NunitoSansLight.eot");
+  src: url("../fonts/NunitoSansLight.eot") format("embedded-opentype"),
+    url("../fonts/NunitoSansLight.woff2") format("woff2"), url("../fonts/NunitoSansLight.woff") format("woff"),
+    url("../fonts/NunitoSansLight.ttf") format("truetype"),
+    url("../fonts/NunitoSansLight.svg#NunitoSansLight") format("svg");
 }
 @font-face {
-    font-family: 'NunitoSansRegular';
-    src: url('../fonts/NunitoSansRegular.eot');
-    src: url('../fonts/NunitoSansRegular.eot') format('embedded-opentype'),
-        url('../fonts/NunitoSansRegular.woff2') format('woff2'),
-        url('../fonts/NunitoSansRegular.woff') format('woff'),
-        url('../fonts/NunitoSansRegular.ttf') format('truetype'),
-        url('../fonts/NunitoSansRegular.svg#NunitoSansRegular') format('svg');
+  font-family: "NunitoSansRegular";
+  src: url("../fonts/NunitoSansRegular.eot");
+  src: url("../fonts/NunitoSansRegular.eot") format("embedded-opentype"),
+    url("../fonts/NunitoSansRegular.woff2") format("woff2"), url("../fonts/NunitoSansRegular.woff") format("woff"),
+    url("../fonts/NunitoSansRegular.ttf") format("truetype"),
+    url("../fonts/NunitoSansRegular.svg#NunitoSansRegular") format("svg");
 }
 @font-face {
-    font-family: 'NunitoSansSemiBold';
-    src: url('../fonts/NunitoSansSemiBold.eot');
-    src: url('../fonts/NunitoSansSemiBold.eot') format('embedded-opentype'),
-        url('../fonts/NunitoSansSemiBold.woff2') format('woff2'),
-        url('../fonts/NunitoSansSemiBold.woff') format('woff'),
-        url('../fonts/NunitoSansSemiBold.ttf') format('truetype'),
-        url('../fonts/NunitoSansSemiBold.svg#NunitoSansSemiBold') format('svg');
+  font-family: "NunitoSansSemiBold";
+  src: url("../fonts/NunitoSansSemiBold.eot");
+  src: url("../fonts/NunitoSansSemiBold.eot") format("embedded-opentype"),
+    url("../fonts/NunitoSansSemiBold.woff2") format("woff2"), url("../fonts/NunitoSansSemiBold.woff") format("woff"),
+    url("../fonts/NunitoSansSemiBold.ttf") format("truetype"),
+    url("../fonts/NunitoSansSemiBold.svg#NunitoSansSemiBold") format("svg");
 }
 @font-face {
-    font-family: 'NunitoSansSemiBoldItalic';
-    src: url('../fonts/NunitoSansSemiBoldItalic.eot');
-    src: url('../fonts/NunitoSansSemiBoldItalic.eot') format('embedded-opentype'),
-        url('../fonts/NunitoSansSemiBoldItalic.woff2') format('woff2'),
-        url('../fonts/NunitoSansSemiBoldItalic.woff') format('woff'),
-        url('../fonts/NunitoSansSemiBoldItalic.ttf') format('truetype'),
-        url('../fonts/NunitoSansSemiBoldItalic.svg#NunitoSansSemiBoldItalic') format('svg');
+  font-family: "NunitoSansSemiBoldItalic";
+  src: url("../fonts/NunitoSansSemiBoldItalic.eot");
+  src: url("../fonts/NunitoSansSemiBoldItalic.eot") format("embedded-opentype"),
+    url("../fonts/NunitoSansSemiBoldItalic.woff2") format("woff2"),
+    url("../fonts/NunitoSansSemiBoldItalic.woff") format("woff"),
+    url("../fonts/NunitoSansSemiBoldItalic.ttf") format("truetype"),
+    url("../fonts/NunitoSansSemiBoldItalic.svg#NunitoSansSemiBoldItalic") format("svg");
 }
 @font-face {
-    font-family: 'DMSansBold';
-    src: url('../fonts/DMSansBold.eot');
-    src: url('../fonts/DMSansBold.eot') format('embedded-opentype'),
-        url('../fonts/DMSansBold.woff2') format('woff2'),
-        url('../fonts/DMSansBold.woff') format('woff'),
-        url('../fonts/DMSansBold.ttf') format('truetype'),
-        url('../fonts/DMSansBold.svg#DMSansBold') format('svg');
+  font-family: "DMSansBold";
+  src: url("../fonts/DMSansBold.eot");
+  src: url("../fonts/DMSansBold.eot") format("embedded-opentype"), url("../fonts/DMSansBold.woff2") format("woff2"),
+    url("../fonts/DMSansBold.woff") format("woff"), url("../fonts/DMSansBold.ttf") format("truetype"),
+    url("../fonts/DMSansBold.svg#DMSansBold") format("svg");
 }
 @font-face {
-    font-family: 'DMSansMedium';
-    src: url('../fonts/DMSansMedium.eot');
-    src: url('../fonts/DMSansMedium.eot') format('embedded-opentype'),
-        url('../fonts/DMSansMedium.woff2') format('woff2'),
-        url('../fonts/DMSansMedium.woff') format('woff'),
-        url('../fonts/DMSansMedium.ttf') format('truetype'),
-        url('../fonts/DMSansMedium.svg#DMSansMedium') format('svg');
+  font-family: "DMSansMedium";
+  src: url("../fonts/DMSansMedium.eot");
+  src: url("../fonts/DMSansMedium.eot") format("embedded-opentype"), url("../fonts/DMSansMedium.woff2") format("woff2"),
+    url("../fonts/DMSansMedium.woff") format("woff"), url("../fonts/DMSansMedium.ttf") format("truetype"),
+    url("../fonts/DMSansMedium.svg#DMSansMedium") format("svg");
 }
 //common-scss
-.no-padding{
-    padding: 0px;
+.no-padding {
+  padding: 0px;
 }
-li{
-    list-style: none;
-} 
-ul{
-    margin: 0;
-    padding: 0; 
+li {
+  list-style: none;
 }
-a{
-     outline: none; 
+ul {
+  margin: 0;
+  padding: 0;
 }
-input[type="text"] 
-{
-    min-width: 200px;
+a {
+  outline: none;
 }
-.button{ 
-    @extend %button-property-shared;
-    &:hover {
-        background: var(--icon-hover-button) !important;
-    }
-    &:focus {
-        background: var(--icon-hover-button) !important;
-        outline: none !important; 
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-    }
-    &:active {
-        background: var(--icon-hover-button) !important;
-    }
+input[type="text"] {
+  min-width: 200px;
+}
+.button {
+  @extend %button-property-shared;
+  &:hover {
+    background: var(--icon-hover-button) !important;
+  }
+  &:focus {
+    background: var(--icon-hover-button) !important;
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  &:active {
+    background: var(--icon-hover-button) !important;
+  }
 }
 button:focus {
-    outline: none !important;
+  outline: none !important;
 }
 .no-padding {
-    padding: 0px !important;
+  padding: 0px !important;
 }
-.on{ 
-        transition: all 0.5s;
-    -webkit-transition: all 0.25s;
+.on {
+  transition: all 0.5s;
+  -webkit-transition: all 0.25s;
 }
-%button-property-shared{          
-    background-color: var(--lightgreen);
-    margin-left: 20px;
-    text-transform: uppercase;
-    border: none;
-    padding: 8px 9px 7px;    
-    font-size: 12px; 
-    color:var(--text-white);
-    border-radius: 5px;
-    min-width: 79px;
-    font-weight: var(--bold-font)!important;
+%button-property-shared {
+  background-color: var(--lightgreen);
+  margin-left: 20px;
+  text-transform: uppercase;
+  border: none;
+  padding: 8px 9px 7px;
+  font-size: 12px;
+  color: var(--text-white);
+  border-radius: 5px;
+  min-width: 79px;
+  font-weight: var(--bold-font) !important;
 }
-.button{
-    @extend %button-property-shared;
+.button {
+  @extend %button-property-shared;
 }
 
 #checkbox {
-    margin: 30px 10px;
+  margin: 30px 10px;
 }
-.red-font{
-    color: #f23658 !important; 
+.red-font {
+  color: #f23658 !important;
 }
-.white-font{
-    color:var(--white)!important;   
+.white-font {
+  color: var(--white) !important;
 }
 .edit-icon {
-    margin-left: 8px;
-    font-size: 13px; 
+  margin-left: 8px;
+  font-size: 13px;
 }
-.btn.focus, .btn:hover, .btn:active {
-    outline: 0px !important; 
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
+.btn.focus,
+.btn:hover,
+.btn:active {
+  outline: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
-.badge.focus, .badge:hover, .badge:active {
-    outline: 0px !important; 
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
+.badge.focus,
+.badge:hover,
+.badge:active {
+  outline: 0px !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
-.yellowish{
-    color:var(--yellowish-color)!important;
+.yellowish {
+  color: var(--yellowish-color) !important;
 }
-.green-font{
-    color:var(--green-color)!important;
+.green-font {
+  color: var(--green-color) !important;
 }
 .hide {
-    display: none !important; 
+  display: none !important;
 }
 
 //chart-scss
-#users, #messages{ 
-    .highcharts-point {
-        display: none;
-    }
+#users,
+#messages {
+  .highcharts-point {
+    display: none;
+  }
 }
 .highcharts-root {
-    max-width: 100%  !important;
-    min-width: 100% !important;
-} 
+  max-width: 100% !important;
+  min-width: 100% !important;
+}
 .highcharts-point.highcharts-point-hover {
-    display: block !important;
+  display: block !important;
 }
-.normal{
-    background: var(--bar-strip-sec-label-Color);   
+.normal {
+  background: var(--bar-strip-sec-label-Color);
 }
-.above{
-    background: var(--above-bg-color);
+.above {
+  background: var(--above-bg-color);
 }
-.high{
-    background: var(--high-bg-color);
+.high {
+  background: var(--high-bg-color);
 }
-.very-high{ 
-    background: var(--very-high-bg-color);
+.very-high {
+  background: var(--very-high-bg-color);
 }
 //search-styles
 
 .dropdown-menu {
-    right: 0!important;
-    margin-right: 0!important;  
-    left: auto !important; 
-    top: 100% !important;
-    -webkit-box-shadow: 2px 6px 21px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 6px 21px -2px rgba(0,0,0,0.75);
-    box-shadow: 2px 6px 21px -2px rgba(0,0,0,0.75);
+  right: 0 !important;
+  margin-right: 0 !important;
+  left: auto !important;
+  top: 100% !important;
+  -webkit-box-shadow: 2px 6px 21px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 6px 21px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 6px 21px -2px rgba(0, 0, 0, 0.75);
 }
 
 .collapse:not(.show) {
-    display: block !important;   
+  display: block !important;
 }
 .animate {
-    animation-duration: 0.8s;
-    -webkit-animation-duration: 0.8s;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
+  animation-duration: 0.8s;
+  -webkit-animation-duration: 0.8s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
 }
 
-
-@keyframes slideIn { 
-    0% {
-        transform: translateY(1rem);
-        opacity: 0; 
-    }
-    100% {
-        transform:translateY(0rem);
-        opacity: 1;
-    }
-    0% {
-        transform: translateY(1rem);
-        opacity: 0;
-    }
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes slideIn {
-    0% {
-        -webkit-transform: transform;
-        -webkit-opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateY(0);
-        -webkit-opacity: 1;
-    }
-    0% {
-        -webkit-transform: translateY(1rem);
-        -webkit-opacity: 0;
-    }
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
 }
 
 .slideIn {
-    -webkit-animation-name: slideIn;
-    animation-name: slideIn;
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
 }
 
 .dropdown-icon {
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    min-height: 30px;
-    width: 8px;
-    margin-left: 17px;  
-    margin-top: 0px; 
-    background-image: var(--icon-dropdown);
-    float: right;
-    .nav-link {
-        padding: 0 !important
-    }
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  min-height: 30px;
+  width: 8px;
+  margin-left: 17px;
+  margin-top: 0px;
+  background-image: var(--icon-dropdown);
+  float: right;
+  .nav-link {
+    padding: 0 !important;
+  }
 }
 
-.dropdown-icon:hover { 
-    background-image: var(--icon-dropdown_hover);  
-} 
+.dropdown-icon:hover {
+  background-image: var(--icon-dropdown_hover);
+}
 .dropdown-icon.active {
-    background-image: var(--icon-dropdown_hover);
+  background-image: var(--icon-dropdown_hover);
 }
-.nav-link { 
-    padding: 0 !important
+.nav-link {
+  padding: 0 !important;
 }
-
-
 
 .elite-bg {
-    background:var(--elite-bg) !important; 
-} 
+  background: var(--elite-bg) !important;
+}
 .gold-bg {
-    background:var(--gold-bg) !important; 
+  background: var(--gold-bg) !important;
 }
 .platinum-bg {
-    background:var(--platinium-bg) !important; 
+  background: var(--platinium-bg) !important;
 }
-
 
 /*
 .elite-bg-border {
@@ -312,7 +302,8 @@ button:focus {
 }
 .platinum-bg-border {
     border: 2px solid var(--platinium-bg) !important;  
-}*/ 
+}*/
+
 /*PRELOADING------------ */
 /*
 #overlayer {
@@ -348,19 +339,19 @@ button:focus {
   0% {
     transform: rotate(0deg);
   }
-  
+
   25% {
     transform: rotate(180deg);
   }
-  
+
   50% {
     transform: rotate(180deg);
   }
-  
+
   75% {
     transform: rotate(360deg);
   }
-  
+
   100% {
     transform: rotate(360deg);
   }
@@ -370,42 +361,68 @@ button:focus {
   0% {
     height: 0%;
   }
-  
+
   25% {
     height: 0%;
   }
-  
+
   50% {
     height: 100%;
   }
-  
+
   75% {
     height: 100%;
   }
-  
+
   100% {
     height: 0%;
   }
 }
+/*menu-icon------------ */
+.bar1,
+.bar2,
+.bar3 {
+  width: 20px;
+  height: 2px;
+  background-color: var(--navli-font-color);
+  margin: 4px 0;
+  transition: 0.4s;
+  cursor: pointer;
+}
 
-.lgMenu{
-    transition: all 0.25s;
-    -webkit-transition: all 0.25s;  
-}
-#exit{
-    position: absolute;
-    right: 6px;
-    padding: 0px;
-    top: 13px;
-    font-size: 32px;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.25s;
-    -webkit-transition: all 0.25s;
+.change {
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-1px, 0px);
+    transform: rotate(-45deg) translate(-1px, 0px);
+    -moz-transform: rotate(-45deg) translate(-1px, 0px);
+    -ms-transform: rotate(-45deg) translate(-1px, 0px);
+    -o-transform: rotate(-45deg) translate(-1px, 0px);
+  }
+  .bar2 {
     opacity: 0;
+  }
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
 }
-#exit.enter{ 
-    opacity: 1;
-    left: 0;
+.sidebar-nav li.active {
+  a {
+    background: var(--icon-hover-bg);
+    color: var(--icon-hover-text) !important;
+  }
+  /*l-sidebar-icon-grid:hover*/
+  .l-sidebar-icon-grid{
+    background-image: var(--icon-grid_hover) !important;
+  } 
+  .l-sidebar-icon-award {
+    background-image: var(--icon-award_hover) !important;
+  }
+  .l-sidebar-icon-film {
+    background-image: var(--icon-film_hover) !important;
+  }
+  .l-sidebar-icon-user {
+    background-image: var(--icon-user_hover) !important;
+  }
 }
+ 
